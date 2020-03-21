@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :criterions
   resources :administrators
   resources :opening_hours
   resources :regions

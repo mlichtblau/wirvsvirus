@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_21_160329) do
+ActiveRecord::Schema.define(version: 2020_03_21_161919) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "email"
@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(version: 2020_03_21_160329) do
     t.float "latitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "criterions", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "region_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["region_id"], name: "index_criterions_on_region_id"
   end
 
   create_table "opening_hours", force: :cascade do |t|
@@ -87,6 +96,7 @@ ActiveRecord::Schema.define(version: 2020_03_21_160329) do
     t.index ["coordinate_id"], name: "index_testcenters_on_coordinate_id"
   end
 
+  add_foreign_key "criterions", "regions"
   add_foreign_key "opening_hours", "testcenters"
   add_foreign_key "regions", "part_ofs"
   add_foreign_key "testcenter_staffs", "testcenters"
