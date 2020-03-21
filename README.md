@@ -7,21 +7,25 @@ Eine Plattform für die Entlastung der Testzentren in Deutschland. Auf Basis ein
 
 ## Ziele
 
-### Kurzer Weg zum Test
+### Identifizieren von Verdachtspersonen ohne Aufwand
 
-Zunächst findet ein **Telefonat mit oder ein Gang zum Arzt** statt. Dieser prüft, ob es sich um eine Infektion mit SARS-CoV-19 handeln könnte. Im Verdachtsfall ruft man bei der Hotline 116117 an.
+Aufgrund der Omnipräsenz des SARS-CoV-19 Virus in den Medien haben viele Menschen die Angst, sie könnten sich mit dem Virus infiziert haben. Dabei informieren sich viele über den ärztlichen Bereitschaftsdienst unter **116117**, lokalen Beratungsstellen oder beim Arzt des Vertrauens. Die Anlaufstellen sind aufgrund der hohen Nachfrage maximal ausgelastet und Ärzte können im Fall anderer Beschwerden nicht mehr verlässlich kontaktiert werden.
 
-Bei der Hotline **116117** wird der Patient zu seinem Kontakt mit positiv getesteten Personen und seinen Aufenthalt in Risikogebieten. Aufgrund der hohen Nachfrage und diversen Telefonschleifen, kann sich dieser Prozess leider über wenige Stunden und mehrere Telefonate erstrecken. Stellt sich bei dem Online-Telefonat ein dringender Infektionsverdacht heraus, erhält der Patient eine PIN und wartet auf einen Rückruf durch ein Testzentrum.
+Die Plattform **COVID Q** vermittelt Patienten mit Verdacht auf eine Infektion an die Testzentren in Deutschland. Dabei findet zunächst eine Eigen-Anamnese statt, wie sie auch durch eine telefonische Beratungsstelle oder den Arzt stattfindet. Auf Basis aktueller Empfehlungen vermittelt die Plattform Verdachtsfälle an qualifizierte Testzentren in der Nähe. Falls die Notwendigkeit auf einen Test aufgrund der Eigen-Anamnese nicht gegeben ist, werden Links zu öffentlichen Beratungstellen und Tipps zum Eigenschutz bereitgestellt. Damit sollen die Beratungsstellen und Ärzte entlastet und besorgte Menschen aufgeklärt werden.
 
-Das **Testzentrum** meldet sich innerhalb weniger Tage um einen kurzfristigen Termin zu vereinbaren.
+### Unbürokratisch zum Test bei Verdacht
 
-Unsere **Plattform möchte Ärzte, Beratungsstellen und Betroffene Personen enlasten**, indem sich Patienten nach einer [Eigen-Anamnese](#wie-läuft-der-eigen-anmenese-ab) auf die Warteliste eines Testzentrums setzen können. Die Patienten werden anschließend von Beratern der Hotline oder medizinischem Personal des Testzentrums geprüft und es kann eine Terminvergabe verneinbart werden. Betroffene können ihren Wartelistenstatus zu jeder Zeit online abrufen. Die Plattform filtert automatisch Personen aus, für die die Notwendigkeit eines Tests nicht besteht. Die Entscheidungen werden auf Basis der Eigen-Anamnese gefällt.
+Im Falle eines begründeten Verdachtes auf eine Infektion mit SARS-CoV-19 - z.B. falls sich die Person in einem Risikogebiet befunden oder direkten Konakt mit einer positiv getesteten Person gehabt hat -, kann die betroffene Person sich auf die Warteliste eines Testzentrums setzen. Das Testzentrum erhält auch einen Zugang zur Plattform. Über diesen Zugang können die Wartelisten und auch die Daten zu den Patienten abgerufen werden. Das medizinische Personal kann Nachrichten an alle Patienten der Warteliste schicken und Informationsmaterialen wie zum Beispiel Anfahrtsbeschreibungen oder Verhaltensregeln veröffentlichen. Patienten haben mit **COVID Q** nur noch eine Anlaufstelle und müssen nicht stundenlang in Telefon-Warteschleifen verbringen. Die Daten werden zw. dem Testzentrum und dem Patienten direkt geteilt, sodass möglichst wenige Personin mit der Bearbeitung eines Falles beschäftigt sind.
 
-### Testzentren ohne Terminvergabe
+Das medizinsche Personal des Testzentrums kann die Patienten auf der Warteliste prüfen und die Notwendigkeit auf einen Test in einer zweiter Instanz prüfen.
 
-In den letzten Wochen werden **mobile Testzentren und sog. Drive-Through Tests** immer populärer. Personen, die den Verdacht haben, sich mit dem Virus infiziert zu haben, können in **Eigenregie** zu einem dieser Zentren fahren sich testen lassen. Aufgrund der fehlenden Koordination und des hohen Andrangs ist mit hohen Wartezeiten zu rechnen.
+### Dynamische Terminvergabe
 
-Mit Hilfe von **COVID Q** können die Betreiber von diesen Zentren zwei Testlinien errichten. Für Personen, welche ohne Anmeldung zur Teststation fahren und solche, die sich über die Plattform angemeldet haben. Personen, die sich online registriert haben können durchgehend ihren Wartelistenstatus einsehen und werden benachrichtigt, wenn sie sich auf dem Weg zum Zentrum machen können.
+Die meisten Testzentren in Deutschland vergeben Termine und Verdachtsfälle auf das Virus zu testen. Das ist zum Einen mit einem hohen Bearbeitungsaufwand verbunden und zum Anderen unflexibel im Fall von Verzögerungen. Falls Termin auflaufen, stauen sich auch die Personen im Testzentrum, wodurch sich eine Gruppe potentiell ansteckender Personen bildet. 
+
+Die Plattform erfasst den Bearbeitungsstatus aller in der Warteliste stehenden Patienten. Über Echtzeitdaten können die Patienten ihre geschätzte Wartedauer jederzeit einsehen und werden wenige Stunden vor dem Test informiert, sich zur Teststelle zu begeben. Damit werden auflaufenden Personengruppen vermieden und die Gefahr einer Ansteckung Anderer in vollen Wartezimmern reduziert. 
+
+Wir glauben, dass dieses Konzept flexibler als die klassische Terminvergabe ist und durch permantente Transparenz keinen Nachteil für die Patienten bildet.
 
 ## FAQ
 
