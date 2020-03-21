@@ -1,5 +1,7 @@
 # COVID Q
 
+Eine Plattform für die Entlastung der Testzentren in Deutschland. Auf Basis einer Eigen-Anamnese wird Patienten eine Liste verfügbarer Testzentren gezeigt. Dabei können die geschätzten Wartzeiten und die Auslastung der Testzentren eingesehen werden. Nachdem man sich auf eine Warteliste gesetzt hat, können Mitarbeiter des Testzentrums Informationen und geänderete Öffnungs- und Schließzeiten verschicken. Patienten können zu Hause warten bis kurz vor ihrem Test. Mit Hilfe von Push-Benachrichtigungen werden sie über ihren Wartelistenstatus kontinuierlich auf dem Laufenden gehalten.
+
 ## Rollen
 
 Unsere Plattform verbindet Patienten mit Testzentren und offiziellen Anlaufstellen rund um SARS-CoV-2. Die Termine zum Testen sollen zentral verwaltet und zugewiesen werden um Betroffenen Zeit zu sparen und Transparenz zu schaffen. Des Weiteren sollen betroffene Personen mit Informationsmaterialien gebildet werden.
