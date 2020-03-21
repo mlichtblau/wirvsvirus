@@ -35,19 +35,21 @@ Wir glauben, dass dieses Konzept flexibler als die klassische Terminvergabe ist 
 
 ### Erhält jeder Patient in der Plattform einen Termin für einen Test?
 
-Nein. Auf Basis der Eigen-Anamnese des Patienten und den Anforderungen der Testzentren filtern wir die Patienten, die sich zunächst bei einem Hausarzt oder der Hotline 116117 melden sollten. In unbegründeten Fällen bieten wir dem Patienten weitere Quellen zur Einschätzung der eigenen Situation. Die Eigen-Anamnese soll auch abfragen, ob der Betroffene bereits ein Arztgespräch hatte und eine Überweisung zu einem Test erhalten hat.
-
-Des Weiteren sollen die Angaben der Patienten auf Wartelisten vor ihrem Test durch medizinischen Personal geprüft werden. Damit wollen wir in einer zweiten Instanz die Patienten aussortieren, für die kein Test in Frage kommt. Auch in diesem Fall soll der Patient auf Quellen zur freiwilligen Selbst-Quarantäne und rund um das Virus verwiesen werden..
+Nein. Ein Ziel der Plattform ist die Identifizierung von begründeten Verdachtsfällen. Personen, bei denen auf Basis der Eigenanamnese keine Notwendigkeit auf einen Test festgestellt wird, werden nicht an die Testzentren vermittelt. Stattdessen werden sie mit Informationen durch offizielle Quellen wie dem RKI oder dem Gesundheitsminesterium versorgt.
 
 ### Wie läuft die Eigenanamnese ab?
 
-Die Eigen-Anamnese von COVID Q ist and die der [Charité app](https://covapp.charite.de) angelehnt. Wir fragen die Symptome, den Reiseverlauf und den Kontakt zu Risikopersonen ab. Des Weiteren fragen wir nach bisherigen Arzt- bzw. Krankenhausbesuchen und nach dort ausgestellten Überweisungen. Diese Daten verwenden wir zur Auswahld der qualifizierten Testzentren.
+Die Eigenanamnese von **COVID Q** ist in Anlehnung an die [App der Charité](https://covapp.charite.de) entwickelt worden. Es wird der Reiseverlauf, der Kontakt zu positiv getesten Personen, Vorerkrankungen, bereits getätigten Arztbesuchen und dabei ausgestellten Überweisungen abgefragt. Bevor ein Patient getestet wird, wird sein Antrag durch medizinisches Personal oder eine andere offizielle Stelle geprüft.
 
 ### Kann man sich auf mehrere Wartelisten setzen?
 
-Nein. Ein Patient kann sich nur auf eine Warteliste setzen. Er kann auch nur die Testzentren auswählen, die im Rahmen seiner Eigen-Anamnese als _qualifiziert_ eingestuft wurden. Nachdem ein Patient sich auf einer Warteliste registriert hat, erhält er regelmäßige Updates zu seinem Teststatus.
+Nein. Ein Patient kann sich nur auf eine Warteliste bewerben. Er kann auch nur die Testzentren auswählen, die im Rahmen seiner Eigenanamnese als _qualifiziert_ eingestuft wurden. Nachdem ein Patient sich auf einer Warteliste registriert hat, erhält er regelmäßige Updates zu seinem Teststatus.
 
 Er kann sich bei Bedarf in einem anderen Testzentrum anmelden, wodurch jedoch sein aktueller Wartelistenplatz verfällt.
+
+### Gibt es einen Fast-Track?
+
+Wir überlegen zurzeit ein Konzept für einen Fast-Track. Dabei sollen Personen priorisiert werden, welche aufgrund ihrer gesellschaftlichen Rolle schneller getestet werden sollten. Ein klassisches Beispiel ist medizinisches Personal.
 
 ## Rollen
 
