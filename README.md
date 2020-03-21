@@ -5,6 +5,18 @@ Eine Plattform für die Entlastung der Testzentren in Deutschland. Auf Basis ein
 | ![Screenshot 1](docs/screen-1.png) 	| ![Screenshot 2](docs/screen-2.png) 	| ![Screenshot 3](docs/screen-3.png) 	|
 |------------------------------------	|------------------------------------	|------------------------------------	|
 
+## Ziele
+
+### Kurzer Weg zum Test
+
+Zunächst findet ein **Telefonat mit oder ein Gang zum Arzt** statt. Dieser prüft, ob es sich um eine Infektion mit SARS-CoV-19 handeln könnte. Im Verdachtsfall ruft man bei der Hotline 116117 an.
+
+Bei der Hotline **116117** wird der Patient zu seinem Kontakt mit positiv getesteten Personen und seinen Aufenthalt in Risikogebieten. Aufgrund der hohen Nachfrage und diversen Telefonschleifen, kann sich dieser Prozess leider über wenige Stunden und mehrere Telefonate erstrecken. Stellt sich bei dem Online-Telefonat ein dringender Infektionsverdacht heraus, erhält der Patient eine PIN und wartet auf einen Rückruf durch ein Testzentrum.
+
+Das **Testzentrum** meldet sich innerhalb weniger Tage um einen kurzfristigen Termin zu vereinbaren.
+
+Unsere **Plattform möchte Ärzte, Beratungsstellen und Betroffene Personen enlasten**, indem sich Patienten nach einer [Eigen-Anamnese](#wie-läuft-der-eigen-anmenese-ab) auf die Warteliste eines Testzentrums setzen können. Die Patienten werden anschließend von Beratern der Hotline oder medizinischem Personal des Testzentrums geprüft und es kann eine Terminvergabe verneinbart werden. Betroffene können ihren Wartelistenstatus zu jeder Zeit online abrufen. Die Plattform filtert automatisch Personen aus, für die die Notwendigkeit eines Tests nicht besteht. Die Entscheidungen werden auf Basis der Eigen-Anamnese gefällt.
+
 ## FAQ
 
 ### Erhält jeder Patient in der Plattform einen Termin für einen Test?
