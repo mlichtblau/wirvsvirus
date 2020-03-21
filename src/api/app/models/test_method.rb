@@ -1,0 +1,2 @@
+class TestMethod < ApplicationRecord
+end

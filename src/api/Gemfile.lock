@@ -56,6 +56,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2)
+    bcrypt (3.1.13)
     builder (3.2.4)
     byebug (11.1.1)
     concurrent-ruby (1.1.6)
@@ -84,6 +85,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
+    pg (1.2.3)
     puma (3.12.4)
     rack (2.2.2)
     rack-test (1.1.0)
@@ -143,14 +145,19 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   byebug
   listen (~> 3.0.5)
+  pg
   puma (~> 3.0)
   rails (~> 6.0.2.1b)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
   tzinfo-data
+
+RUBY VERSION
+   ruby 2.6.1p33
 
 BUNDLED WITH
    2.1.4
