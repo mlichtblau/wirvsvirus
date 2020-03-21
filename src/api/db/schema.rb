@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_21_164336) do
+ActiveRecord::Schema.define(version: 2020_03_21_165632) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "email"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2020_03_21_164336) do
     t.integer "region_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "kind"
     t.index ["region_id"], name: "index_criterions_on_region_id"
   end
 
