@@ -50,7 +50,6 @@ testcenter = Testcenter.create(
   street: 'Augustenburger Platz 1',
   zip_code: '13353',
   city: 'Berlin',
-  # not valid
   directions: 'Mittelallee 1',
   coordinate_attributes: {longitude: 52.541899, latitude: 13.345846},
   daily_capacity: 10,

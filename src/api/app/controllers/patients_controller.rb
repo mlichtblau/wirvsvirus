@@ -22,7 +22,7 @@ class PatientsController < ApplicationController
       params[:criterion_names].each do |criterion_name|
         criterion = Criterion.find_by name: criterion_name
         if criterion
-          @patient.criterions << Criterion.find_by(id: criterion)
+          @patient.criterions << criterion
         else
           all_criterions_found = false
           break
