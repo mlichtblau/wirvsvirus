@@ -1,5 +1,5 @@
 class TestcentersController < ApplicationController
-  before_action :set_testcenter, only: [:show, :update, :destroy, :set_criterions]
+  before_action :set_testcenter, only: [:show, :update, :destroy, :set_criteria]
 
   # GET /testcenters
   def index
@@ -40,13 +40,14 @@ class TestcentersController < ApplicationController
 
   # POST /testcenters/1/criterions
   def set_criteria
+    @testcenter.criterions.destroy_all
     params[:criterion_ids].each do |criterion_id|
       criterion = Criterion.find_by id: criterion_id
       if criterion
         @testcenter.criterions << Criterion.find_by(id: criterion)
-        render json: @testcenter, status: :created, location: @testcenter
       end
     end
+    render json: @testcenter, include: [:coordinate, :contact_datum]
   end
 
   private
@@ -57,6 +58,6 @@ class TestcentersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def testcenter_params
-      params.require(:testcenter).permit(:name, :street, :zip_code, :city, :directions, :coordinate_id, :troughput_per_day, :registered_vs_non_registered_preference_ratio, :verified_at, :contact_datum_id)
+      params.require(:testcenter).permit(:name, :street, :zip_code, :city, :directions, :coordinate_id, :troughput_per_day, :registered_vs_non_registered_preference_ratio, :verified_at, :contact_datum_id, :criterion_ids)
     end
 end
