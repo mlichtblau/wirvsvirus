@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :patients
   resources :testcenter_staffs
   resources :testcenters
   resources :coordinates
