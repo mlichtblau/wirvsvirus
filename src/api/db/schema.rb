@@ -10,13 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_21_162507) do
+ActiveRecord::Schema.define(version: 2020_03_21_164336) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "appointments", force: :cascade do |t|
+    t.integer "patient_id", null: false
+    t.integer "testcenter_id", null: false
+    t.datetime "time"
+    t.integer "waiting_number"
+    t.datetime "processed_at"
+    t.integer "rescheduled_to_appointment_id"
+    t.datetime "canceled_at"
+    t.integer "feedback_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["feedback_id"], name: "index_appointments_on_feedback_id"
+    t.index ["patient_id"], name: "index_appointments_on_patient_id"
+    t.index ["testcenter_id"], name: "index_appointments_on_testcenter_id"
   end
 
   create_table "contact_data", force: :cascade do |t|
@@ -47,6 +63,28 @@ ActiveRecord::Schema.define(version: 2020_03_21_162507) do
     t.integer "criterion_id", null: false
   end
 
+  create_table "criterions_testcenters", id: false, force: :cascade do |t|
+    t.integer "testcenter_id", null: false
+    t.integer "criterion_id", null: false
+  end
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.integer "rating"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.integer "testcenter_id", null: false
+    t.integer "testcenter_staff_id", null: false
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["testcenter_id"], name: "index_messages_on_testcenter_id"
+    t.index ["testcenter_staff_id"], name: "index_messages_on_testcenter_staff_id"
+  end
+
   create_table "opening_hours", force: :cascade do |t|
     t.integer "day"
     t.datetime "opens"
@@ -75,6 +113,27 @@ ActiveRecord::Schema.define(version: 2020_03_21_162507) do
     t.index ["part_of_id"], name: "index_regions_on_part_of_id"
   end
 
+  create_table "scaffolds", force: :cascade do |t|
+    t.string "CapacityLimit"
+    t.integer "testcenter_id", null: false
+    t.datetime "reached_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["testcenter_id"], name: "index_scaffolds_on_testcenter_id"
+  end
+
+  create_table "test_methods", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "test_methods_testcenters", id: false, force: :cascade do |t|
+    t.integer "testcenter_id", null: false
+    t.integer "test_method_id", null: false
+  end
+
   create_table "testcenter_staffs", force: :cascade do |t|
     t.integer "testcenter_id", null: false
     t.integer "staff_type"
@@ -91,7 +150,7 @@ ActiveRecord::Schema.define(version: 2020_03_21_162507) do
     t.string "city"
     t.text "directions"
     t.integer "coordinate_id", null: false
-    t.integer "troughput_per_day"
+    t.integer "daily_capacity"
     t.float "registered_vs_non_registered_preference_ratio"
     t.datetime "verified_at"
     t.integer "contact_datum_id", null: false
@@ -101,9 +160,15 @@ ActiveRecord::Schema.define(version: 2020_03_21_162507) do
     t.index ["coordinate_id"], name: "index_testcenters_on_coordinate_id"
   end
 
+  add_foreign_key "appointments", "feedbacks"
+  add_foreign_key "appointments", "patients"
+  add_foreign_key "appointments", "testcenters"
   add_foreign_key "criterions", "regions"
+  add_foreign_key "messages", "testcenter_staffs"
+  add_foreign_key "messages", "testcenters"
   add_foreign_key "opening_hours", "testcenters"
   add_foreign_key "regions", "part_ofs"
+  add_foreign_key "scaffolds", "testcenters"
   add_foreign_key "testcenter_staffs", "testcenters"
   add_foreign_key "testcenters", "contact_data"
   add_foreign_key "testcenters", "coordinates"

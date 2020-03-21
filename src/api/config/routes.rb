@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :messages
+  resources :appointments
+  resources :feedbacks
+  resources :scaffolds
+  resources :test_methods
   resources :criterions
   resources :administrators
   resources :opening_hours
