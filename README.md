@@ -17,6 +17,12 @@ Das **Testzentrum** meldet sich innerhalb weniger Tage um einen kurzfristigen Te
 
 Unsere **Plattform möchte Ärzte, Beratungsstellen und Betroffene Personen enlasten**, indem sich Patienten nach einer [Eigen-Anamnese](#wie-läuft-der-eigen-anmenese-ab) auf die Warteliste eines Testzentrums setzen können. Die Patienten werden anschließend von Beratern der Hotline oder medizinischem Personal des Testzentrums geprüft und es kann eine Terminvergabe verneinbart werden. Betroffene können ihren Wartelistenstatus zu jeder Zeit online abrufen. Die Plattform filtert automatisch Personen aus, für die die Notwendigkeit eines Tests nicht besteht. Die Entscheidungen werden auf Basis der Eigen-Anamnese gefällt.
 
+### Testzentren ohne Terminvergabe
+
+In den letzten Wochen werden **mobile Testzentren und sog. Drive-Through Tests** immer populärer. Personen, die den Verdacht haben, sich mit dem Virus infiziert zu haben, können in **Eigenregie** zu einem dieser Zentren fahren sich testen lassen. Aufgrund der fehlenden Koordination und des hohen Andrangs ist mit hohen Wartezeiten zu rechnen.
+
+Mit Hilfe von **COVID Q** können die Betreiber von diesen Zentren zwei Testlinien errichten. Für Personen, welche ohne Anmeldung zur Teststation fahren und solche, die sich über die Plattform angemeldet haben. Personen, die sich online registriert haben können durchgehend ihren Wartelistenstatus einsehen und werden benachrichtigt, wenn sie sich auf dem Weg zum Zentrum machen können.
+
 ## FAQ
 
 ### Erhält jeder Patient in der Plattform einen Termin für einen Test?
