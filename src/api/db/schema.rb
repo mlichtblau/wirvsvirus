@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_21_173816) do
+ActiveRecord::Schema.define(version: 2020_03_21_191545) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "email"
@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(version: 2020_03_21_173816) do
   create_table "appointments", force: :cascade do |t|
     t.integer "patient_id", null: false
     t.integer "testcenter_id", null: false
-    t.datetime "time"
+    t.datetime "appointment_time"
     t.integer "waiting_number"
     t.datetime "processed_at"
     t.integer "rescheduled_to_appointment_id"
     t.datetime "canceled_at"
-    t.integer "feedback_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "feedback_id"
     t.index ["feedback_id"], name: "index_appointments_on_feedback_id"
     t.index ["patient_id"], name: "index_appointments_on_patient_id"
     t.index ["testcenter_id"], name: "index_appointments_on_testcenter_id"
@@ -152,7 +152,6 @@ ActiveRecord::Schema.define(version: 2020_03_21_173816) do
     t.index ["coordinate_id"], name: "index_testcenters_on_coordinate_id"
   end
 
-  add_foreign_key "appointments", "feedbacks"
   add_foreign_key "appointments", "patients"
   add_foreign_key "appointments", "testcenters"
   add_foreign_key "messages", "testcenter_staffs"
