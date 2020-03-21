@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionnairePage implements OnInit {
 
+  slideOpts = {
+    speed: 400,
+    centeredSlides: true,
+  };
+
   constructor() { }
 
   ngOnInit() {

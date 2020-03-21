@@ -1,9 +1,98 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>questionnaire</ion-title>
+    <ion-title>COVID Q</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-button expand="block" [routerLink]="['/', 'patient', 'overview']">Block Button</ion-button>
+<ion-content fullscreen class="ion-padding" scroll-y="false">
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <div class="slide">
+        <h2>Rechtliche Absicherung</h2>
+        <p>Im Zweifel zum Arzt!</p>
+        <p>
+          Die Nutzung dieser App ersetzt keine ärztliche Behandlung.
+          Wenn Sie sich aktuell schwer krank fühlen, suchen Sie bitte
+          umgehend medizinische Hilfe auf.
+        </p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <h2>Hinweis</h2>
+        <p>
+          Die Nutzung dieser App ersetzt keine ärztliche Behandlung und
+          erbringt keine diagnostische Leistung. Die CovApp dient der
+          Verbesserung der Handlungsabläufe in der Untersuchungsstelle
+          der Charité und anderen Ambulanzen im Zusammenhang mit dem neuartigen
+          Coronavirus SARS-CoV-2.
+        </p>
+        <p>
+          Wenn Sie sich aktuell schwer krank fühlen,
+          suchen Sie bitte umgehend einen Arzt/Ärztin oder medizinische Hilfe auf.
+        </p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <p>
+          Um Ihr Infektionsrisiko einzustufen und Sie gegebenenfalls an ein 
+          passendes Testzentrum zu vermitteln, haben wir 
+          vorab ein paar Fragen. 
+        </p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <ion-item>
+          <ion-label position="floating">Wie alt sind Sie?</ion-label>
+          <ion-input type="number"></ion-input>
+        </ion-item>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <p>Hatten Sie in den letzten 24 Stunden Fieber?</p>
+        <ion-item>
+          <ion-select placeholder="Ja/Nein/Vllt.">
+            <ion-select-option value="ja">Ja</ion-select-option>
+            <ion-select-option value="nein">Nein</ion-select-option>
+            <ion-select-option value="unsicher">Unsicher</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <p>Vielen Dank für Ihre Hilfe.</p>
+        <p>Aufgrund Ihrer Antworten empfehlen wir Ihnen:</p>
+        <ion-text color="danger">
+          <h2 class="result-instruction" text-color="danger">Bleiben Sie daheim.</h2>
+        </ion-text>
+        <p class="ion-text-left">Es besteht derzeit kein Handlungsbedarf für Sie, da Sie:</p>
+        <ul class="ion-text-left ul-fix">
+          <li>Keinen Kontakt zu einem bestätigten Fall hatten</li>
+          <li>In den letzten 14 Tagen in keinem Risikogebiet laut RKI waren</li>
+          <li>Keine Symptome haben</li>
+        </ul>
+        <p>Achten Sie vermehrt auf gute <a href="#">Händehygiene</a>.</p>
+        <p>Wenn Sie das Haus verlassen, halten Sie ausreichend Abstand 
+          (mehr als 2 Meter) zu anderen Personen, fassen Sie möglichst nichts
+           an, und achten Sie auf die Regeln für richtiges Husten und Niesen.</p>
+      </div>
+    </ion-slide>
+    <!-- <ion-slide>
+      <div class="slide">
+        
+        
+        <p>Achten Sie vermehrt auf gute Händehygiene.</p>
+      </div>
+    </ion-slide> -->
+  </ion-slides>
 </ion-content>
+
+<!-- <ion-footer class="ion-padding">
+  <ion-toolbar>
+    <ion-button expand="block" >Next</ion-button>
+  </ion-toolbar>
+</ion-footer> -->
