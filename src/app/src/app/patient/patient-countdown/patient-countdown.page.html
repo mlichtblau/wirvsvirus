@@ -14,37 +14,31 @@
   </ion-header>
 
   <div id="container">
-    <ion-card>
-      <img src="https://image.freepik.com/free-vector/flat-people-forming-line_23-2147679939.jpg" style="height: 250px; width: 100%; object-fit: cover"/>
-      <ion-card-header>
-        <ion-card-subtitle>Ihre Wartenummer</ion-card-subtitle>
-        <ion-card-title>{{ appointment.waitingNumber }}</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <div>
-                Voraussichtliche Wartezeit: {{ getCountdownInMs() }}
-              </div>
-            </ion-col>
-            <ion-col>
-              <div>
-                Voraussichtlicher Termin: {{ appointment.appointmentTime | date }}
-              </div>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-        <ion-button expand="block" [routerLink]="['/', 'patient', 'testcenter-infos']">Wichtige Informationen</ion-button>
-        <ion-button expand="block" [routerLink]="['/', 'patient', 'change-appointment']">Termin Ändern</ion-button>
-      </ion-card-content>
-    </ion-card>
+    <ion-grid fixed>
+      <ion-card>
+        <img src="https://image.freepik.com/free-vector/flat-people-forming-line_23-2147679939.jpg" style="height: 250px; width: 100%; object-fit: cover"/>
+        <ion-card-header>
+          <ion-card-subtitle>Ihre Wartenummer</ion-card-subtitle>
+          <ion-card-title>{{ appointment.waitingNumber }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                Voraussichtliche Wartezeit: <br>
+                <strong>{{ getCountdownInMs() }}</strong>
+              </ion-col>
+              <ion-col>
+                Voraussichtlicher Termin: <br>
+                <strong>{{ appointment.appointmentTime | date: 'short' }}</strong>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-button expand="block" [routerLink]="['/', 'patient', 'testcenter-infos']">Wichtige Informationen</ion-button>
+          <ion-button expand="block" [routerLink]="['/', 'patient', 'change-appointment']">Termin Ändern</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-grid>
   </div>
 
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Footer</ion-title>
-  </ion-toolbar>
-</ion-footer>
