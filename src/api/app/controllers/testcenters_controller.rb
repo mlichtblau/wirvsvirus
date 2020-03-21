@@ -5,12 +5,12 @@ class TestcentersController < ApplicationController
   def index
     @testcenters = Testcenter.all
 
-    render json: @testcenters
+    render json: @testcenters, include: [:coordinate, :contact_datum]
   end
 
   # GET /testcenters/1
   def show
-    render json: @testcenter
+    render json: @testcenter, include: [:coordinate, :contact_datum]
   end
 
   # POST /testcenters

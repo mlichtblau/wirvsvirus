@@ -32,5 +32,22 @@ criterions = Criterion.create([
   {kind: :symptom, name: 'dyspnea'}
 ])
 
-# italy = Criterion.create(kind: :visit, name: 'italy')
-# lombardia = Criterion.create(kind: :visit, name: 'lombardia', region: italy)
+italy = Criterion.create(kind: :visit, name: 'italy')
+lombardia = Criterion.create(kind: :visit, name: 'lombardia', superregion: italy)
+
+spain = Criterion.create(kind: :visit, name: 'spain')
+madrid = Criterion.create(kind: :visit, name: 'madrid', superregion: spain)
+
+# TEST DATA
+
+Testcenter.create(
+  name: 'Charité – Virchow Klinikum',
+  street: 'Augustenburger Platz 1',
+  zip_code: '13353',
+  city: 'Berlin',
+  # not valid
+  directions: 'Mittelallee 1',
+  coordinate_attributes: {longitude: 52.541899, latitude: 13.345846},
+  daily_capacity: 10,
+  contact_datum_attributes: {phone: '030 450 50'}
+)
