@@ -1,9 +1,51 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>patient-testcenter-infos</ion-title>
+    <ion-title>
+      {{ testcenter.name }}
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ testcenter.name }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-grid fixed>
+      <ion-card>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <div class="ion-text-center">
+                  <strong>{{ testcenter.name }}</strong><br>
+                  {{ testcenter.street }}<br>
+                  {{ testcenter.zipCode }} {{ testcenter.city }}
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div class="ion-text-center">
+                  <strong>Öffnungszeiten</strong>
+                  {{ testcenter.openingHours[0].opensAt }} - {{ testcenter.openingHours[0].closesAt }}
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div class="ion-text-center">
+                  {{ testcenter.directions }}
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </ion-grid>
+  </div>
 
 </ion-content>
