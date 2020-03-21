@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_21_213026) do
+ActiveRecord::Schema.define(version: 2020_03_21_232222) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "email"
@@ -103,6 +103,8 @@ ActiveRecord::Schema.define(version: 2020_03_21_213026) do
     t.string "zip_code"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "flu_vaccinated"
+    t.datetime "symptoms_since"
   end
 
   create_table "scaffolds", force: :cascade do |t|
