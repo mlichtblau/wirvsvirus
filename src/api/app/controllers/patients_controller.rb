@@ -18,7 +18,13 @@ class PatientsController < ApplicationController
     @patient = Patient.new(patient_params)
 
     if @patient.save
-      render json: @patient, status: :created, location: @patient
+      params[:criterion_ids].each do |criterion_id|
+        criterion = Criterion.find_by id: criterion_id
+        if criterion
+          @patient.criterions << Criterion.find_by(id: criterion)
+          render json: @patient, status: :created, location: @patient
+        end
+      end
     else
       render json: @patient.errors, status: :unprocessable_entity
     end
