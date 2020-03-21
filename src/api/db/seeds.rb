@@ -58,3 +58,5 @@ TestcenterStaff.create(testcenter: testcenter, staff_type: :admin, pin_code: "56
 patient = Patient.create(age: 35, living_situation: :community, workplace: :police, zip_code: "80331")
 
 Appointment.create(patient: patient, testcenter: testcenter, appointment_time: DateTime.now + 2.hours, waiting_number: "555")
+
+OpeningHour.create(testcenter: testcenter, day: :tuesday, opens_at: Time.now - 6.hours, closes_at: Time.now + 2.hours)

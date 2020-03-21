@@ -46,6 +46,6 @@ class OpeningHoursController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def opening_hour_params
-      params.require(:opening_hour).permit(:day, :opens, :closes, :testcenter_id)
+      params.require(:opening_hour).permit(:day, :opens_at, :closes_at, :testcenter_id)
     end
 end

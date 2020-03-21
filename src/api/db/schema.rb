@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_21_203714) do
+ActiveRecord::Schema.define(version: 2020_03_21_213026) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "email"
@@ -88,8 +88,8 @@ ActiveRecord::Schema.define(version: 2020_03_21_203714) do
 
   create_table "opening_hours", force: :cascade do |t|
     t.integer "day"
-    t.datetime "opens"
-    t.datetime "closes"
+    t.time "opens_at"
+    t.time "closes_at"
     t.integer "testcenter_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
