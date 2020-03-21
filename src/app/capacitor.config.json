@@ -1,0 +1,8 @@
+{
+  "appId": "io.lichtblau.covidq",
+  "appName": "COVID Q",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
