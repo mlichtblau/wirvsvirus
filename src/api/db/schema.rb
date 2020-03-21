@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_21_155228) do
+ActiveRecord::Schema.define(version: 2020_03_21_160329) do
+
+  create_table "administrators", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "contact_data", force: :cascade do |t|
     t.string "phone"
@@ -24,6 +31,34 @@ ActiveRecord::Schema.define(version: 2020_03_21_155228) do
     t.float "latitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "opening_hours", force: :cascade do |t|
+    t.integer "day"
+    t.datetime "opens"
+    t.datetime "closes"
+    t.integer "testcenter_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["testcenter_id"], name: "index_opening_hours_on_testcenter_id"
+  end
+
+  create_table "patients", force: :cascade do |t|
+    t.integer "age"
+    t.integer "living_situation"
+    t.integer "workplace"
+    t.string "zip_code"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "regions", force: :cascade do |t|
+    t.string "name"
+    t.integer "risk_score"
+    t.integer "part_of_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["part_of_id"], name: "index_regions_on_part_of_id"
   end
 
   create_table "testcenter_staffs", force: :cascade do |t|
@@ -52,6 +87,8 @@ ActiveRecord::Schema.define(version: 2020_03_21_155228) do
     t.index ["coordinate_id"], name: "index_testcenters_on_coordinate_id"
   end
 
+  add_foreign_key "opening_hours", "testcenters"
+  add_foreign_key "regions", "part_ofs"
   add_foreign_key "testcenter_staffs", "testcenters"
   add_foreign_key "testcenters", "contact_data"
   add_foreign_key "testcenters", "coordinates"
