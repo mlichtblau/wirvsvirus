@@ -1,27 +1,50 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      COVID Q - Home
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">COVID Q</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid class="ion-no-padding">
+    <ion-row class="row covid whiteText">
+      <ion-col>
+        <h1 class="mediumWeight">
+          COVID Q
+        </h1>
+        <p>Willkommen bei COVID Q, der virtuellen Warteschlange
+          für COVID-19 Testzentren in Deutschland.
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row infected grayText">
+      <ion-col>
+        <h2 class="mediumWeight">
+          Potentiell angesteckt?
+        </h2>
+        <p>Ein Fragebogen hilft Ihnen Ihr Infektionsrisiko einzustufen und gegebenenfalls ein passendes Testzentrum zu
+          finden. Sie können sich dort in eine virtuelle Schlange einreihen und bequem zu Hause auf Ihren Termin warten.
+        </p>
+        <ion-button color="medium" expand="block" [routerLink]="['/', 'patient', 'testcenter-infos']">COVID-19 TEST
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row testcenter grayText">
+      <ion-col>
+        <h2 class="mediumWeight">
+          Neues Testzentrum?
+        </h2>
+        <p>Hier hast Du die Möglichkeit uns auf weitere Testzentren aufmerksam zu machen.
+        </p>
+        <ion-button color="medium" expand="block" [routerLink]="['/', 'patient', 'testcenter-infos']">TESTZENTRUM
+          ANMELDEN
+        </ion-button>
 
-  <div id="container">
-    <strong>Willkommen bei COVID Q</strong>
-    <ion-button expand="block" [routerLink]="['/questionnaire']">Block Button</ion-button>
-  </div>
-
+      </ion-col>
+    </ion-row>
+    <ion-row class="row employee whiteText">
+      <ion-col>
+        <h2 class="mediumWeight">
+          Mitarbeiter?
+        </h2>
+        <p>Hier können sich Mitarbeiter von Testzentren und Gesundheitszentren anmelden.
+        </p>
+        <ion-button color="medium" expand="block" [routerLink]="['/', 'patient', 'testcenter-infos']">LOG IN
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Footer</ion-title>
-  </ion-toolbar>
-</ion-footer>
