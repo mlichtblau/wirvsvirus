@@ -4,7 +4,9 @@ Der hohe Bedarf an Tests auf SARS-CoV-19 führt zu überfüllten Teststellen mit
 
 Unsere Plattform entlastet die Testzentren in Deutschland, indem Patienten unmittelbar vor dem Test zum Zentrum gerufen werden. Damit vermeiden wir lange Schlangen potentiell erkrankter Menschen. Auf Basis von Echtzeitdaten der Warteschlangen reagieren wir auch auf Verzögerungen im Testablauf und informieren die Patienten über etwaige Verspätungen. Damit erzeugen wir bedeutend weniger Aufwand als bei der klassichen Terminvergabe und sind untern Strich dennoch sicherer sowie flexibler.
 
-| ![Screenshot 1](docs/screen-1.png) 	| ![Screenshot 2](docs/screen-2.png) 	| ![Screenshot 3](docs/screen-3.png) 	|
+![WirWsVirus](docs/wir_vs_virus-logo.png)
+
+| ![Screenshot 1](docs/screen-1.png) 	| ![Screenshot 2](docs/screen-2.png) 	| ![Screenshot 3](docs/screen-3.jpeg) |
 |------------------------------------	|------------------------------------	|------------------------------------	|
 
 ## Ziele
