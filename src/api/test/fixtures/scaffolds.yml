@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  CapacityLimit: MyString
+  testcenter: one
+  reached_at: 2020-03-21 17:39:39
+
+two:
+  CapacityLimit: MyString
+  testcenter: two
+  reached_at: 2020-03-21 17:39:39

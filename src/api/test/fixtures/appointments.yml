@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient: one
+  testcenter: one
+  time: 2020-03-21 17:43:07
+  waiting_number: 1
+  processed_at: 2020-03-21 17:43:07
+  rescheduled_to_appointment_id: 1
+  canceled_at: 2020-03-21 17:43:07
+  feedback: one
+
+two:
+  patient: two
+  testcenter: two
+  time: 2020-03-21 17:43:07
+  waiting_number: 1
+  processed_at: 2020-03-21 17:43:07
+  rescheduled_to_appointment_id: 1
+  canceled_at: 2020-03-21 17:43:07
+  feedback: two
