@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_21_191545) do
+ActiveRecord::Schema.define(version: 2020_03_21_203714) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "email"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2020_03_21_191545) do
     t.integer "patient_id", null: false
     t.integer "testcenter_id", null: false
     t.datetime "appointment_time"
-    t.integer "waiting_number"
+    t.string "waiting_number"
     t.datetime "processed_at"
     t.integer "rescheduled_to_appointment_id"
     t.datetime "canceled_at"
