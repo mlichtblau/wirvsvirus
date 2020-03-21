@@ -39,7 +39,7 @@ Nein. Auf Basis der Eigen-Anamnese des Patienten und den Anforderungen der Testz
 
 Des Weiteren sollen die Angaben der Patienten auf Wartelisten vor ihrem Test durch medizinischen Personal geprüft werden. Damit wollen wir in einer zweiten Instanz die Patienten aussortieren, für die kein Test in Frage kommt. Auch in diesem Fall soll der Patient auf Quellen zur freiwilligen Selbst-Quarantäne und rund um das Virus verwiesen werden..
 
-### Wie läuft der Eigen-Anmenese ab?
+### Wie läuft die Eigenanamnese ab?
 
 Die Eigen-Anamnese von COVID Q ist and die der [Charité app](https://covapp.charite.de) angelehnt. Wir fragen die Symptome, den Reiseverlauf und den Kontakt zu Risikopersonen ab. Des Weiteren fragen wir nach bisherigen Arzt- bzw. Krankenhausbesuchen und nach dort ausgestellten Überweisungen. Diese Daten verwenden wir zur Auswahld der qualifizierten Testzentren.
 
