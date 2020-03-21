@@ -11,11 +11,10 @@ Rails.application.routes.draw do
   resources :regions
   resources :patients
   resources :testcenter_staffs
-  resources :testcenters
   resources :coordinates
   resources :contact_data
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  post "/testcenters/:id/criterions" => "testcenters#set_criteria"
+  post 'testcenters/:id/criterions', to: 'testcenters#set_criteria'
 
 end
