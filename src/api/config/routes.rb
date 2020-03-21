@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :messages
   resources :appointments
   resources :feedbacks
@@ -14,4 +15,7 @@ Rails.application.routes.draw do
   resources :coordinates
   resources :contact_data
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  post "/testcenters/:id/criterions" => "testcenters#set_criteria"
+
 end

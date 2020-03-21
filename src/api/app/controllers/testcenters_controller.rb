@@ -1,5 +1,5 @@
 class TestcentersController < ApplicationController
-  before_action :set_testcenter, only: [:show, :update, :destroy]
+  before_action :set_testcenter, only: [:show, :update, :destroy, :set_criterions]
 
   # GET /testcenters
   def index
@@ -36,6 +36,17 @@ class TestcentersController < ApplicationController
   # DELETE /testcenters/1
   def destroy
     @testcenter.destroy
+  end
+
+  # POST /testcenters/1/criterions
+  def set_criteria
+    params[:criterion_ids].each do |criterion_id|
+      criterion = Criterion.find_by id: criterion_id
+      if criterion
+        @testcenter.criterions << Criterion.find_by(id: criterion)
+        render json: @testcenter, status: :created, location: @testcenter
+      end
+    end
   end
 
   private
