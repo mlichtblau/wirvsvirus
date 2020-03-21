@@ -40,7 +40,7 @@ madrid = Criterion.create(kind: :visit, name: 'madrid', superregion: spain)
 
 # TEST DATA
 
-Testcenter.create(
+testcenter = Testcenter.create(
   name: 'Charité – Virchow Klinikum',
   street: 'Augustenburger Platz 1',
   zip_code: '13353',
@@ -51,3 +51,6 @@ Testcenter.create(
   daily_capacity: 10,
   contact_datum_attributes: {phone: '030 450 50'}
 )
+
+TestcenterStaff.create(testcenter: testcenter, staff_type: :coworker, pin_code: "1234")
+TestcenterStaff.create(testcenter: testcenter, staff_type: :admin, pin_code: "5678")
