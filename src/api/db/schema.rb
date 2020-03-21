@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_21_154704) do
+ActiveRecord::Schema.define(version: 2020_03_21_155228) do
 
   create_table "contact_data", force: :cascade do |t|
     t.string "phone"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 2020_03_21_154704) do
     t.float "latitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "testcenter_staffs", force: :cascade do |t|
+    t.integer "testcenter_id", null: false
+    t.integer "staff_type"
+    t.string "pin_code"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["testcenter_id"], name: "index_testcenter_staffs_on_testcenter_id"
   end
 
   create_table "testcenters", force: :cascade do |t|
@@ -43,6 +52,7 @@ ActiveRecord::Schema.define(version: 2020_03_21_154704) do
     t.index ["coordinate_id"], name: "index_testcenters_on_coordinate_id"
   end
 
+  add_foreign_key "testcenter_staffs", "testcenters"
   add_foreign_key "testcenters", "contact_data"
   add_foreign_key "testcenters", "coordinates"
 end
