@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_21_165632) do
+ActiveRecord::Schema.define(version: 2020_03_21_173816) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "email"
@@ -52,11 +52,11 @@ ActiveRecord::Schema.define(version: 2020_03_21_165632) do
   create_table "criterions", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.integer "region_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "kind"
-    t.index ["region_id"], name: "index_criterions_on_region_id"
+    t.integer "superregion_id"
+    t.index ["superregion_id"], name: "index_criterions_on_superregion_id"
   end
 
   create_table "criterions_patients", id: false, force: :cascade do |t|
@@ -103,15 +103,6 @@ ActiveRecord::Schema.define(version: 2020_03_21_165632) do
     t.string "zip_code"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "regions", force: :cascade do |t|
-    t.string "name"
-    t.integer "risk_score"
-    t.integer "part_of_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["part_of_id"], name: "index_regions_on_part_of_id"
   end
 
   create_table "scaffolds", force: :cascade do |t|
@@ -164,11 +155,9 @@ ActiveRecord::Schema.define(version: 2020_03_21_165632) do
   add_foreign_key "appointments", "feedbacks"
   add_foreign_key "appointments", "patients"
   add_foreign_key "appointments", "testcenters"
-  add_foreign_key "criterions", "regions"
   add_foreign_key "messages", "testcenter_staffs"
   add_foreign_key "messages", "testcenters"
   add_foreign_key "opening_hours", "testcenters"
-  add_foreign_key "regions", "part_ofs"
   add_foreign_key "scaffolds", "testcenters"
   add_foreign_key "testcenter_staffs", "testcenters"
   add_foreign_key "testcenters", "contact_data"
