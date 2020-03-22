@@ -5,7 +5,7 @@
 
 > [Probiert hier die App live aus!](https://mlichtblau.github.io/wirvsvirus/)
 
-Der extrem hohe Bedarf an Tests auf SARS-CoV-2 führt zu einer massiven Überlastung der Teststellen und teils drastischen Verspätungen. Die Liste der Wartenden kumuliert sich. Ein weiteres Hindernis ist der aufwendige Prozess für Patienten, Ärzte und das medizinischen Personal und der hohe bürokratische Aufwand. 
+Der extrem hohe Bedarf an Tests auf SARS-CoV-2 führt zu einer massiven Überlastung der Teststellen und teils drastischen Verspätungen. Die Liste der Wartenden kumuliert sich. Ein weiteres Hindernis ist der aufwendige Prozess für Patienten, Ärzte und das medizinischen Personal sowie der hohe bürokratische Aufwand. 
 
 Unsere Plattform entlastet die Testzentren in Deutschland, indem Patienten durch eine exakte Terminierung erst unmittelbar vor dem Test zum Zentrum gerufen werden. Damit vermeiden wir lange Schlangen potentiell erkrankter Menschen und damit auch mögliche Neuinfektionen. Auf Basis von Echtzeitdaten der Warteschlangen können wir auch sofort auf Verzögerungen im Testablauf reagieren und die Patienten über etwaige Verspätungen informieren. Dadurch erzeugen wir einen deutlich geringeren Aufwand als bei der herkömmlichen Terminvergabe und sind dazu noch sicherer (geringere Ansteckungsgefahr) wie auch flexibler.
 
