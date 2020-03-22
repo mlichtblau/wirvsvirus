@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Warteschlange</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,7 +10,7 @@
 <ion-content fullscreen scroll-y="false">
   <ion-list>
     <ion-item *ngFor="let appointment of appointments; let i = index">
-      <ion-button slot="start" color="success" (click)="checkIn(i)">
+      <ion-button (click)="process(i)" color="success" slot="start">
         <ion-icon slot="icon-only" name="checkmark-outline"></ion-icon>
       </ion-button>
       <ion-label [routerLink]="['/', 'testcenter', 'queue', 'patient']" [queryParams]="{ id: appointment?.patient_id}">

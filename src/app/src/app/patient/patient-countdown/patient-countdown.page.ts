@@ -3,6 +3,7 @@ import {ActionSheetController, AlertController} from '@ionic/angular';
 import {AppointmentProvider} from '../../shared/api/appointment/appointment';
 import {Appointment} from '../../shared/models/appointment';
 import {Storage} from '@ionic/storage';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-patient-countdown',
@@ -18,7 +19,8 @@ export class PatientCountdownPage implements OnInit {
       public storage: Storage,
       public actionSheetController: ActionSheetController,
       public alertController: AlertController,
-      public appointmentProvider: AppointmentProvider
+      public appointmentProvider: AppointmentProvider,
+      public router: Router
   ) { }
 
   ngOnInit() {
@@ -27,6 +29,17 @@ export class PatientCountdownPage implements OnInit {
           console.log(appointment);
           this.appointment = appointment;
         })
+  }
+
+  getCountdownString() {
+    const duration = this.getCountdownInMs()
+    let seconds = parseInt((duration/1000)%60), minutes = parseInt((duration/(1000*60))%60), hours = parseInt((duration/(1000*60*60))%24);
+
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+    return hours + ":" + minutes + ":" + seconds;
   }
 
   getCountdownInMs() {
@@ -40,18 +53,21 @@ export class PatientCountdownPage implements OnInit {
         text: '15 Minuten',
         cssClass: 'secondary',
         handler: () => {
+          this.rescheduleAppointment(15);
           console.log('Share clicked');
         }
       }, {
         text: '30 Minuten',
         cssClass: 'secondary',
         handler: () => {
+          this.rescheduleAppointment(30);
           console.log('Share clicked');
         }
       }, {
         text: '1 Stunde',
         cssClass: 'secondary',
         handler: () => {
+          this.rescheduleAppointment(60);
           console.log('Share clicked');
         }
       }, {
@@ -67,6 +83,13 @@ export class PatientCountdownPage implements OnInit {
     await actionSheet.present();
   }
 
+  rescheduleAppointment(shiftedByMins) {
+    this.appointmentProvider.reschedule(this.appointment.id, shiftedByMins)
+        .subscribe((appointment) => {
+          console.log(appointment);
+        })
+  }
+
   async cancelAppointment() {
     const alert = await this.alertController.create({
       header: 'Termin absagen',
@@ -77,12 +100,17 @@ export class PatientCountdownPage implements OnInit {
           role: 'cancel',
           cssClass: 'secondary',
           handler: (blah) => {
-            console.log('Confirm Cancel: blah');
+
           }
         }, {
           text: 'Bestätigen',
           cssClass: 'secondary',
           handler: () => {
+            this.appointmentProvider.cancel(this.appointment.id)
+                .subscribe((appointment) => {
+                  console.log(appointment);
+                  this.router.navigate(['/']);
+                });
             console.log('Confirm Okay');
           }
         }

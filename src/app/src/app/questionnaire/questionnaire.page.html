@@ -107,8 +107,7 @@
           <ion-label position="floating">
             Seit wie vielen Tagen haben Sie Symptome?
           </ion-label>
-          <ion-input [(ngModel)]="patientModel.symptoms_since" type="string">
-          </ion-input>
+          <ion-datetime [(ngModel)]="patientModel.symptoms_since" [max]="currentDateString.substr(0, 10)" displayFormat="DD.MM" min="2020-01-01"></ion-datetime>
         </ion-item>
         <ion-button class="prevButton" (click)="prev()">
           <ion-icon name="chevron-back-outline"></ion-icon>
