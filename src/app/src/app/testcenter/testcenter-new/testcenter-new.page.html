@@ -1,9 +1,12 @@
 <ion-header>
   <ion-toolbar>
+    <ion-title>COVID Q</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Testzentrum registrieren</ion-title>
+    <ion-title size="small">Testzentrum registrieren</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,14 +15,9 @@
     <ion-slide>
       <div class="slide">
 
-        <p>
-          Helfen Sie uns weiter Testzentren in unsere Kartei aufzunehmen.
-
-          Hier können Sie uns auf weitere Zentren aufmerksam machen. Wir treten dann in Kontakt mit dem Zentrum.
-
-          Wir freuen uns über
-          Ihren Tipp!
-        </p>
+        <p>Helfen Sie uns weiter Testzentren in unsere Kartei aufzunehmen.</p>
+        <p>Hier können Sie uns auf weitere Zentren aufmerksam machen. Wir treten dann in Kontakt mit dem Zentrum.</p>
+        <p>Wir freuen uns über Ihren Tipp!</p>
         <ion-button class="nextButton" (click)="next()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
@@ -68,6 +66,9 @@
 
     <ion-slide>
       <div class="slide">
+        <p>
+          Bitte geben Sie uns Ihre Email Adresse, damit wir Uns bei eventuellen Fragen, bei Ihnen melden können.
+        </p>
 
         <ion-item>
           <ion-label position="floating">Telefonnummer</ion-label>
@@ -79,7 +80,7 @@
           <ion-input [(ngModel)]="contactDatum.email" type="email"></ion-input>
         </ion-item>
 
-        <ion-button class="ion-margin" [disabled]="!isNextButtonActive('contact_datum')" (click)="saveTestcenter()">Speichern</ion-button>
+        <ion-button class="ion-margin" [disabled]="!isNextButtonActive('contact_datum')" (click)="saveTestcenter()">Abschicken</ion-button>
 
       </div>
     </ion-slide>
@@ -87,7 +88,10 @@
     <ion-slide>
       <div class="slide">
 
-        <ion-button class="ion-margin" (click)="resetFormAndReturn()" [routerLink]="['/']">Vielen Dank</ion-button>
+        <h1 class="hero-emoji">🎉</h1>
+        <h2>Vielen Dank!</h2>
+        <p>Wir haben Ihren Tipp aufgenommen und werden ihn schnellstmöglich überprüfen. Bei Fragen melden wir uns bei Ihnen.</p>
+        <ion-button class="ion-margin" (click)="resetFormAndReturn()" [routerLink]="['/']">Fertig</ion-button>
 
       </div>
     </ion-slide>
