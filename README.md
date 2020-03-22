@@ -117,7 +117,7 @@ Zurzeit ist es uns noch nicht möglich die Testzentren von offizielle Stelle aut
 
 Die Plattform **COVID Q** ist eine Web-basierte Anwendung mit Schwerpunkt auf mobile Endgeräte. 
 
-### Lizenz ![License Badge](https://img.shields.io/github/license/mlichtblau/wirvsvirus)
+### ![License Badge](https://img.shields.io/github/license/mlichtblau/wirvsvirus)
 
 **Who cares whose shares.**
 
