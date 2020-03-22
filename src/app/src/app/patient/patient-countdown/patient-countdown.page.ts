@@ -34,7 +34,7 @@ export class PatientCountdownPage implements OnInit {
 
     getCountdownString() {
         const duration = this.getCountdownInMs();
-        const seconds = (duration / 1000) % 60, minutes = (duration / (1000 * 60)) % 60, hours = (duration / (1000 * 60 * 60)) % 24;
+        const seconds = Math.floor((duration / 1000) % 60), minutes = Math.floor((duration / (1000 * 60)) % 60), hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
 
         const hoursString = (hours < 10) ? '0' + hours : hours;
         const minutesString = (minutes < 10) ? '0' + minutes : minutes;
