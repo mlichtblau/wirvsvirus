@@ -5,23 +5,13 @@
 </ion-header>
 
 <ion-content>
-  <!--<ion-segment (ionChange)="segmentChanged($event)">
-    <ion-segment-button value="mapview">
-      <ion-label>Map</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="listview">
-      <ion-label>List</ion-label>
-    </ion-segment-button>
-  </ion-segment>-->
 
-  <app-testcenter-map [isLoaded]="isLoaded"> <!--*ngIf="activeSegment==='mapview'"--></app-testcenter-map>
+  <app-testcenter-map [isLoaded]="isLoaded"> </app-testcenter-map>
 
-  <ion-footer> <!--*ngIf="activeSegment==='mapview'"-->
+  <ion-footer>
     <ion-toolbar>
       <ion-title style="text-align: center" size="small">Bitte wählen Sie ein Testzentrum</ion-title>
     </ion-toolbar>
   </ion-footer>
 
-  <!--<ion-button expand="block" *ngIf="activeSegment === 'listview'" [routerLink]="['/', 'patient','queue-confirmation']">List View</ion-button>
-    -->
 </ion-content>

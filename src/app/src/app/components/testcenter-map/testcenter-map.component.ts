@@ -20,16 +20,11 @@ export class TestcenterMapComponent implements OnInit, OnChanges {
   }
 
   ngOnInit() {
-    /*this.storage.get('testcenters')
-      .then((tcs) => {
-        this.loadMap(tcs);
-      });*/
   }
 
   ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
     let changedProp = changes['isLoaded'];
-    let to = JSON.stringify(changedProp.currentValue);
-    if(to) {
+    if(changedProp.currentValue) {
       this.storage.get('testcenters')
         .then((tcs) => {
           this.loadMap(tcs);
@@ -107,11 +102,6 @@ export class TestcenterMapComponent implements OnInit, OnChanges {
         console.log('Error getting location', error)
       });
 
-    function getCurrentDay() {
-      var d = new Date();
-      return d.getDay()
-    }
-
     function createTCLocationText(tc) {
 
       let tcLocationText = '<div class="testcenter" id="content">' +
@@ -128,12 +118,7 @@ export class TestcenterMapComponent implements OnInit, OnChanges {
         tcLocationText = tcLocationText + `${tc.zipCode} ${tc.city} <br>`;
       }
       tcLocationText = tcLocationText + '</p>' + '<p>';
-      if(tc.openingHours){
-        tcLocationText = tcLocationText + `Heute: ${tc.openingHours[getCurrentDay()].opensAt}-${
-          tc.openingHours[getCurrentDay()].closesAt
-          } <br>`;
-      }
-      if(tc.waitingTime){
+      if(tc.waitingTime !== undefined){
         tcLocationText = tcLocationText + `Wartezeit: etwa ${tc.waitingTime} Minuten`;
       }
       tcLocationText = tcLocationText + '</p>';

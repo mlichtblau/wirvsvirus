@@ -9,7 +9,6 @@ import {TestcenterProvider} from "../../shared/api/testcenter/testcenter";
   styleUrls: ['./patient-overview.page.scss'],
 })
 export class PatientOverviewPage implements OnInit {
-  activeSegment = 'mapview';
   testcenters = [];
   isLoaded = false;
 
@@ -21,10 +20,6 @@ export class PatientOverviewPage implements OnInit {
 
   ngOnInit() {
     this.fetchTestCenter();
-  }
-
-  segmentChanged($event) {
-    this.activeSegment = $event.detail.value;
   }
 
   fetchTestCenter() {
