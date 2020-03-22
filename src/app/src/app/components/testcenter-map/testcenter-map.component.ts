@@ -107,9 +107,30 @@ export class TestcenterMapComponent implements OnInit {
 
           //info window for location of user
 
-          infoWindow.setPosition(pos);
-          infoWindow.setContent('Standort');
-          infoWindow.open(map);
+          const patientIcon = {
+            url: 'assets/icon/patienticon.png',
+            scaledSize: new google.maps.Size(50,50)
+          };
+
+            let marker = new google.maps.Marker({
+              position: pos,
+              map: map,
+              title: 'Ihr Standort',
+              icon: patientIcon,
+            });
+
+            const patientLocationText = '<div id="content">' +
+              `<p>Ihr Standort</p>` +
+              '</div>';
+            const patientInfoWindow = new google.maps.InfoWindow({
+              content: patientLocationText,
+              maxWidth: 400,
+              position: pos
+            });
+
+            marker.addListener('click', function() {
+              patientInfoWindow.open(map,marker);
+            });
 
           //icons + info windows for test centers
 
