@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {TestcenterStaff} from '../../shared/models/testcenter-staff';
 
 @Component({
   selector: 'app-testcenter-login',
@@ -8,10 +9,9 @@ import {Router} from '@angular/router';
 })
 export class TestcenterLoginPage implements OnInit {
 
-  testcenterStaff = {
-    testcenter_id: 1,
-    staff_type: 0,
-    pin_code: '1234',
+  testcenterStaff: TestcenterStaff = {
+    testcenter_id: null,
+    pin_code: null,
   };
 
   constructor(
@@ -24,6 +24,10 @@ export class TestcenterLoginPage implements OnInit {
   login() {
     console.log(this.testcenterStaff);
     this.router.navigate(['/', 'testcenter', 'queue']);
+  }
+
+  isLoginButtonActive() {
+    return this.testcenterStaff.testcenter_id && this.testcenterStaff.pin_code;
   }
 
 }

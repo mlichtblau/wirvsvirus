@@ -17,6 +17,7 @@ import {TestcenterProvider} from './shared/api/testcenter/testcenter';
 import {CriterionProvider} from './shared/api/criterion/criterion';
 import {OpeningHourProvider} from './shared/api/opening-hour/opening-hour';
 import {IonicStorageModule} from '@ionic/storage';
+import {TestcenterStaffProvider} from './shared/api/testcenter-staff/testcenter-staff';
 
 @NgModule({
   declarations: [AppComponent],
@@ -39,6 +40,7 @@ import {IonicStorageModule} from '@ionic/storage';
       TestcenterProvider,
       CriterionProvider,
       OpeningHourProvider,
+      TestcenterStaffProvider
   ],
   bootstrap: [AppComponent]
 })
