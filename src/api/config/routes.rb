@@ -20,8 +20,10 @@ Rails.application.routes.draw do
   post 'testcenters/:id/criterions', to: 'testcenters#set_criteria'
   post '/testcenters/:id/staff_login', to: 'testcenters#staff_login'
   get '/testcenters/:id/current_delay', to: 'testcenters#current_delay'
+  get 'testcenters/:id/appointments', to: 'testcenters#show_next_appointments'
 
   get 'appointments/:id/canceled', to: 'appointments#cancel_appointment'
   get 'appointments/:id/processed', to: 'appointments#process_appointment'
+  post 'appointments/:id/rescheduled', to: 'appointments#reschedule_appointment'
 
 end

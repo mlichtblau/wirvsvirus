@@ -1,5 +1,9 @@
 class TestcentersController < ApplicationController
+<<<<<<< HEAD
   before_action :set_testcenter, only: [:show, :update, :destroy, :set_criteria, :staff_login, :current_delay]
+=======
+  before_action :set_testcenter, only: [:show, :update, :destroy, :set_criteria, :staff_login, :show_next_appointments]
+>>>>>>> 49e3e4cfa5f95be9f4a9d145ccbf2ec000bad100
 
   # GET /testcenters
   def index
@@ -76,6 +80,11 @@ class TestcentersController < ApplicationController
   def staff_login
     testcenter_staff = @testcenter.testcenter_staffs.find_by(pin_code: params[:pin_code])
     render json: testcenter_staff
+  end
+  
+  def show_next_appointments
+    @next_appointments = @testcenter.appointments.order :appointment_time
+    render json: @next_appointments
   end
 
   # GET /testcenters/1/current_delay

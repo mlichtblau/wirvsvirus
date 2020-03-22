@@ -9,7 +9,7 @@
 
 <ion-content fullscreen class="ion-padding" scroll-y="false">
   <ion-slides pager="true" [options]="slideOpts">
-    <ion-slide>
+    <!-- <ion-slide>
       <div class="slide">
         <h2>Rechtliche Absicherung</h2>
         <p>Im Zweifel zum Arzt!</p>
@@ -53,24 +53,27 @@
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
       </div>
-    </ion-slide>
+    </ion-slide> -->
     <ion-slide>
-      <div class="slide">
+      <div class="slide question">
         <ion-item>
-          <ion-label position="floating">Wie alt sind Sie?</ion-label>
-          <ion-input [(ngModel)]="patientModel.age" type="number" (ngModelChange)="unlockOnChange('age')"></ion-input>
+          <div class="big">
+            <ion-label position="floating">Wie alt sind Sie?</ion-label>
+            <ion-input [(ngModel)]="patientModel.age" type="number" (ngModelChange)="unlockOnChange('age')"></ion-input>
+          </div>
         </ion-item>
-        Sie sind {{ patientModel.age }} Jahre alt. Wow!
         <ion-button class="nextButton" [disabled]="!allowNext('age')" (click)="nextAndLock()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
       </div>
     </ion-slide>
     <ion-slide>
-      <div class="slide">
-        <p>Hatten Sie in den letzten 24 Stunden Fieber?</p>
+      <div class="slide question">
         <ion-item>
-          <ion-select placeholder="Ja/Nein/Vllt.">
+          <ion-label position="floating">
+            Hatten Sie in den letzten 24 Stunden Fieber?
+          </ion-label>
+          <ion-select class="big">
             <ion-select-option value="ja">Ja</ion-select-option>
             <ion-select-option value="nein">Nein</ion-select-option>
             <ion-select-option value="unsicher">Unsicher</ion-select-option>
