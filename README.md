@@ -53,7 +53,15 @@ Wir überlegen zurzeit ein Konzept für einen Fast-Track. Dabei sollen Personen 
 
 ### Sind meine Daten sicher?
 
+### Wie verhindern wir Terminleichen?
 
+Unsere Plattform vereinfacht die Terminfindung für Patienten und birgt damit das Risiko, dass Personen eine lockere Haltung gegenüber den Terminen annehmen. Um dem entgegenzuwirken, haben wir uns mehrere Konzepte überlegt.
+
+Zum Einen können sich betroffene Personen auf lediglich [eine Warteliste bewerben](#kann-man-sich-auf-mehrere-wartelisten-setzen). Unsere Plattform versucht technisch zu verhindern, dass Personen sich in mehreren Testzentren für einen Test registrieren.
+
+Des Weiteren werden Patienten an ihren [Termin erinnert](#47). Sie werden rechtzeitig darüber informiert, wann sie sich auf den Weg ins Testzentrum machen sollten.
+
+Zu guter letzte wird das [Erscheinen](#7) oder [Versäumen](#5) von Terminen vom medizinschen Personal gemeldet. 
 
 ## Rollen
 
