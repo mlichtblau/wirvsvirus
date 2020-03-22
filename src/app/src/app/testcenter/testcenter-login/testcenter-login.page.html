@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding" scroll-y="false">
+
+        <ion-item>
+          <ion-label position="floating">ID</ion-label>
+          <ion-input [(ngModel)]="testcenterStaff.testcenter_id" type="string"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">PIN</ion-label>
+          <ion-input [(ngModel)]="testcenterStaff.pin_code" type="string"></ion-input>
+        </ion-item>
+
+    <ion-button class="ion-margin" expand="block" [disabled]="!isLoginButtonActive()" (click)="login()">Login</ion-button>
+</ion-content>

@@ -3,21 +3,27 @@
 
 /** Ionic CSS Variables **/
 :root {
+  --ion-grid-width-xs: 500px;
+  --ion-grid-width-sm: 500px;
+  --ion-grid-width-md: 500px;
+  --ion-grid-width-lg: 500px;
+  --ion-grid-width-xl: 500px;
+
   /** primary **/
-  --ion-color-primary: #3880ff;
-  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary: #5b6275;
+  --ion-color-primary-rgb: 91,98,117;
   --ion-color-primary-contrast: #ffffff;
-  --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary-contrast-rgb: 255,255,255;
+  --ion-color-primary-shade: #505667;
+  --ion-color-primary-tint: #6b7283;
 
   /** secondary **/
-  --ion-color-secondary: #3dc2ff;
-  --ion-color-secondary-rgb: 61, 194, 255;
-  --ion-color-secondary-contrast: #ffffff;
-  --ion-color-secondary-contrast-rgb: 255, 255, 255;
-  --ion-color-secondary-shade: #36abe0;
-  --ion-color-secondary-tint: #50c8ff;
+  --ion-color-secondary: #F4E6D4;
+  --ion-color-secondary-rgb: 244,230,212;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0,0,0;
+  --ion-color-secondary-shade: #d7cabb;
+  --ion-color-secondary-tint: #f5e9d8;
 
   /** tertiary **/
   --ion-color-tertiary: #5260ff;
