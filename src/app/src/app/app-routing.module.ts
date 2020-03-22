@@ -32,6 +32,14 @@ const routes: Routes = [
     path: 'testcenter/new',
     loadChildren: () => import('./testcenter/testcenter-new/testcenter-new.module').then( m => m.TestcenterNewPageModule)
   },
+  {
+    path: 'testcenter/queue',
+    loadChildren: () => import('./testcenter/testcenter-queue/testcenter-queue.module').then( m => m.TestcenterQueuePageModule)
+  },
+  {
+    path: 'testcenter/login',
+    loadChildren: () => import('./testcenter/testcenter-login/testcenter-login.module').then( m => m.TestcenterLoginPageModule)
+  },
 ];
 
 @NgModule({
