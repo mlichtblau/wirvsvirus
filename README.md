@@ -89,7 +89,11 @@ Die Plattform **COVID Q** ist eine Web-basierte Anwendung mit Schwerpunkt auf mo
 
 ### Lizenz
 
-tba
+**Who cares whose shares.**
+
+Unsere gesamte Plattform, einschließich des gesamten Quellcodes, ist offen und frei zugänglich. Wir hoffen und freuen uns auf Unterstüztung aus der Community und nehmen Pull Requests gerne entgegen. Unsere verwendete Lizenz erlaubt die nicht-kommerzielle oder kommerzielle Weiterentwicklung des Projektes. Unser Fokus liegt in der Bewältigung der aktuellen Situation. Wir haben nur eine einzige Bedingung: Folgeprojekte müssen ebenfalls quelloffen sein, damit die Community aus den Erfahrungen lernen kann.
+
+Falls ihr mithelfen wollt, lest bitte unsere [Contributing](CONTRIBUTING.md) und unseren [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ### Ionic Frontend
 
