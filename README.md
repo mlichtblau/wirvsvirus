@@ -1,4 +1,4 @@
-# COVID Q
+# COVID Q ![License Badge](https://img.shields.io/github/license/mlichtblau/wirvsvirus)
 
 Der hohe Bedarf an Tests auf SARS-CoV-19 führt zu überfüllten Teststellen mit teils drastischen Verspätungen und auflaufenden Menschenmassen. Des Weiteren ist der Prozess für Patient, Arzt und dem medizischen Personal sowohl aufwendig als auch bürokratisch. 
 
