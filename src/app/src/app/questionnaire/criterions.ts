@@ -63,12 +63,12 @@ export function getCriterions() {
     },
     { criterion: 'living alone', question: 'Leben Sie alleine?' },
     {
-      criterion: 'workplace',
+      criterion: 'critical workplace',
       question:
         'Arbeiten Sie in einem strukturreleveanten Beruf? (Polizei, Arzt, etc.)',
     },
     {
-      criterion: 'flu_vaccinated',
+      criterion: 'flu vaccinated',
       question: 'Wurden Sie seit Oktober 2019 gegen Grippe geimpft?',
     },
   ]
