@@ -165,7 +165,7 @@ export class TestcenterMapComponent implements OnInit {
               tc.openingHours[getCurrentDay()].closesAt
             } <br>` +
             `Wartezeit: etwa ${tc.waitingTime} Minuten</p>` +
-            `<ion-button color="medium" expand="block" href="../patient/queue-confirmation/${tc.id}">In Warteschlange stellen</ion-button>` +
+            `<ion-button color="medium" expand="block" href="../patient/queue-confirmation/${tc.id}">Auswählen</ion-button>` +
             '</div>' +
             '</div>'
           const testCenterInfoWindow = new google.maps.InfoWindow({
