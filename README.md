@@ -53,7 +53,15 @@ Wir überlegen zurzeit ein Konzept für einen Fast-Track. Dabei sollen Personen 
 
 ### Sind meine Daten sicher?
 
+### Wie verhindern wir Terminleichen?
 
+Unsere Plattform vereinfacht die Terminfindung für Patienten und birgt damit das Risiko, dass Personen eine lockere Haltung gegenüber den Terminen annehmen. Um dem entgegenzuwirken, haben wir uns mehrere Konzepte überlegt.
+
+Zum Einen können sich betroffene Personen auf lediglich [eine Warteliste bewerben](#kann-man-sich-auf-mehrere-wartelisten-setzen). Unsere Plattform versucht technisch zu verhindern, dass Personen sich in mehreren Testzentren für einen Test registrieren.
+
+Des Weiteren werden Patienten an ihren [Termin erinnert](#47). Sie werden rechtzeitig darüber informiert, wann sie sich auf den Weg ins Testzentrum machen sollten.
+
+Zu guter letzte wird das [Erscheinen](#7) oder [Versäumen](#5) von Terminen vom medizinschen Personal gemeldet. 
 
 ## Rollen
 
@@ -89,7 +97,11 @@ Die Plattform **COVID Q** ist eine Web-basierte Anwendung mit Schwerpunkt auf mo
 
 ### Lizenz
 
-tba
+**Who cares whose shares.**
+
+Unsere gesamte Plattform, einschließich des gesamten Quellcodes, ist offen und frei zugänglich. Wir hoffen und freuen uns auf Unterstüztung aus der Community und nehmen Pull Requests gerne entgegen. Unsere verwendete Lizenz erlaubt die nicht-kommerzielle oder kommerzielle Weiterentwicklung des Projektes. Unser Fokus liegt in der Bewältigung der aktuellen Situation. Wir haben nur eine einzige Bedingung: Folgeprojekte müssen ebenfalls quelloffen sein, damit die Community aus den Erfahrungen lernen kann.
+
+Falls ihr mithelfen wollt, lest bitte unsere [Contributing](CONTRIBUTING.md) und unseren [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ### Ionic Frontend
 
