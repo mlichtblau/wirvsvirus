@@ -5,6 +5,8 @@ import {Testcenter} from '../../shared/models/testcenter';
 import {TestcenterProvider} from '../../shared/api/testcenter/testcenter';
 import {Appointment} from '../../shared/models/appointment';
 import {Storage} from '@ionic/storage';
+import {Patient} from '../../shared/models/patient';
+import {AppointmentProvider} from '../../shared/api/appointment/appointment';
 
 @Component({
     selector: 'app-patient-queue-confirmation',
@@ -14,19 +16,18 @@ import {Storage} from '@ionic/storage';
 export class PatientQueueConfirmationPage implements OnInit {
     testcenter: Testcenter;
 
+    patient: Patient;
+
     appointment: Appointment = {
-        appointment_time: new Date('2020-03-21T15:00:00'),
-        patient_id: 1,
-        testcenter_id: null,
-        waiting_number: 'UKG_02301',
-        processed_at: undefined,
-        created_at: new Date('2020-03-21T10:00:00')
+        patient_id: null,
+        testcenter_id: null
     };
 
     constructor(
         public router: Router,
         private route: ActivatedRoute,
         public testcenterProvider: TestcenterProvider,
+        public appointmentProvider: AppointmentProvider,
         public storage: Storage
     ) {
     }
@@ -37,12 +38,21 @@ export class PatientQueueConfirmationPage implements OnInit {
                 this.testcenter = testcenter;
                 this.appointment.testcenter_id = testcenter.id;
             });
+        this.storage.get('patient')
+            .then((patient) => {
+                this.appointment.patient_id = patient.id;
+                this.patient = patient;
+            });
     }
 
     confirmAppointment() {
-        this.storage.set('appointment', this.appointment)
-            .then(() => {
-                this.router.navigate(['/', 'patient', 'countdown']);
+        this.appointmentProvider.create(this.appointment)
+            .subscribe((appointment) => {
+                console.log(appointment);
+                this.storage.set('appointment', appointment)
+                    .then(() => {
+                        this.router.navigate(['/', 'patient', 'countdown']);
+                    });
             });
     }
 
