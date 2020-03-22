@@ -53,7 +53,15 @@ Wir überlegen zurzeit ein Konzept für einen Fast-Track. Dabei sollen Personen 
 
 ### Sind meine Daten sicher?
 
-### Wie verhindern wir Terminleichen?
+Im Rahmen der Eigenanmenese erfassen wir vertrauliche, sehr persönliche Daten. Dabei fragen wir allerdings keine personenbezognene Daten, mit denen man auf die Identität des Antagstellers schließen könnte, ab. Wir fragen weder den Namen, die Anschrift noch Identifizierungsnummern (z.B. Sozialversicherungsnummer) an. Die Amanmese wird mit einem Identifier gespeichert, welcher beim Test vorgezeigt werden kann. Dieser dient als einzige Möglichkeit die erfasste Anamnese mit dem Antragsteller zu verbinden.
+
+Unsere API bietet keine Möglichkeit die Anamesen der Patienten abzufragen. Diese werden nur in Verbindung mit Wartelisten an das medizinische Personal der Testzentren herausgegeben. Auch das medizinische Personal kann keine Rückschlüsse auf die Identität des Patienten in unserer Plattform schließen.
+
+Optional würden wir gerne anbieten, dass die betroffene Person Kontaktinformationen für Rückfragen hinterlegen kann. Wir prüfen zurzeit eine mögliche Realisierung, die die Identität des Patienten nicht preisgeben.
+
+Die **Datenschutzrelevanten Fragen** besprechen wir zurzeit mit Experten aus Slack. Sobald wir neue Erkentnisse haben, vervollständigen wir diese Frage.
+
+### Wie verhindern Terminleichen verhindert?
 
 Unsere Plattform vereinfacht die Terminfindung für Patienten und birgt damit das Risiko, dass Personen eine lockere Haltung gegenüber den Terminen annehmen. Um dem entgegenzuwirken, haben wir uns mehrere Konzepte überlegt.
 
