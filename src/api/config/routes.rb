@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :opening_hours
   resources :regions
   resources :patients
+  resources :testcenters
   resources :testcenter_staffs
   resources :coordinates
   resources :contact_data
