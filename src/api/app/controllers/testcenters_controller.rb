@@ -1,5 +1,5 @@
 class TestcentersController < ApplicationController
-  before_action :set_testcenter, only: [:show, :update, :destroy, :set_criteria, :staff_login]
+  before_action :set_testcenter, only: [:show, :update, :destroy, :set_criteria, :staff_login, :show_next_appointments]
 
   # GET /testcenters
   def index
@@ -74,6 +74,11 @@ class TestcentersController < ApplicationController
   def staff_login
     testcenter_staff = @testcenter.testcenter_staffs.find_by(pin_code: params[:pin_code])
     render json: testcenter_staff
+  end
+  
+  def show_next_appointments
+    @next_appointments = @testcenter.appointments.order :appointment_time
+    render json: @next_appointments
   end
 
   private
