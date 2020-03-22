@@ -37,6 +37,10 @@ const routes: Routes = [
     loadChildren: () => import('./testcenter/testcenter-queue/testcenter-queue.module').then( m => m.TestcenterQueuePageModule)
   },
   {
+    path: 'testcenter/queue/patient',
+    loadChildren: () => import('./testcenter/patient-details/patient-details.module').then( m => m.PatientDetailsPageModule)
+  },
+  {
     path: 'testcenter/login',
     loadChildren: () => import('./testcenter/testcenter-login/testcenter-login.module').then( m => m.TestcenterLoginPageModule)
   },

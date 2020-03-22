@@ -11,7 +11,7 @@ export class TestcenterQueuePage implements OnInit {
   appointments: Array<Appointment> = [{
     id: 0,
     appointment_time: new Date('2020-03-21T15:00:00'),
-    patient_id: 1,
+    patient_id: 0,
     testcenter_id: 1,
     waiting_number: 'UKG_02301',
     processed_at: undefined,

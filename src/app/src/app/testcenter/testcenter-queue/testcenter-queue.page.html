@@ -10,7 +10,7 @@
       <ion-button slot="start" color="success" (click)="checkIn(i)">
         <ion-icon slot="icon-only" name="checkmark-outline"></ion-icon>
       </ion-button>
-      <ion-label>
+      <ion-label [routerLink]="['/', 'testcenter', 'queue', 'patient']" [queryParams]="{ id: appointment?.patient_id}">
         <h2>{{ appointment?.waiting_number }}</h2>
         <h3>{{ appointment?.appointment_time | date: 'short' }}</h3>
       </ion-label>
