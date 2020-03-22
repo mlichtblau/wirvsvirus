@@ -51,6 +51,10 @@ Er kann sich bei Bedarf in einem anderen Testzentrum anmelden, wodurch jedoch se
 
 Wir überlegen zurzeit ein Konzept für einen Fast-Track. Dabei sollen Personen priorisiert werden, welche aufgrund ihrer gesellschaftlichen Rolle schneller getestet werden sollten. Ein klassisches Beispiel ist medizinisches Personal.
 
+### Sind meine Daten sicher?
+
+
+
 ## Rollen
 
 Unsere Plattform verbindet Patienten mit Testzentren und offiziellen Anlaufstellen rund um SARS-CoV-2. Die Termine zum Testen sollen zentral verwaltet und zugewiesen werden um Betroffenen Zeit zu sparen und Transparenz zu schaffen. Des Weiteren sollen betroffene Personen mit Informationsmaterialien gebildet werden.
@@ -78,3 +82,38 @@ tba
 ### Offizielle Verwaltung von Bund, Ländern und Organisationen
 
 Verbände, Organisationen, Länder und der Bund können die Testzentren in Deutschland zentral verwalten. Neue Zentren können unkompliziert registriert werden und den Patienten nach ihrer Eigen-Anamnese vorgeschlagen werden. Durch die Prüfung durch offizielle Stellen werden unseriöse Tesstellen gefiltert.
+
+## Technologische Umsetzung
+
+Die Plattform **COVID Q** ist eine Web-basierte Anwendung mit Schwerpunkt auf mobile Endgeräte. 
+
+### Lizenz
+
+**Who cares whose shares.**
+
+Unsere gesamte Plattform, einschließich des gesamten Quellcodes, ist offen und frei zugänglich. Wir hoffen und freuen uns auf Unterstüztung aus der Community und nehmen Pull Requests gerne entgegen. Unsere verwendete Lizenz erlaubt die nicht-kommerzielle oder kommerzielle Weiterentwicklung des Projektes. Unser Fokus liegt in der Bewältigung der aktuellen Situation. Wir haben nur eine einzige Bedingung: Folgeprojekte müssen ebenfalls quelloffen sein, damit die Community aus den Erfahrungen lernen kann.
+
+Falls ihr mithelfen wollt, lest bitte unsere [Contributing](CONTRIBUTING.md) und unseren [Code of Conduct](CODE_OF_CONDUCT.md).
+
+### Ionic Frontend
+
+Das Frontend basiert auf [Ionic](https://ionicframework.com). Um den Zugang zur Plattform zu vereinfachen, wurde **COVID Q** als [Progressive Web App](https://de.wikipedia.org/wiki/Progressive_Web_App) entwickelt. Damit können native Features wie Push-Benachrichtigungen genutzt werden, ohne eine App aus dem App Store zu installieren.
+
+**COVID Q** kann auf allen mobilen iOS (Apple), Android, [Windows Phone](https://user-images.githubusercontent.com/194400/40563172-c329255c-605b-11e8-8b46-2db59796f905.jpg) und Desktop Plattformen macOS (Apple), Linux, Windows verwendet werden. 
+
+### Rails Backend
+
+Als Backend wird [Ruby on Rails](https://rubyonrails.org) eingesetzt. Damit bietet die Plattform eine offene [REST](https://de.wikipedia.org/wiki/Representational_State_Transfer)-Schnittstelle, welche von anderen Diensten wie z.B. dem [Frontend](#ionic-frontend) konsumiert wird.
+
+### Authentifizierung
+
+Nach der Eigenanamnese von Patienten wird ein Identifier auf dem Gerät des Patienten gespeichert. Aufgrund der Kürze des Hackathons verwenden wir nicht-sichere Integer, würden diese gerne auf [sichere Universally Unique Identifiers umstellen](#44).
+
+Mitarbeiter von Testzentren melden sich zurzeit mit dem Identifier ihres Testzentrums un einer bei der [Registrierung](#2) generierten PIN an. Verantwortilche bzw. Administratoren von Testzentren verwenden eine andere PIN. Auch hier würden wir gerne auf [sichere Konzepte nach dem Hackathon umstellen](#46).
+
+### Miscellaneous
+
+- Als Datenbank verwenden wir [PostgreSQL](https://www.postgresql.org).
+- Die Plattform wird auf der [Google Cloud Platform](https://cloud.google.com/gcp) mit Hilfe von [App Engine](https://cloud.google.com/appengine) und [Cloud SQL](https://cloud.google.com/sql gehostet. Vielen Dank an das kostenlose Kontingent an das Team von GCP!
+- Alle Server befinden sich in Deutschland.
+- Lokal ist die Plattform über [Docker](https://www.docker.com) und [docker-compose](https://docs.docker.com/compose/) deployed.

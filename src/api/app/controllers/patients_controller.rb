@@ -10,7 +10,12 @@ class PatientsController < ApplicationController
 
   # GET /patients/1
   def show
-    render json: @patient, :include => {:criterions => {:only => [:name, :description, :kind]}}
+    render json: @patient, :include => {
+      anamnestic_items: {
+        include: {criterion: {only: [:name, :description, :kind]}},
+        only: :answer
+      }
+    }
   end
 
   # POST /patients
@@ -18,12 +23,19 @@ class PatientsController < ApplicationController
     @patient = Patient.new(patient_params)
 
     if @patient.save
+      unsupported_answer = false
       all_criterions_found = true
       wrong_criterion = ''
-      params[:criterion_names].each do |criterion_name|
-        criterion = Criterion.find_by name: criterion_name
+      params[:anamnestic_items].each do |anamnestic_item|
+        criterion = Criterion.find_by name: anamnestic_item[:criterion]
+        
         if criterion
-          @patient.criterions << criterion
+          if ['yes', 'no', 'unsure'].include?(anamnestic_item[:answer])
+            @patient.anamnestic_items.create(criterion: criterion, answer: anamnestic_item[:answer])
+          else
+            unsupported_answer = true
+            break
+          end
         else
           wrong_criterion = criterion_name
           all_criterions_found = false
@@ -31,8 +43,18 @@ class PatientsController < ApplicationController
         end
       end
       
+      if unsupported_answer
+        render json: {error: 'unsupported answer specified. use either yes, no, or unsure'}, status: :unprocessable_entity
+        return
+      end
+      
       if all_criterions_found
-        render json: @patient, :include => {:criterions => {:only => [:name, :description, :kind]}}, status: :created, location: @patient
+        render json: @patient, :include => {
+          anamnestic_items: {
+            include: {criterion: {only: [:name, :description, :kind]}},
+            only: :answer
+          }
+        }, status: :created, location: @patient
       else
         render json: {error: 'criterion not found: ' + wrong_criterion}, status: :unprocessable_entity
       end
