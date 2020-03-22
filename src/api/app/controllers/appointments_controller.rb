@@ -61,7 +61,7 @@ class AppointmentsController < ApplicationController
       patient: @appointment.patient,
       testcenter: @appointment.testcenter,
       waiting_number: @appointment.waiting_number,
-      appointment_time: params['new_appointment_time']
+      appointment_time: @appointment.appointment_time + params[:shifted_by_mins].to_i.minutes
     )
     
     if @new_appointment.save

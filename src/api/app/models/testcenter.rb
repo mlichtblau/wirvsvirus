@@ -71,7 +71,7 @@ class Testcenter < ApplicationRecord
     end
 
     next_opening_hour = self.opening_hours.find_by(day: next_open_day).opens_at
-    next_opening_hour_datetime = given_datetime.to_date + days_jump.days + next_opening_hour.hours + next_opening_hour.minutes + next_opening_hour.seconds
+    next_opening_hour_datetime = given_datetime.to_date + days_jump.days + next_opening_hour.to_datetime.hours + next_opening_hour.to_datetime.minutes + next_opening_hour.to_datetime.seconds
 
     return next_opening_hour_datetime
   end
