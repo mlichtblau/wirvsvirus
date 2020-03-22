@@ -55,7 +55,7 @@ export function getCriterions() {
       criterion: 'contact confirmed case',
       question: 'Hatten Sie engen Kontakt zu einem bestätigten Fall?',
     },
-    { criterion: 'contact suspected case', question: 'Are you pregnant?' },
+    { criterion: 'contact suspected case', question: 'Hatten Sie engen Kontakt zu einem Verdachtsfall?' },
     {
       criterion: 'high risk visit',
       question:
@@ -63,12 +63,12 @@ export function getCriterions() {
     },
     { criterion: 'living alone', question: 'Leben Sie alleine?' },
     {
-      criterion: 'workplace',
+      criterion: 'critical workplace',
       question:
         'Arbeiten Sie in einem strukturreleveanten Beruf? (Polizei, Arzt, etc.)',
     },
     {
-      criterion: 'flu_vaccinated',
+      criterion: 'flu vaccinated',
       question: 'Wurden Sie seit Oktober 2019 gegen Grippe geimpft?',
     },
   ]
