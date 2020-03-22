@@ -8,4 +8,9 @@ class Criterion < ApplicationRecord
   belongs_to :superregion, class_name: 'Criterion', optional: true
   
   enum kind: [ :symptom, :risk_factor, :visit, :contact ]
+  
+  scope :yes, -> { merge(AnamnesticItem.where(answer: :yes)) }
+  scope :no, -> { merge(AnamnesticItem.where(answer: :no)) }
+  scope :unsure, -> { merge(AnamnesticItem.where(answer: :unsure)) }
+  
 end
