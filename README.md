@@ -57,7 +57,7 @@ Im Rahmen der Eigenanmenese erfassen wir vertrauliche, sehr persönliche Daten. 
 
 Unsere API bietet keine Möglichkeit die Anamesen der Patienten abzufragen. Diese werden nur in Verbindung mit Wartelisten an das medizinische Personal der Testzentren herausgegeben. Auch das medizinische Personal kann keine Rückschlüsse auf die Identität des Patienten in unserer Plattform schließen.
 
-Optional würden wir gerne anbieten, dass die betroffene Person Kontaktinformationen für Rückfragen hinterlegen kann. Wir prüfen zurzeit eine mögliche Realisierung, die die Identität des Patienten nicht preisgeben.
+Optional würden wir gerne anbieten, dass die betroffene Person Kontaktinformationen für Rückfragen hinterlegen kann. Wir prüfen zurzeit mögliche Realisierungen, die die Identität des Patienten nicht preisgeben.
 
 Die **Datenschutzrelevanten Fragen** besprechen wir zurzeit mit Experten aus Slack. Sobald wir neue Erkentnisse haben, vervollständigen wir diese Frage.
 
