@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Appointment} from '../../shared/models/appointment';
+import {TestcenterProvider} from '../../shared/api/testcenter/testcenter';
+import {Storage} from '@ionic/storage';
+import {TestcenterStaff} from '../../shared/models/testcenter-staff';
 
 @Component({
   selector: 'app-testcenter-queue',
@@ -8,27 +11,21 @@ import {Appointment} from '../../shared/models/appointment';
 })
 export class TestcenterQueuePage implements OnInit {
 
-  appointments: Array<Appointment> = [{
-    id: 0,
-    appointment_time: new Date('2020-03-21T15:00:00'),
-    patient_id: 0,
-    testcenter_id: 1,
-    waiting_number: 'UKG_02301',
-    processed_at: undefined,
-    created_at: new Date('2020-03-21T10:00:00')
-  }, {
-    id: 1,
-    appointment_time: new Date('2020-03-21T15:10:00'),
-    patient_id: 1,
-    testcenter_id: 1,
-    waiting_number: 'UKG_05672',
-    processed_at: undefined,
-    created_at: new Date('2020-03-21T10:00:00')
-  }];
+  appointments: Array<Appointment> = [];
 
-  constructor() { }
+  constructor(
+      public testcenterProvider: TestcenterProvider,
+      public storage: Storage
+  ) { }
 
   ngOnInit() {
+    this.storage.get('testcenterStaff')
+        .then((testcenterStaff: TestcenterStaff) => {
+          this.testcenterProvider.getAppointments(testcenterStaff.testcenter_id)
+              .subscribe((appointments) => {
+                this.appointments = appointments;
+              });
+        });
   }
 
   checkIn(index: number) {
