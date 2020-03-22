@@ -16,11 +16,27 @@ class TestcentersController < ApplicationController
   # POST /testcenters
   def create
     @testcenter = Testcenter.new(testcenter_params)
-
-    if @testcenter.save
-      render json: @testcenter, status: :created, location: @testcenter
+    
+    @testcenter.contact_datum = ContactDatum.create(phone: params[:phone], email: params[:email])
+    
+    geo_results = Geocoder.search([
+        @testcenter.street, 
+        @testcenter.zip_code, 
+        @testcenter.city,
+        "Germany"
+    ].compact.join(', '))
+    
+    if geo_results.empty?
+      render json: {error: 'address not resolvable'}, status: :unprocessable_entity
     else
-      render json: @testcenter.errors, status: :unprocessable_entity
+      coord_obj = Coordinate.create(longitude: geo_results[0].longitude, latitude: geo_results[0].latitude)
+
+      @testcenter.coordinate = coord_obj
+      if @testcenter.save
+        render json: @testcenter, include: [:coordinate, :contact_datum], status: :created, location: @testcenter
+      else
+        render json: @testcenter.errors, status: :unprocessable_entity
+      end
     end
   end
 
@@ -58,6 +74,6 @@ class TestcentersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def testcenter_params
-      params.require(:testcenter).permit(:name, :street, :zip_code, :city, :directions, :coordinate_id, :troughput_per_day, :registered_vs_non_registered_preference_ratio, :verified_at, :contact_datum_id, :criterion_ids)
+      params.require(:testcenter).permit(:name, :street, :zip_code, :city, :directions, :coordinate_id, :daily_capacity, :registered_vs_non_registered_preference_ratio, :verified_at, :contact_datum_id, :criterion_ids)
     end
 end

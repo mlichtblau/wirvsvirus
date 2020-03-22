@@ -63,6 +63,7 @@ GEM
     crass (1.0.6)
     erubi (1.9.0)
     ffi (1.12.2)
+    geocoder (1.6.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.8.2)
@@ -147,6 +148,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
+  geocoder
   listen (~> 3.0.5)
   pg
   puma (~> 3.0)
@@ -155,9 +157,6 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
   tzinfo-data
-
-RUBY VERSION
-   ruby 2.6.1p33
 
 BUNDLED WITH
    2.1.4
