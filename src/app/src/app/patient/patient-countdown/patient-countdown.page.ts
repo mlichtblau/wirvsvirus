@@ -87,6 +87,8 @@ export class PatientCountdownPage implements OnInit {
     rescheduleAppointment(shiftedByMins) {
         this.appointmentProvider.reschedule(this.appointment.id, shiftedByMins)
             .subscribe((appointment) => {
+                this.appointment = appointment;
+                this.storage.set('appointment', appointment);
                 console.log(appointment);
             });
     }
