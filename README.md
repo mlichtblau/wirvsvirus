@@ -1,5 +1,5 @@
 # COVID Q ![Website Status Badge](https://img.shields.io/website?url=https%3A%2F%2Fcorona-q.appspot.com) <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Der hohe Bedarf an Tests auf SARS-CoV-2 führt zu überfüllten Teststellen mit teils drastischen Verspätungen und auflaufenden Menschenmassen. Des Weiteren ist der Prozess für Patient, Arzt und dem medizinischen Personal sowohl aufwendig als auch bürokratisch. 
@@ -165,6 +165,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://lichtblau.io"><img src="https://avatars2.githubusercontent.com/u/22854083?v=4" width="100px;" alt=""/><br /><sub><b>Marius Lichtblau</b></sub></a><br /><a href="https://github.com/mlichtblau/wirvsvirus/commits?author=mlichtblau" title="Code">💻</a></td>
+    <td align="center"><a href="http://marcfreiheit.de"><img src="https://avatars2.githubusercontent.com/u/27914201?v=4" width="100px;" alt=""/><br /><sub><b>Marc André Freiheit</b></sub></a><br /><a href="#business-marcfreiheit" title="Business development">💼</a></td>
   </tr>
 </table>
 
