@@ -23,11 +23,11 @@
 
 <ion-footer class="dark-bg ion-padding">
   <h2 class="title ion-text-center">Kontakt zu Wartenden</h2>
-  <ion-button color="light" size="small">
+  <ion-button color="light" size="small" [routerLink]="['/', 'testcenter', 'send-message']">
     <ion-icon slot="start" name="megaphone-outline"></ion-icon>
     Nachricht senden
   </ion-button>
-  <ion-button color="light" size="small">
+  <ion-button color="light" size="small" [routerLink]="['/', 'testcenter', 'info-for-patients']">
     <ion-icon slot="start" name="information-circle-outline"></ion-icon>
     Informationen für Wartende
   </ion-button>

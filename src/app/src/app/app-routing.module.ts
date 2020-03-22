@@ -44,6 +44,14 @@ const routes: Routes = [
     path: 'testcenter/login',
     loadChildren: () => import('./testcenter/testcenter-login/testcenter-login.module').then( m => m.TestcenterLoginPageModule)
   },
+  {
+    path: 'testcenter/send-message',
+    loadChildren: () => import('./testcenter/send-message/send-message.module').then( m => m.SendMessagePageModule)
+  },
+  {
+    path: 'testcenter/info-for-patients',
+    loadChildren: () => import('./testcenter/info-for-patients/info-for-patients.module').then( m => m.InfoForPatientsPageModule)
+  },
 ];
 
 @NgModule({
