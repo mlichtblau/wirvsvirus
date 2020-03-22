@@ -70,26 +70,42 @@
         </ion-button>
       </div>
     </ion-slide>
-    <ion-slide *ngFor="let criterion of criterions">
+    <ion-slide>
       <div class="slide question">
-        <ion-radio-group class="big" [(ngModel)]="criterion.answer" (ngModelChange)="next()">
+        <ion-item>
+          <div class="big">
+            <ion-label position="floating">
+              Bitten geben Sie ihre Postleitzahl an.
+            </ion-label>
+            <ion-input [(ngModel)]="patientModel.zip_code" type="number" (ngModelChange)="unlockOnChange('zip_code')">
+            </ion-input>
+          </div>
+        </ion-item>
+        <ion-button class="nextButton" [disabled]="!allowNext('age')" (click)="nextAndLock()">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide *ngFor="let criterion of criterions; let i = index">
+      <div class="slide question">
+        <ion-radio-group [(ngModel)]="criterion.answer" (ngModelChange)="next()">
           <ion-list-header>
             <ion-label>{{ criterion.question }}</ion-label>
           </ion-list-header>
           <ion-item>
             <ion-label>Ja</ion-label>
-            <ion-radio slot="start" value="yes"></ion-radio>
+            <ion-radio slot="end" value="yes"></ion-radio>
           </ion-item>
           <ion-item>
             <ion-label>Nein</ion-label>
-            <ion-radio slot="start" value="no"></ion-radio>
+            <ion-radio slot="end" value="no"></ion-radio>
           </ion-item>
           <ion-item>
             <ion-label>Unsicher</ion-label>
-            <ion-radio slot="start" value="unsure"></ion-radio>
+            <ion-radio slot="end" value="unsure"></ion-radio>
           </ion-item>
         </ion-radio-group>
-        <ion-button class="nextButton" [disabled]="!allowNext('age')" (click)="nextAndLock()">
+        <ion-button class="nextButton" (click)="next()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
       </div>

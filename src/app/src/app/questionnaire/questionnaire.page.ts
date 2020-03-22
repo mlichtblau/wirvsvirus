@@ -15,7 +15,6 @@ export class QuestionnairePage implements OnInit {
   @ViewChild(IonSlides, { static: false }) slides: IonSlides
 
   patientModel: Patient = {
-    zip_code: '123',
     living_situation: 'community',
     workplace: 'police',
     flu_vaccinated: true,
@@ -24,7 +23,7 @@ export class QuestionnairePage implements OnInit {
 
   slideOpts = {
     speed: 400,
-    centeredSlides: true,
+    centeredSlides: false,
   }
 
   criterions = getCriterions()

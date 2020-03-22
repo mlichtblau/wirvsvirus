@@ -4,8 +4,8 @@ export interface Patient {
   age?: number
   living_situation?: string
   workplace?: string
-  flu_vaccinated: boolean
-  symptoms_since: string
+  flu_vaccinated?: boolean
+  symptoms_since?: string
   anamnestic_items?: AnamnesticItem[]
 }
 
