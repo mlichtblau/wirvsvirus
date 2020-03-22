@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActionSheetController, AlertController} from '@ionic/angular';
 import {AppointmentProvider} from '../../shared/api/appointment/appointment';
 import {Appointment} from '../../shared/models/appointment';
+import {Storage} from '@ionic/storage';
 
 @Component({
   selector: 'app-patient-countdown',
@@ -10,25 +11,33 @@ import {Appointment} from '../../shared/models/appointment';
 })
 export class PatientCountdownPage implements OnInit {
 
-  appointment: Appointment = {
+  /*appointment: Appointment = {
     appointment_time: new Date('2020-03-21T15:00:00'),
     patient_id: 1,
     testcenter_id: 1,
     waiting_number: 'UKG_02301',
     processed_at: undefined,
     created_at: new Date('2020-03-21T10:00:00')
-  };
+  };*/
+  appointment: Appointment;
 
   constructor(
+      public storage: Storage,
       public actionSheetController: ActionSheetController,
       public alertController: AlertController,
       public appointmentProvider: AppointmentProvider
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.storage.get('appointment')
+        .then((appointment) => {
+          console.log(appointment);
+          this.appointment = appointment;
+        })
+  }
 
   getCountdownInMs() {
-    return this.appointment.appointment_time.getTime() - Date.now();
+    return this.appointment ? new Date(this.appointment.appointment_time).getTime() - Date.now() : 0;
   }
 
   async moveAppointment() {

@@ -16,11 +16,18 @@ import {CoordinateProvider} from './shared/api/coordinate/coordinate';
 import {TestcenterProvider} from './shared/api/testcenter/testcenter';
 import {CriterionProvider} from './shared/api/criterion/criterion';
 import {OpeningHourProvider} from './shared/api/opening-hour/opening-hour';
+import {IonicStorageModule} from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, HttpClientModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+      BrowserModule,
+    HttpClientModule,
+    IonicModule.forRoot(),
+    IonicStorageModule.forRoot(),
+    AppRoutingModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,
@@ -31,7 +38,7 @@ import {OpeningHourProvider} from './shared/api/opening-hour/opening-hour';
       CoordinateProvider,
       TestcenterProvider,
       CriterionProvider,
-      OpeningHourProvider
+      OpeningHourProvider,
   ],
   bootstrap: [AppComponent]
 })

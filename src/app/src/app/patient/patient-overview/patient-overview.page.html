@@ -14,6 +14,7 @@
     </ion-segment-button>
   </ion-segment>
 
-  <ion-button expand="block" *ngIf="activeSegment === 'friends'" [routerLink]="['/', 'patient','queue-confirmation']">Friends Button</ion-button>
+  <ion-button expand="block" *ngIf="activeSegment === 'friends'" (click)="addAppointment()">Friends Button</ion-button>
+  <!--<ion-button expand="block" *ngIf="activeSegment === 'friends'" [routerLink]="['/', 'patient','queue-confirmation']">Friends Button</ion-button>-->
   <ion-button expand="block" *ngIf="activeSegment === 'enemies'" [routerLink]="['/', 'patient','queue-confirmation']">Enemy Button</ion-button>
 </ion-content>
