@@ -41,10 +41,10 @@ class TestcentersController < ApplicationController
   # POST /testcenters/1/criterions
   def set_criteria
     @testcenter.criterions.destroy_all
-    params[:criterion_ids].each do |criterion_id|
-      criterion = Criterion.find_by id: criterion_id
+    params[:criterion_names].each do |criterion_name|
+      criterion = Criterion.find_by name: criterion_name
       if criterion
-        @testcenter.criterions << Criterion.find_by(id: criterion)
+        @testcenter.criterions << criterion
       end
     end
     render json: @testcenter, include: [:coordinate, :contact_datum]

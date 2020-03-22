@@ -19,20 +19,22 @@ class PatientsController < ApplicationController
 
     if @patient.save
       all_criterions_found = true
+      wrong_criterion = ''
       params[:criterion_names].each do |criterion_name|
         criterion = Criterion.find_by name: criterion_name
         if criterion
           @patient.criterions << criterion
         else
+          wrong_criterion = criterion_name
           all_criterions_found = false
           break
         end
       end
       
       if all_criterions_found
-        render json: @patient, status: :created, location: @patient
+        render json: @patient, :include => {:criterions => {:only => [:name, :description, :kind]}}, status: :created, location: @patient
       else
-        render json: params[:criterion_names], status: :unprocessable_entity
+        render json: {error: 'criterion not found: ' + wrong_criterion}, status: :unprocessable_entity
       end
     else
       render json: @patient.errors, status: :unprocessable_entity
