@@ -28,7 +28,7 @@ class PatientsController < ApplicationController
 
     params[:anamnestic_items].each do |anamnestic_item|
       criterion = Criterion.find_by name: anamnestic_item[:criterion]
-      
+
       if criterion
         if ['yes', 'no', 'unsure'].include?(anamnestic_item[:answer])
           @patient.anamnestic_items.new(criterion: criterion, answer: anamnestic_item[:answer])
@@ -47,7 +47,7 @@ class PatientsController < ApplicationController
       render json: {error: 'unsupported answer specified. use either yes, no, or unsure'}, status: :unprocessable_entity
       return
     end
-    
+
     if not all_criterions_found
       render json: {error: 'criterion not found: ' + wrong_criterion}, status: :unprocessable_entity
       return
@@ -55,7 +55,7 @@ class PatientsController < ApplicationController
 
     if @patient.save
       @patient.anamnestic_items.each &:save
-      
+
       render json: @patient, methods: :test_indication, :include => {
         anamnestic_items: {
           include: {criterion: {only: [:name, :description, :kind]}},
@@ -94,6 +94,6 @@ class PatientsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def patient_params
-      params.require(:patient).permit(:age, :living_situation, :workplace, :zip_code, :flu_vaccinated, :symptoms_since)
+      params.require(:patient).permit(:age, :zip_code, :symptoms_since)
     end
 end
