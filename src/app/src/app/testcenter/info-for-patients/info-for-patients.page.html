@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Informationen für Wartende</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ testcenter.name }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-grid fixed>
+      <ion-card>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <div>
+                  <strong>{{ testcenter.name }}</strong><br>
+                  {{ testcenter.street }}<br>
+                  {{ testcenter.zipCode }} {{ testcenter.city }}
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div >
+                  <strong>Öffnungszeiten</strong>
+                  <p *ngFor="let openingHours of testcenter.openingHours; let i = index">
+                    {{["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"][i]}}:
+                    {{ openingHours.opensAt }} - {{ openingHours.closesAt }}
+                  </p>
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div>
+                  <strong>Hinweise</strong>
+                  <p>{{ testcenter.directions }}</p>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </ion-grid>
+  </div>
+
+  <ion-button class="ion-margin">
+    <ion-icon slot="start" name="pencil-outline"></ion-icon>
+    Bearbeiten
+  </ion-button>
+
+</ion-content>

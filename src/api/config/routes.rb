@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   resources :criterions
   resources :administrators
   resources :opening_hours
-  resources :regions
   resources :patients
   resources :testcenters
   resources :testcenter_staffs
@@ -22,8 +21,8 @@ Rails.application.routes.draw do
   get '/testcenters/:id/current_delay', to: 'testcenters#current_delay'
   get 'testcenters/:id/appointments', to: 'testcenters#show_next_appointments'
 
-  get '/appointments/:id/canceled', to: 'appointments#cancel_appointment'
-  get '/appointments/:id/processed', to: 'appointments#process_appointment'
+  put '/appointments/:id/canceled', to: 'appointments#cancel_appointment'
+  put '/appointments/:id/processed', to: 'appointments#process_appointment'
   post '/appointments/:id/rescheduled', to: 'appointments#reschedule_appointment'
 
   get '/patients/:id/testcenters', to: 'patients#testcenters_index'

@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 criterions = Criterion.create([
+  {kind: :general, name: 'flu vaccinated'},
+  {kind: :general, name: 'critical workplace'},
+  {kind: :general, name: 'living alone'},
+
   {kind: :risk_factor, name: 'smoking'},
   {kind: :risk_factor, name: 'diabetes'},
   {kind: :risk_factor, name: 'chronic lung disease'},
@@ -15,7 +19,7 @@ criterions = Criterion.create([
   {kind: :risk_factor, name: 'pregnancy'},
   {kind: :risk_factor, name: 'taking steroids'},
   {kind: :risk_factor, name: 'taking immunosuppressants'},
-  
+
   # {kind: :symptom, name: 'fever below 38'},
   # {kind: :symptom, name: 'fever 38'},
   # {kind: :symptom, name: 'fever 39'},
@@ -34,10 +38,10 @@ criterions = Criterion.create([
   {kind: :symptom, name: 'headache'},
   {kind: :symptom, name: 'tachypnea'},
   {kind: :symptom, name: 'dyspnea'},
-  
+
   {kind: :contact, name: 'contact confirmed case'},
   {kind: :contact, name: 'contact suspected case'},
-  
+
   {kind: :visit, name: 'high risk visit'}
 ])
 
@@ -70,7 +74,7 @@ OpeningHour.create(testcenter: testcenter, day: :sunday, opens_at: Time.now - 6.
 TestcenterStaff.create(testcenter: testcenter, staff_type: :coworker, pin_code: "1234")
 TestcenterStaff.create(testcenter: testcenter, staff_type: :admin, pin_code: "5678")
 
-patient = Patient.create(age: 35, living_situation: :community, workplace: :police, zip_code: "80331")
+patient = Patient.create(age: 35, zip_code: "80331")
 
 AnamnesticItem.create(patient: patient, criterion: criterions[0], answer: :yes)
 AnamnesticItem.create(patient: patient, criterion: criterions[1], answer: :yes)

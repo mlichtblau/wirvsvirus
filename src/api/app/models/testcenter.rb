@@ -24,10 +24,10 @@ class Testcenter < ApplicationRecord
     end
 
     if delays.mean.nil?
-      return "keine Verspätung"
+      return 0
     end
 
-    return time_ago_in_words(delays.mean.seconds.from_now)
+    return delays.mean.seconds / 60.0
   end
 
   def todays_appintments
@@ -50,6 +50,30 @@ class Testcenter < ApplicationRecord
 
     return Time.now.between?(opening_hours_today.opens_at.to_time, opening_hours_today.closes_at.to_time)
 
+  end
+
+  def open_at?(given_datetime)
+    opening_hours = self.opening_hours.find_by(day: given_datetime.wday)
+    if opening_hours.nil?
+      return false
+    end
+
+    return given_datetime.between?(opening_hours.opens_at, opening_hours.closes_at)
+  end
+
+  def next_opening_hour(given_datetime)
+    open_days = self.opening_hours.collect { |opening_hour| OpeningHour.days[opening_hour.day] }
+    next_open_day = (given_datetime.wday + 1) % 6
+    days_jump = 1
+    while not open_days.include? next_open_day
+      days_jump = days_jump + 1
+      next_open_day = (next_open_day + 1) % 6
+    end
+
+    next_opening_hour = self.opening_hours.find_by(day: next_open_day).opens_at
+    next_opening_hour_datetime = given_datetime.to_date + days_jump.days + next_opening_hour.to_datetime.hour.hours + next_opening_hour.to_datetime.minute.minutes + next_opening_hour.to_datetime.second.seconds
+
+    return next_opening_hour_datetime
   end
 
   def test_slot_duration(week_day)

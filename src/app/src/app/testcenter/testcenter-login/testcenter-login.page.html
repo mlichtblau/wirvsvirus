@@ -3,11 +3,13 @@
       <ion-buttons slot="start">
           <ion-back-button></ion-back-button>
       </ion-buttons>
-    <ion-title>Login</ion-title>
+    <ion-title>Mitarbeiter Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen class="ion-padding" scroll-y="false">
+
+  <p>Login für Mitarbeiter der Testzentren und des Gesundheitsamtes.</p>
 
         <ion-item>
           <ion-label position="floating">ID</ion-label>
@@ -19,5 +21,13 @@
           <ion-input [(ngModel)]="testcenterStaff.pin_code" type="string"></ion-input>
         </ion-item>
 
-    <ion-button class="ion-margin" expand="block" [disabled]="!isLoginButtonActive()" (click)="login()">Login</ion-button>
+        <ion-item *ngIf="didError" color="danger">
+            <ion-label>Anmeldung fehlgeschlagen.</ion-label>
+        </ion-item>
+
+    <ion-button class="ion-margin" expand="block" [disabled]="!isLoginButtonActive()" (click)="login()">Anmelden</ion-button>
 </ion-content>
+
+<ion-footer class="ion-padding">
+  PS Das Passwort ist <code>1234</code>... 😉
+</ion-footer>

@@ -16,12 +16,15 @@
   <p>
     <strong>Alter:</strong> {{patient.age}}<br />
     <strong>Arbeitsplatz Branche:</strong> {{ {"medical": "Medizin", "police": "Polizei", "school": "Bildung", "retail": "Einzelhandel", "other": "Anders"}[patient.workplace]}}<br />
-    <strong>Wohnsituation:</strong> {{ {"alone": "Alleine", "community": "Wohngemeinschaft"}[patient.living_situation] }}
+    <strong>Wohnsituation:</strong> {{ {"alone": "Alleine", "community": "Wohngemeinschaft"}[patient.living_situation] }}<br />
+    <strong>Symptome seit:</strong> {{patient.symptoms_since}}<br />
+    <strong>Grippe Impfung:</strong> {{patient.flu_vaccinated ? "Ja" : "Nein"}}<br />
   </p>
   <strong>Risikofaktoren:</strong>
   <ul>
-    <li *ngFor="let criterion of patient.criterion_names; let i = index">
-      {{criterion}}
+    <li *ngFor="let item of patient.anamnestic_items; let i = index">
+      {{{"smoking": "Rauchen", "chronic lung disease": "Chronische Lungenprobleme"}[item.criterion]}}: 
+      {{{"no": "Nein", "yes": "Ja"}[item.answer]}}
     </li>
   </ul>
 
