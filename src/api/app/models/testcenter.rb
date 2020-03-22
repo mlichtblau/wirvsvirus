@@ -4,8 +4,8 @@ class Testcenter < ApplicationRecord
 
   validates :street, :zip_code, :city, presence: true
 
-  has_many :criterions_testcenters
-  has_many :criterions, through: :criterions_testcenters
+  has_many :testcenter_criterions
+  has_many :criterions, through: :testcenter_criterions
   has_many :appointments
   belongs_to :coordinate
   belongs_to :contact_datum

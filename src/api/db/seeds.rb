@@ -50,8 +50,14 @@ testcenter = Testcenter.create(
   directions: 'Mittelallee 1',
   coordinate_attributes: {longitude: 52.541899, latitude: 13.345846},
   daily_capacity: 10,
-  contact_datum_attributes: {phone: '030 450 50'}
+  contact_datum_attributes: {phone: '030 450 50'},
+  verified_at: DateTime.now
 )
+
+TestcenterCriterion.create(criterion: criterions[0], testcenter: testcenter)
+TestcenterCriterion.create(criterion: criterions[1], testcenter: testcenter)
+TestcenterCriterion.create(criterion: criterions[2], testcenter: testcenter)
+
 
 OpeningHour.create(testcenter: testcenter, day: :monday, opens_at: Time.now - 6.hours, closes_at: Time.now + 6.hours)
 OpeningHour.create(testcenter: testcenter, day: :tuesday, opens_at: Time.now - 6.hours, closes_at: Time.now + 6.hours)
@@ -65,5 +71,10 @@ TestcenterStaff.create(testcenter: testcenter, staff_type: :coworker, pin_code: 
 TestcenterStaff.create(testcenter: testcenter, staff_type: :admin, pin_code: "5678")
 
 patient = Patient.create(age: 35, living_situation: :community, workplace: :police, zip_code: "80331")
+
+AnamnesticItem.create(patient: patient, criterion: criterions[0], answer: :yes)
+AnamnesticItem.create(patient: patient, criterion: criterions[1], answer: :yes)
+AnamnesticItem.create(patient: patient, criterion: criterions[2], answer: :yes)
+AnamnesticItem.create(patient: patient, criterion: criterions[3], answer: :yes)
 
 Appointment.create(patient: patient, testcenter: testcenter, appointment_time: DateTime.now + 2.hours, waiting_number: "555")
