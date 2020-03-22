@@ -46,7 +46,7 @@
           passendes Testzentrum zu vermitteln, haben wir
           vorab ein paar Fragen.
         </p>
-        <ion-button class="nextButton" (click)="next()">
+        <ion-button class="nextButton" (click)="nextAndLock()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
       </div>
@@ -55,9 +55,10 @@
       <div class="slide">
         <ion-item>
           <ion-label position="floating">Wie alt sind Sie?</ion-label>
-          <ion-input type="number"></ion-input>
+          <ion-input [(ngModel)]="patientModel.age" type="number" (ngModelChange)="unlockOnChange('age')"></ion-input>
         </ion-item>
-        <ion-button class="nextButton" (click)="next()">
+        Sie sind {{ patientModel.age }} Jahre alt. Wow!
+        <ion-button class="nextButton" [disabled]="!allowNext('age')" (click)="nextAndLock()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
       </div>
