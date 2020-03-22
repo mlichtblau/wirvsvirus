@@ -18,6 +18,9 @@
           Wenn Sie sich aktuell schwer krank fühlen, suchen Sie bitte
           umgehend medizinische Hilfe auf.
         </p>
+        <ion-button class="prevButton" (click)="prev()">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
         <ion-button class="nextButton" (click)="next()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
@@ -37,6 +40,9 @@
           Wenn Sie sich aktuell schwer krank fühlen,
           suchen Sie bitte umgehend einen Arzt/Ärztin oder medizinische Hilfe auf.
         </p>
+        <ion-button class="prevButton" (click)="prev()">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
         <ion-button class="nextButton" (click)="next()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
@@ -50,7 +56,10 @@
           passendes Testzentrum zu vermitteln, haben wir
           vorab ein paar Fragen.
         </p>
-        <ion-button class="nextButton" (click)="nextAndLock()">
+        <ion-button class="prevButton" (click)="prev()">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
+        <ion-button (click)="next()" class="nextButton">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
       </div>
@@ -59,11 +68,35 @@
       <div class="slide question">
         <ion-item>
           <div class="big">
-            <ion-label position="floating">Wie alt sind Sie?</ion-label>
-            <ion-input [(ngModel)]="patientModel.age" type="number" (ngModelChange)="unlockOnChange('age')"></ion-input>
+            <ion-label position="floating">
+              Wie alt sind sie?
+            </ion-label>
+            <ion-input [(ngModel)]="patientModel.age" type="number"></ion-input>
           </div>
         </ion-item>
-        <ion-button class="nextButton" [disabled]="!allowNext('age')" (click)="nextAndLock()">
+        <ion-button class="prevButton" (click)="prev()">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
+        <ion-button (click)="next()" [disabled]="!allowNext('age')" class="nextButton">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide question">
+        <ion-item>
+          <div class="big">
+            <ion-label position="floating">
+              Bitten geben Sie ihre Postleitzahl an.
+            </ion-label>
+            <ion-input [(ngModel)]="patientModel.zip_code" type="number">
+            </ion-input>
+          </div>
+        </ion-item>
+        <ion-button class="prevButton" (click)="prev()">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
+        <ion-button (click)="next()" [disabled]="!allowNext('zip_code')" class="nextButton">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
       </div>
@@ -72,16 +105,50 @@
       <div class="slide question">
         <ion-item>
           <ion-label position="floating">
-            Hatten Sie in den letzten 24 Stunden Fieber?
+            Seid wann haben Sie Symptome?
           </ion-label>
-          <ion-select class="big">
-            <ion-select-option value="ja">Ja</ion-select-option>
-            <ion-select-option value="nein">Nein</ion-select-option>
-            <ion-select-option value="unsicher">Unsicher</ion-select-option>
-          </ion-select>
+          <ion-input [(ngModel)]="patientModel.symptoms_since" type="string">
+          </ion-input>
         </ion-item>
+        <ion-button class="prevButton" (click)="prev()">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
+        <ion-button class="nextButton" [disabled]="!allowNext('age')" (click)="next()">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide *ngFor="let criterion of criterions; let i = index">
+      <div class="slide question">
+        <ion-radio-group [(ngModel)]="criterion.answer" (ngModelChange)="next()">
+          <ion-list-header>
+            <ion-label>{{ criterion.question }}</ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label>Ja</ion-label>
+            <ion-radio slot="end" value="yes"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Nein</ion-label>
+            <ion-radio slot="end" value="no"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Unsicher</ion-label>
+            <ion-radio slot="end" value="unsure"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+        <ion-button class="prevButton" (click)="prev()">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
         <ion-button class="nextButton" (click)="next()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <ion-button (click)="sendResults()">
+          Abschicken
         </ion-button>
       </div>
     </ion-slide>
@@ -102,9 +169,9 @@
         <p>Wenn Sie das Haus verlassen, halten Sie ausreichend Abstand
           (mehr als 2 Meter) zu anderen Personen, fassen Sie möglichst nichts
           an, und achten Sie auf die Regeln für richtiges Husten und Niesen.</p>
-          <ion-button [routerLink]="['/']">
-            Fertig
-          </ion-button>
+        <ion-button [routerLink]="['/']">
+          Fertig
+        </ion-button>
       </div>
     </ion-slide>
     <ion-slide>
@@ -116,8 +183,8 @@
         </ion-text>
         <p>Im Folgenden Helfen wir Ihnen ein nahes Testzentrum mit kurzer Wartezeit zu finden.</p>
         <p>
-          Wegen des hohen Andrangs in den Testzentren können Sie sich 
-          nur in einem Testzentrum auf die Warteliste setzen lassen. 
+          Wegen des hohen Andrangs in den Testzentren können Sie sich
+          nur in einem Testzentrum auf die Warteliste setzen lassen.
           Wir bitten um Ihr Verständnis.
         </p>
         <ion-button [routerLink]="['/', 'patient', 'overview']">
