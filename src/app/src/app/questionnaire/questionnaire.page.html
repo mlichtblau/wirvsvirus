@@ -44,6 +44,7 @@
     </ion-slide>
     <ion-slide>
       <div class="slide">
+        <h1 class="hero-emoji">🤔</h1>
         <p>
           Um Ihr Infektionsrisiko einzustufen und Sie gegebenenfalls an ein
           passendes Testzentrum zu vermitteln, haben wir
@@ -101,23 +102,28 @@
         <p>Wenn Sie das Haus verlassen, halten Sie ausreichend Abstand
           (mehr als 2 Meter) zu anderen Personen, fassen Sie möglichst nichts
           an, und achten Sie auf die Regeln für richtiges Husten und Niesen.</p>
-        <ion-button class="nextButton" (click)="next()">
-          <ion-icon name="chevron-forward-outline"></ion-icon>
+          <ion-button [routerLink]="['/']">
+            Fertig
+          </ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <p>Vielen Dank für Ihre Hilfe.</p>
+        <p>Aufgrund Ihrer Antworten empfehlen wir Ihnen:</p>
+        <ion-text color="danger">
+          <h2 class="result-instruction" text-color="danger">Lassen Sie sich testen.</h2>
+        </ion-text>
+        <p>Im Folgenden Helfen wir Ihnen ein nahes Testzentrum mit kurzer Wartezeit zu finden.</p>
+        <p>
+          Wegen des hohen Andrangs in den Testzentren können Sie sich 
+          nur in einem Testzentrum auf die Warteliste setzen lassen. 
+          Wir bitten um Ihr Verständnis.
+        </p>
+        <ion-button [routerLink]="['/', 'patient', 'overview']">
+          Testcenter finden
         </ion-button>
       </div>
     </ion-slide>
-    <!-- <ion-slide>
-      <div class="slide">
-
-
-        <p>Achten Sie vermehrt auf gute Händehygiene.</p>
-      </div>
-    </ion-slide> -->
   </ion-slides>
 </ion-content>
-
-<!-- <ion-footer class="ion-padding">
-  <ion-toolbar>
-    <ion-button expand="block" >Next</ion-button>
-  </ion-toolbar>
-</ion-footer> -->
