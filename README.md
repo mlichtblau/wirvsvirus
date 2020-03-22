@@ -11,7 +11,7 @@ Unsere Plattform entlastet die Testzentren in Deutschland, indem Patienten unmit
 
 ![WirWsVirus](docs/wir_vs_virus-logo.png)
 
-**COVID Q** ist bei der Teilnahme am Hackathon [WirVsVirus](https://wirvsvirushackathon.org) entstanden. Wir haben an der **Challenge 040** zur _Unterstüztung medizinisches Personals_, konkret mit der Entlastung von Testzentren: **1_040_c_d_entlastung_testcentren**.
+**COVID Q** ist bei der Teilnahme am Hackathon [WirVsVirus](https://wirvsvirushackathon.org) entstanden. Wir haben an der **Challenge 040** zur _Unterstützung medizinisches Personals_, konkret mit der Entlastung von Testzentren: **1_040_c_d_entlastung_testcentren**.
 
 Wir haben im Channel [#1_040_medizinischespersonal](http://wirvsvirus.slack.com/messages/1_040_medizinischespersonal) mit unseren Mentor:innen und Pat:innen sowie anderen Teams kommuniziert. Die Team-interne Kommunikation fand im Channel [#1_040_c_d_entlastung_testcentren](http://wirvsvirus.slack.com/messages/1_040_c_d_entlastung_testcentren) statt.
 
@@ -31,11 +31,11 @@ Das medizinsche Personal des Testzentrums kann die Patienten auf der Warteliste 
 
 ### Dynamische Terminvergabe
 
-Die meisten Testzentren in Deutschland vergeben Termine und Verdachtsfälle auf das Virus zu testen. Das ist zum Einen mit einem hohen Bearbeitungsaufwand verbunden und zum Anderen unflexibel im Fall von Verzögerungen. Falls Termin auflaufen, stauen sich auch die Personen im Testzentrum, wodurch sich eine Gruppe potentiell ansteckender Personen bildet. 
+Die meisten Testzentren in Deutschland vergeben Termine und Verdachtsfälle auf das Virus zu testen. Das ist zum Einen mit einem hohen Bearbeitungsaufwand verbunden und zum Anderen unflexibel im Fall von Verzögerungen. Falls Termine auflaufen, stauen sich auch die Personen im Testzentrum, wodurch sich eine Gruppe potentiell ansteckender Personen bildet. 
 
 Die Plattform erfasst den Bearbeitungsstatus aller in der Warteliste stehenden Patienten. Über Echtzeitdaten können die Patienten ihre geschätzte Wartedauer jederzeit einsehen und werden wenige Stunden vor dem Test informiert, sich zur Teststelle zu begeben. Damit werden auflaufenden Personengruppen vermieden und die Gefahr einer Ansteckung Anderer in vollen Wartezimmern reduziert. 
 
-Wir glauben, dass dieses Konzept flexibler als die klassische Terminvergabe ist und durch permantente Transparenz keinen Nachteil für die Patienten bildet.
+Wir glauben, dass dieses Konzept flexibler als die klassische Terminvergabe ist und durch permanente Transparenz keinen Nachteil für die Patienten bildet.
 
 ## FAQ
 
@@ -65,9 +65,9 @@ Unsere API bietet keine Möglichkeit die Anamesen der Patienten abzufragen. Dies
 
 Optional würden wir gerne anbieten, dass die betroffene Person Kontaktinformationen für Rückfragen hinterlegen kann. Wir prüfen zurzeit mögliche Realisierungen, die die Identität des Patienten nicht preisgeben.
 
-⚠️ Die **Datenschutzrelevanten Fragen** besprechen wir zurzeit mit Experten aus Slack. Sobald wir neue Erkentnisse haben, vervollständigen wir diese Frage.
+⚠️ Die **Datenschutzrelevanten Fragen** besprechen wir zurzeit mit Experten. Sobald wir neue Erkentnisse haben, vervollständigen wir diese Frage.
 
-### Wie verhindern Terminleichen verhindert?
+### Wie werden Terminleichen verhindert?
 
 Unsere Plattform vereinfacht die Terminfindung für Patienten und birgt damit das Risiko, dass Personen eine lockere Haltung gegenüber den Terminen annehmen. Um dem entgegenzuwirken, haben wir uns mehrere Konzepte überlegt.
 
@@ -79,7 +79,7 @@ Zu guter letzte wird das [Erscheinen](#7) oder [Versäumen](#5) von Terminen vom
 
 ## An wen richtet sich die Plattform?
 
-Die Plattform **COVID Q** bietet Patienten eine schnelle, unkomplizierte und unbürokratische Möglichkeit sich für Test auf SARS-CoV-2 zu bewerben. Medizinischem Personal und Helfer in den Testzentren wird Arbeit abgenommen, indem die Terminfindung automatisiert auf Basis von Warteschlangen stattfinet. Offizielle Stellen wie Städte, Länder, der Bund und gemeinnützige Organisationen können über die Plattform Testzentren melden und zentral verwalten. Des Weiteren können sie Informationsmaterial anlegen und an die wartenden Patienten über Push-Benachrichtigungen verschicken.
+Die Plattform **COVID Q** bietet Patienten eine schnelle, unkomplizierte und unbürokratische Möglichkeit sich für Test auf SARS-CoV-2 zu bewerben. Medizinischem Personal und Helfern in den Testzentren wird Arbeit abgenommen, indem die Terminfindung automatisiert auf Basis von Warteschlangen stattfinet. Offizielle Stellen wie Städte, Länder, der Bund und gemeinnützige Organisationen können über die Plattform Testzentren melden und zentral verwalten. Des Weiteren können sie Informationsmaterial anlegen und an die wartenden Patienten über Push-Benachrichtigungen verschicken.
 
 ### Betroffene Personen und Patienten ![Patient Badge](https://img.shields.io/github/labels/mlichtblau/wirvsvirus/rolle:patient)
 
@@ -87,13 +87,13 @@ Personen mit Verdacht auf Infektion können über die App eine Eigenanamnese in 
 
 Personen, die die Kriterien auf einen Test in Hinsich auf Dringlichkeit nicht erfüllen, erhalten eine Übersicht an Informationsmaterialen aus offiziellen Quellen (RKI, Gesundheitsminestierum) und Tipps zur freiwilligen Eigenisolation.
 
-Bei Risiko auf eine Ansteckung durch erhält die betroffene Person eine Übersicht qualifizierter Testzentren in der Nähe. Für jedes Testzentrum ist die [geschätzte Auslastung](#36) und die [geschätzte Wartedauer](#35) angzeigt. Diese werden auf Basis anonymisierter Statistiken und aus offiziellen Quellen berechnet. Die Person kann sich nun auf die Warteliste von [einem](#kann-man-sich-auf-mehrere-wartelisten-setzen) Testzentrum setzen. Nun wird der Patient regelmäßig über seinen Wartelistenstatus informiert und erhält das Infomaterial, welches das Testzentrum hinterlegt hat. Des Weiteren wird über Verspätungen und anderen Terminanpassungen per Push-Benachrichtigung informiert. Der Patient kann nun zu Hause, fernab langer Warteschlangen potentiell erkrankter Personen auf seinen Testtermin warten. 
+Bei Risiko auf eine Ansteckung erhält die betroffene Person eine Übersicht qualifizierter Testzentren in der Nähe. Für jedes Testzentrum ist die [geschätzte Auslastung](#36) und die [geschätzte Wartedauer](#35) angezeigt. Diese werden auf Basis anonymisierter Statistiken und aus offiziellen Quellen berechnet. Die Person kann sich nun auf die Warteliste von [einem](#kann-man-sich-auf-mehrere-wartelisten-setzen) Testzentrum setzen. Nun wird der Patient regelmäßig über seinen Wartelistenstatus informiert und erhält das Infomaterial, welches das Testzentrum hinterlegt hat. Des Weiteren wird über Verspätungen und andere Terminanpassungen per Push-Benachrichtigung informiert. Der Patient kann nun zu Hause, fernab langer Warteschlangen potentiell erkrankter Personen auf seinen Testtermin warten. 
 
-Nach Ablehnung auf einen Test oder erfolgreicher Vermitllung eines Testes werden alle Daten zur betroffenen Person gelöscht.
+Nach Ablehnung auf einen Test oder erfolgreicher Vermittlung eines Testes werden alle Daten zur betroffenen Person gelöscht.
 
 ### Testzentren ![Test Center Badge](https://img.shields.io/github/labels/mlichtblau/wirvsvirus/rolle:testzentrum)
 
-Die offiziellen Testzentren werden sowohl von den Verantwortlichen des Testzentrums (Medizinischem Personal, Helfer) und offiziellen Behörden (Städte, Länder, Bund und gemeinnütige Organisationen wie z.B. dem Gesundheitsamt) verwaltet. Damit soll eine zentrale Anlaufstelle für [Patienten](#betroffene-personen-und-patienten) geschaffen werden, welche ebenso zentral von offiziellen verwaltet werden kann. Neue Testzentren können innerhalb weniger Minuten einer breiten Masse an Personen zur Verfügung gestellt werden.
+Die offiziellen Testzentren werden sowohl von den Verantwortlichen des Testzentrums (Medizinischem Personal, Helfer) und offiziellen Behörden (Städte, Länder, Bund und gemeinnützige Organisationen) verwaltet. Damit soll eine zentrale Anlaufstelle für [Patienten](#betroffene-personen-und-patienten) geschaffen werden, welche ebenso zentral von offiziellen verwaltet werden kann. Neue Testzentren können innerhalb weniger Minuten einer breiten Masse an Personen zur Verfügung gestellt werden.
 
 #### Verantwortliche und Leiter
 
@@ -150,7 +150,7 @@ Mitarbeiter von Testzentren melden sich zurzeit mit dem Identifier ihres Testzen
 ### Miscellaneous
 
 - Als Datenbank verwenden wir [PostgreSQL](https://www.postgresql.org).
-- Die Plattform wird auf der [Google Cloud Platform](https://cloud.google.com/gcp) mit Hilfe von [App Engine](https://cloud.google.com/appengine) und [Cloud SQL](https://cloud.google.com/sql gehostet. Vielen Dank an das kostenlose Kontingent an das Team von GCP!
+- Die Plattform wird auf der [Google Cloud Platform](https://cloud.google.com/gcp) mit Hilfe von [App Engine](https://cloud.google.com/appengine) und [Cloud SQL](https://cloud.google.com/sql) gehostet. Vielen Dank an das kostenlose Kontingent an das Team von GCP!
 - Alle Server befinden sich in Deutschland.
 - Lokal ist die Plattform über [Docker](https://www.docker.com) und [docker-compose](https://docs.docker.com/compose/) deployed.
 
