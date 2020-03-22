@@ -24,10 +24,10 @@ class Testcenter < ApplicationRecord
     end
 
     if delays.mean.nil?
-      return "Keine Verspätung"
+      return 0
     end
 
-    return time_ago_in_words(delays.mean.seconds.from_now)
+    return delays.mean.seconds / 60.0
   end
 
   def todays_appintments
@@ -69,7 +69,7 @@ class Testcenter < ApplicationRecord
       days_jump = days_jump + 1
       next_open_day = (next_open_day + 1) % 6
     end
-    
+
     next_opening_hour = self.opening_hours.find_by(day: next_open_day).opens_at
     next_opening_hour_datetime = given_datetime.to_date + days_jump.days + next_opening_hour.to_datetime.hour.hours + next_opening_hour.to_datetime.minute.minutes + next_opening_hour.to_datetime.second.seconds
 

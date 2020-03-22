@@ -13,12 +13,12 @@ class TestcentersController < ApplicationController
       @testcenters = @testcenters.all_open
     end
 
-    render json: @testcenters, include: [:coordinate, :contact_datum], methods: :current_delay
+    render json: @testcenters, include: [:coordinate, :contact_datum, :opening_hours], methods: :current_delay
   end
 
   # GET /testcenters/1
   def show
-    render json: @testcenter, include: [:coordinate, :contact_datum], methods: :current_delay
+    render json: @testcenter, include: [:coordinate, :contact_datum, :opening_hours], methods: :current_delay
   end
 
   # POST /testcenters
@@ -41,7 +41,7 @@ class TestcentersController < ApplicationController
 
       @testcenter.coordinate = coord_obj
       if @testcenter.save
-        render json: @testcenter, include: [:coordinate, :contact_datum], status: :created, location: @testcenter
+        render json: @testcenter, include: [:coordinate, :contact_datum, :opening_hours], status: :created, location: @testcenter
       else
         render json: @testcenter.errors, status: :unprocessable_entity
       end
