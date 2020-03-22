@@ -3,6 +3,7 @@ import {Appointment} from '../../shared/models/appointment';
 import {TestcenterProvider} from '../../shared/api/testcenter/testcenter';
 import {Storage} from '@ionic/storage';
 import {TestcenterStaff} from '../../shared/models/testcenter-staff';
+import {AppointmentProvider} from '../../shared/api/appointment/appointment';
 
 @Component({
   selector: 'app-testcenter-queue',
@@ -15,6 +16,7 @@ export class TestcenterQueuePage implements OnInit {
 
   constructor(
       public testcenterProvider: TestcenterProvider,
+      public appointmentProvider: AppointmentProvider,
       public storage: Storage
   ) { }
 
@@ -28,11 +30,19 @@ export class TestcenterQueuePage implements OnInit {
         });
   }
 
-  checkIn(index: number) {
+  process(index: number) {
+    this.appointmentProvider.process(this.appointments[index].id)
+        .subscribe((appointment) => {
+            console.log(appointment);
+        });
     console.log(this.appointments[index]);
   }
 
   cancel(index: number) {
+    this.appointmentProvider.cancel(this.appointments[index].id)
+        .subscribe((appointment) => {
+            console.log(appointment);
+        });
     console.log(this.appointments[index]);
   }
 
