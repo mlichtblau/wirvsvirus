@@ -52,7 +52,7 @@ testcenter = Testcenter.create(
   zip_code: '13353',
   city: 'Berlin',
   directions: 'Mittelallee 1',
-  coordinate_attributes: {longitude: 52.541899, latitude: 13.345846},
+  coordinate_attributes: {longitude: 13.345846, latitude: 52.541899},
   daily_capacity: 10,
   contact_datum_attributes: {phone: '030 450 50'},
   verified_at: DateTime.now
