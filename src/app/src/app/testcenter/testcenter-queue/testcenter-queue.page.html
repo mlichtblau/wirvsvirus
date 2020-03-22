@@ -22,13 +22,25 @@
 </ion-content>
 
 <ion-footer class="dark-bg ion-padding">
-  <h2 class="title ion-text-center">Kontakt zu Wartenden</h2>
-  <ion-button color="light" size="small">
-    <ion-icon slot="start" name="megaphone-outline"></ion-icon>
-    Nachricht senden
-  </ion-button>
-  <ion-button color="light" size="small">
-    <ion-icon slot="start" name="information-circle-outline"></ion-icon>
-    Informationen für Wartende
-  </ion-button>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h2 class="title ion-text-center">Kontakt zu Wartenden</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button color="light" size="small" style="display: inline-block;">
+          <ion-icon name="megaphone-outline" slot="start"></ion-icon>
+          Nachricht senden
+        </ion-button>
+      </ion-col>
+      <ion-col text-center>
+        <ion-button color="light" size="small" style="display: inline-block;">
+          <ion-icon name="information-circle-outline" slot="start"></ion-icon>
+          Informationen für Wartende
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-footer>
