@@ -3,7 +3,7 @@
 # COVID Q ![Website Status Badge](https://img.shields.io/website?url=https%3A%2F%2Fcorona-q.appspot.com) <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section --> [![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-> [Probiert hier die App live aus!](https://mlichtblau.github.io/wirvsvirus/)
+> [Probiert hier die App live aus!](https://mlichtblau.github.io/wirvsvirus/) ([mobile Version](https://corona-q.appspot.com))
 
 Der extrem hohe Bedarf an Tests auf SARS-CoV-2 führt zu einer massiven Überlastung der Teststellen und teils drastischen Verspätungen. Die Liste der Wartenden kumuliert sich. Ein weiteres Hindernis ist der aufwendige Prozess für Patienten, Ärzte und das medizinischen Personal sowie der hohe bürokratische Aufwand. 
 
