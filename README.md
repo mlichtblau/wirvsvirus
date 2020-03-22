@@ -71,33 +71,47 @@ Des Weiteren werden Patienten an ihren [Termin erinnert](#47). Sie werden rechtz
 
 Zu guter letzte wird das [Erscheinen](#7) oder [Versäumen](#5) von Terminen vom medizinschen Personal gemeldet. 
 
-## Rollen
+## An wen richtet sich die Plattform?
 
-Unsere Plattform verbindet Patienten mit Testzentren und offiziellen Anlaufstellen rund um SARS-CoV-2. Die Termine zum Testen sollen zentral verwaltet und zugewiesen werden um Betroffenen Zeit zu sparen und Transparenz zu schaffen. Des Weiteren sollen betroffene Personen mit Informationsmaterialien gebildet werden.
+Die Plattform **COVID Q** bietet Patienten eine schnelle, unkomplizierte und unbürokratische Möglichkeit sich für Test auf SARS-CoV-19 zu bewerben. Medizinischem Personal und Helfer in den Testzentren wird Arbeit abgenommen, indem die Terminfindung automatisiert auf Basis von Warteschlangen stattfinet. Offizielle Stellen wie Städte, Länder, der Bund und gemeinnützige Organisationen können über die Plattform Testzentren melden und zentral verwalten. Des Weiteren können sie Informationsmaterial anlegen und an die wartenden Patienten über Push-Benachrichtigungen verschicken.
 
-### Patienten
+### Betroffene Personen und Patienten
 
-Patienten haben den Verdacht sich mit dem Virus infiziert zu haben. Sie haben sich entweder in einem Risikogebiet befunden oder direkten Kontakt zu einer erkrankten Person gehabt zu haben.
+Personen mit Verdacht auf Infektion können über die App eine Eigenanamnese in Anlehnung an die [App der Charité](https://covapp.charite.de) durchführen. Nach der Durchführung erhält die Person Rückmeldung über Notwendigkeit bzw. Dringlichkeit eines Testes. 
 
-Sie können in **COVID Q** ihre Symptome beschreiben und erhalten eine Liste qualifizierter Testzentren. Anschließent können sies ich auf die Warteliste eines Testzentrums setzen. Über die Warteliste können Wartezeiten und Auslastungen von Testzentren eingesehen werden.
+Personen, die die Kriterien auf einen Test in Hinsich auf Dringlichkeit nicht erfüllen, erhalten eine Übersicht an Informationsmaterialen aus offiziellen Quellen (RKI, Gesundheitsminestierum) und Tipps zur freiwilligen Eigenisolation.
+
+Bei Risiko auf eine Ansteckung durch erhält die betroffene Person eine Übersicht qualifizierter Testzentren in der Nähe. Für jedes Testzentrum ist die [geschätzte Auslastung](#36) und die [geschätzte Wartedauer](#35) angzeigt. Diese werden auf Basis anonymisierter Statistiken und aus offiziellen Quellen berechnet. Die Person kann sich nun auf die Warteliste von [einem](#kann-man-sich-auf-mehrere-wartelisten-setzen) Testzentrum setzen. Nun wird der Patient regelmäßig über seinen Wartelistenstatus informiert und erhält das Infomaterial, welches das Testzentrum hinterlegt hat. Des Weiteren wird über Verspätungen und anderen Terminanpassungen per Push-Benachrichtigung informiert. Der Patient kann nun zu Hause, fernab langer Warteschlangen potentiell erkrankter Personen auf seinen Testtermin warten. 
+
+Nach Ablehnung auf einen Test oder erfolgreicher Vermitllung eines Testes werden alle Daten zur betroffenen Person gelöscht.
 
 ### Testzentren
 
-Patienten können sich in diversen Testzentren in Deutschland auf SARS-CoV-2 testen lassen.
+Die offiziellen Testzentren werden sowohl von den Verantwortlichen des Testzentrums (Medizinischem Personal, Helfer) und offiziellen Behörden (Städte, Länder, Bund und gemeinnütige Organisationen wie z.B. dem Gesundheitsamt) verwaltet. Damit soll eine zentrale Anlaufstelle für [Patienten](#betroffene-personen-und-patienten) geschaffen werden, welche ebenso zentral von offiziellen verwaltet werden kann. Neue Testzentren können innerhalb weniger Minuten einer breiten Masse an Personen zur Verfügung gestellt werden.
 
 #### Verantwortliche und Leiter
 
-Verantwortliche von Testzentren können Informationen zur Kapazität, den Anforderungen und den Möglichen Tests ihres Zentrums hinterlegen. Auf Basis dieser Daten werden dem Patienten nach der Eigen-Anamnese verfügbare und passende Testzentren vorgeschlagen.
+Die Verantwortlichen von Testzentren pflegen die Kontaktdaten, Anfahrtmöglichkeiten, Öffnungszeiten und Beschreibungen zur Testabwicklung. Diese Informationen können von den Patienten eingesehen werden und werden kurz vor dem Testtermin aktive per Push-Benachrichtigung verschickt. Die für den Patienten relevanten Daten befinden sich zentral an einer Stelle und die Recherche über weitere, offizielle Stellen entfällt.
 
-Nachrichten über Verspätungen oder Zwischenfälle können mittels Push-Benachrichtigungen an alle wartenden Patienten geschickt werden.
+Testzentren haben teils unterschiedliche Anforderungen und Möglichkeiten. Diese können online konfiguriert werden und dienen der automatisierten Selektion von Patienten nach deren Eigenanamnese. Als Beispiel können die verfügbaren Testverfahren hinterleget werden.
+
+In Notfällen oder bei bedeutenden Verzögerungen können die wartenden Patienten über Push-Benachichtigungen informiert werden. Termine können im Fall von Engpässen schneller und einfacher neu mit den Paitenten abgestimmt werden.
 
 #### Mitarbeiter
 
-tba
+Medizinisches Personal und Helfer aus Testzentren erhalten ebenfalls einen Zugang zur Plattform. Dabei erhalten sie Zugriff auf die Warteliste von ihrem Testzentrum. Sie können Eigenanamnesen der wartenden Patienten einsehen, ohne Rückschlüsse auf deren Identität zu ziehen. 
+
+Die Notwendigkeit auf einen Test kann nun in einer zweiten Instanz durch geschultes Personal für jeden Patienten geprüft. Patienten, die sich nicht für einen Test qualifizieren, können abgelehnt werden. Diese erhalten daraufhin wieder eine Push-Benachrichtigung über die Änderung ihres Wartelistenstatus.
+
+Angenommene Patienten werden über Push-Benachichtigung informiert, dass sie sich bald im Testzentrum testen lassen können. Sie erhalten nochmal die Informationsmaterialen des Zentrums. 
+
+Die Helfer geben unserer Plattform Feedback über das Erscheinen und Versäumen von Patienten.
 
 ### Offizielle Verwaltung von Bund, Ländern und Organisationen
 
-Verbände, Organisationen, Länder und der Bund können die Testzentren in Deutschland zentral verwalten. Neue Zentren können unkompliziert registriert werden und den Patienten nach ihrer Eigen-Anamnese vorgeschlagen werden. Durch die Prüfung durch offizielle Stellen werden unseriöse Tesstellen gefiltert.
+Zurzeit werden Termine über lokale Behörden oder die bundensweite Hotline **116117** vergeben. Informationen zu Testzentren werden auf den Internetseiten der Behörden und in der Presse veröffenlicht. Bei detailreicher Pflege der Daten erhalten die Patienten alle Informationen direkt in der App. Hinterlegte Informationen können über Push-Benachrichtigungen auch aktiv an Patienten verschickt werden. 
+
+Zurzeit ist es uns noch nicht möglich die Testzentren von offizielle Stelle automatisiert abzufragen. Wir suchen allerdings nach Lösungsmöglichkeiten und öffentlichen Schnittstellen. Bis darauf hoffen wir auf Hilfe aus den Ländern und dem Gesundheitsamt.
 
 ## Technologische Umsetzung
 
