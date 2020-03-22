@@ -25,12 +25,14 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/27914201?v=4",
       "profile": "http://marcfreiheit.de",
       "contributions": [
-        "business"
+        "business",
+        "infra",
+        "projectManagement"
       ]
     },
     {
       "login": "drs-m",
-      "name": "Darius",
+      "name": "Darius Mewes",
       "avatar_url": "https://avatars3.githubusercontent.com/u/1767255?v=4",
       "profile": "https://github.com/drs-m",
       "contributions": [
@@ -39,7 +41,7 @@
     },
     {
       "login": "FWirtz",
-      "name": "Flo",
+      "name": "Florian Wirtz",
       "avatar_url": "https://avatars1.githubusercontent.com/u/6052785?v=4",
       "profile": "https://github.com/FWirtz",
       "contributions": [
@@ -57,7 +59,7 @@
     },
     {
       "login": "tom2022",
-      "name": "tom2022",
+      "name": "Thomas M. Samer",
       "avatar_url": "https://avatars1.githubusercontent.com/u/32955754?v=4",
       "profile": "https://github.com/tom2022",
       "contributions": [
@@ -75,13 +77,15 @@
     },
     {
       "login": "pia-francesca",
-      "name": "pia-francesca",
+      "name": "Pia Francesca Rissom",
       "avatar_url": "https://avatars1.githubusercontent.com/u/56447302?v=4",
       "profile": "https://github.com/pia-francesca",
       "contributions": [
-        "design"
+        "design",
+        "content",
+        "video"
       ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 4
 }
