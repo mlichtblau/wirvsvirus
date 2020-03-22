@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Testzentrum registrieren</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding" scroll-y="false">
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <div class="slide">
+
+        <p>
+          Helfen Sie uns weiter Testzentren in unsere Kartei aufzunehmen.
+
+          Hier können Sie uns auf weitere Zentren aufmerksam machen. Wir treten dann in Kontakt mit dem Zentrum.
+
+          Wir freuen uns über
+          Ihren Tipp!
+        </p>
+        <ion-button class="nextButton" (click)="next()">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+
+        <ion-item>
+          <ion-label position="floating">Name</ion-label>
+          <ion-input [(ngModel)]="testcenter.name" type="string"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Straße + Hausnummer</ion-label>
+          <ion-input [(ngModel)]="testcenter.street" type="string"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Postleitzahl</ion-label>
+          <ion-input [(ngModel)]="testcenter.zip_code" type="number"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Stadt</ion-label>
+          <ion-input [(ngModel)]="testcenter.city" type="string"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Öffnungszeiten Beginn</ion-label>
+          <ion-input [(ngModel)]="testcenter.opening_hours[0].opens_at" type="string"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Öffnungszeiten Ende</ion-label>
+          <ion-input [(ngModel)]="testcenter.opening_hours[0].closes_at" type="string"></ion-input>
+        </ion-item>
+
+        <ion-button (click)="saveTestcenter()">Speichern</ion-button>
+
+      </div>
+    </ion-slide>
+    <!--<ion-slide>
+      <div class="slide">
+
+        <ion-item>
+          <ion-label position="floating">Wie alt sind Sie?</ion-label>
+          <ion-input [(ngModel)]="patientModel.age" type="number" (ngModelChange)="unlockOnChange('age')"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Wie alt sind Sie?</ion-label>
+          <ion-input [(ngModel)]="patientModel.age" type="number" (ngModelChange)="unlockOnChange('age')"></ion-input>
+        </ion-item>
+
+        <ion-button class="nextButton" (click)="next()">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+
+      </div>
+    </ion-slide>-->
+    <ion-slide>
+      <div class="slide">
+
+        <ion-button  [routerLink]="['/']">Vielen Dank</ion-button>
+
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

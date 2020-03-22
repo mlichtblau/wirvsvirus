@@ -28,6 +28,10 @@ const routes: Routes = [
     path: 'patient/change-appointment',
     loadChildren: () => import('./patient/patient-change-appointment/patient-change-appointment.module').then( m => m.PatientChangeAppointmentPageModule)
   },
+  {
+    path: 'testcenter/new',
+    loadChildren: () => import('./testcenter/testcenter-new/testcenter-new.module').then( m => m.TestcenterNewPageModule)
+  },
 ];
 
 @NgModule({
