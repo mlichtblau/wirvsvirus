@@ -18,7 +18,8 @@ class Testcenter < ApplicationRecord
   end
 
   def test_slot_duration(week_day)
-    self.daily_capacity / (self.opening_hours.find_by(day: week_day).closes_at - self.opening_hours.find_by(day: week_day).opens_at)
+    daily_opening_duration_in_hours = (self.opening_hours.find_by(day: week_day).closes_at - self.opening_hours.find_by(day: week_day).opens_at) / 3600.0
+    return (daily_opening_duration_in_hours / self.daily_capacity).hours
   end
 
 end
