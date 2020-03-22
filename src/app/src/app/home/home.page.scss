@@ -1,31 +1,36 @@
-#container {
+.row {
+  padding: 25px;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.covid {
+  background-color: #7b8898ff;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.infected {
+  background-color: #faf8f3ff;
 }
 
-#container a {
-  text-decoration: none;
+.testcenter {
+  background-color: #f4e6d4ff;
 }
 
-ion-content ion-toolbar {
-  --background: translucent;
+.employee {
+  background-color: #5b6275;
+}
+
+.infectedButton {
+  color: #5b6275;
+}
+
+.grayText {
+  color: #5b6275;
+}
+
+.whiteText {
+  color: #f5f6f9;
+}
+
+.mediumWeight {
+  font-weight: 600;
 }

@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatientCountdownPage implements OnInit {
 
+  appointment: {
+    appointmentTime: Date,
+    patientId: number,
+    testcenterId: number,
+    waitingNumber: string,
+    processedAt: Date,
+    createdAt: Date
+  } = {
+    appointmentTime: new Date('2020-03-21T15:00:00'),
+    patientId: 1,
+    testcenterId: 1,
+    waitingNumber: 'UKG_02301',
+    processedAt: undefined,
+    createdAt: new Date('2020-03-21T10:00:00')
+  };
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  getCountdownInMs() {
+    return this.appointment.appointmentTime.getTime() - Date.now();
   }
 
 }
