@@ -19,7 +19,7 @@
         <img src="https://image.freepik.com/free-vector/flat-people-forming-line_23-2147679939.jpg" style="height: 250px; width: 100%; object-fit: cover"/>
         <ion-card-header>
           <ion-card-subtitle>Ihre Wartenummer</ion-card-subtitle>
-          <ion-card-title>{{ appointment.waitingNumber }}</ion-card-title>
+          <ion-card-title>{{ appointment.waiting_number }}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
           <ion-grid>
@@ -30,12 +30,13 @@
               </ion-col>
               <ion-col>
                 Voraussichtlicher Termin: <br>
-                <strong>{{ appointment.appointmentTime | date: 'short' }}</strong>
+                <strong>{{ appointment.appointment_time | date: 'short' }}</strong>
               </ion-col>
             </ion-row>
           </ion-grid>
           <ion-button expand="block" [routerLink]="['/', 'patient', 'testcenter-infos']">Wichtige Informationen</ion-button>
-          <ion-button expand="block" [routerLink]="['/', 'patient', 'change-appointment']">Termin Ändern</ion-button>
+          <ion-button expand="block" (click)="moveAppointment()">Verspätung eintragen</ion-button>
+          <ion-button expand="block" (click)="cancelAppointment()">Termin absagen</ion-button>
         </ion-card-content>
       </ion-card>
     </ion-grid>

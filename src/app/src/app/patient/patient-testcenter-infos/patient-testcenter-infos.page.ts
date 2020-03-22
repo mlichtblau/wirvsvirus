@@ -12,11 +12,11 @@ export class PatientTestcenterInfosPage implements OnInit {
     zipCode: string,
     city: string,
     directions: string,
-    openingHours: [{
+    openingHours: Array<{
       day: number,
       opensAt: string,
       closesAt: string
-    }]
+    }>
   } = {
     name: "Uni Klinikum Göttingen",
     street: "Robert-Koch-Straße",
