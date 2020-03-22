@@ -1,5 +1,5 @@
 class TestcentersController < ApplicationController
-  before_action :set_testcenter, only: [:show, :update, :destroy, :set_criteria]
+  before_action :set_testcenter, only: [:show, :update, :destroy, :set_criteria, :staff_login]
 
   # GET /testcenters
   def index
@@ -68,6 +68,12 @@ class TestcentersController < ApplicationController
       end
     end
     render json: @testcenter, include: [:coordinate, :contact_datum]
+  end
+
+  # POST /testcenters/1/staff_login
+  def staff_login
+    testcenter_staff = @testcenter.testcenter_staffs.find_by(pin_code: params[:pin_code])
+    render json: testcenter_staff
   end
 
   private

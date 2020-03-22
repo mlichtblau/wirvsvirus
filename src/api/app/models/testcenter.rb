@@ -8,6 +8,7 @@ class Testcenter < ApplicationRecord
   belongs_to :coordinate
   belongs_to :contact_datum
   has_many :opening_hours
+  has_many :testcenter_staffs
 
   
   accepts_nested_attributes_for :coordinate
