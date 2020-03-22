@@ -104,7 +104,7 @@ ActiveRecord::Schema.define(version: 2020_03_21_232222) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "flu_vaccinated"
-    t.datetime "symptoms_since"
+    t.date "symptoms_since"
   end
 
   create_table "scaffolds", force: :cascade do |t|

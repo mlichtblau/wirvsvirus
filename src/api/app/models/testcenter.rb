@@ -10,4 +10,9 @@ class Testcenter < ApplicationRecord
   
   accepts_nested_attributes_for :coordinate
   accepts_nested_attributes_for :contact_datum
+
+  def self.all_verified
+    return Testcenter.where.not(verified_at: nil).all
+  end
+
 end
