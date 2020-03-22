@@ -1,12 +1,18 @@
 # COVID Q ![Website Status Badge](https://img.shields.io/website?url=https%3A%2F%2Fcorona-q.appspot.com)
 
-Der hohe Bedarf an Tests auf SARS-CoV-19 führt zu überfüllten Teststellen mit teils drastischen Verspätungen und auflaufenden Menschenmassen. Des Weiteren ist der Prozess für Patient, Arzt und dem medizischen Personal sowohl aufwendig als auch bürokratisch. 
+Der hohe Bedarf an Tests auf SARS-CoV-2 führt zu überfüllten Teststellen mit teils drastischen Verspätungen und auflaufenden Menschenmassen. Des Weiteren ist der Prozess für Patient, Arzt und dem medizinischen Personal sowohl aufwendig als auch bürokratisch. 
 
-Unsere Plattform entlastet die Testzentren in Deutschland, indem Patienten unmittelbar vor dem Test zum Zentrum gerufen werden. Damit vermeiden wir lange Schlangen potentiell erkrankter Menschen. Auf Basis von Echtzeitdaten der Warteschlangen reagieren wir auch auf Verzögerungen im Testablauf und informieren die Patienten über etwaige Verspätungen. Damit erzeugen wir bedeutend weniger Aufwand als bei der klassichen Terminvergabe und sind untern Strich dennoch sicherer sowie flexibler.
+Unsere Plattform entlastet die Testzentren in Deutschland, indem Patienten unmittelbar vor dem Test zum Zentrum gerufen werden. Damit vermeiden wir lange Schlangen potentiell erkrankter Menschen. Auf Basis von Echtzeitdaten der Warteschlangen reagieren wir auch auf Verzögerungen im Testablauf und informieren die Patienten über etwaige Verspätungen. Damit erzeugen wir bedeutend weniger Aufwand als bei der klassischen Terminvergabe und sind untern Strich dennoch sicherer sowie flexibler.
+
+![App Description Screenshots](docs/app-description.jpeg)
+
+## WirVsVirus Hack
 
 ![WirWsVirus](docs/wir_vs_virus-logo.png)
 
-![App Description Screenshots](docs/app-description.jpeg)
+**COVID Q** ist bei der Teilnahme am Hackathon [WirVsVirus](https://wirvsvirushackathon.org) entstanden. Wir haben an der **Challenge 040** zur _Unterstüztung medizinisches Personals_, konkret mit der Entlastung von Testzentren: **1_040_c_d_entlastung_testcentren**.
+
+Wir haben im Channel [#1_040_medizinischespersonal](http://wirvsvirus.slack.com/messages/1_040_medizinischespersonal) mit unseren Mentor:innen und Pat:innen sowie anderen Teams kommuniziert. Die Team-interne Kommunikation fand im Channel [#1_040_c_d_entlastung_testcentren](http://wirvsvirus.slack.com/messages/1_040_c_d_entlastung_testcentren) statt.
 
 ## Ziele
 
