@@ -1,6 +1,5 @@
 runtime: python27
 threadsafe: true
-service: app
 
 skip_files:
 - (?!^www)

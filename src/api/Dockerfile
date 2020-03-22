@@ -6,8 +6,8 @@ FROM ruby:${RUBY_VERSION}-alpine${ALPINE_VERSION}
 WORKDIR /usr/src/app
 
 ENV RAILS_ROOT /usr/src/app
-ENV RAILS_ENV='development'
-ENV RACK_ENV='development'
+ENV RAILS_ENV='production'
+ENV RACK_ENV='production'
 
 RUN apk add --no-cache postgresql sqlite sqlite-libs
 
@@ -23,4 +23,4 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "bundle exec rake db:migrate RAILS_ENV=development ; bundle exec puma -C config/puma.rb"]
+CMD ["sh", "-c", "bundle exec rake db:migrate RAILS_ENV=production ; bundle exec puma -C config/puma.rb"]
