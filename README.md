@@ -1,3 +1,5 @@
+![COVID Q Header Logo](docs/covid-q-logo-github-header.png)
+
 # COVID Q ![Website Status Badge](https://img.shields.io/website?url=https%3A%2F%2Fcorona-q.appspot.com) <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section --> [![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
