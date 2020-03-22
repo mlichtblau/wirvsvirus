@@ -38,6 +38,20 @@ class Testcenter < ApplicationRecord
     return Testcenter.where.not(verified_at: nil).all
   end
 
+  def self.all_open
+    return Testcenter.all.select(&:open?)
+  end
+
+  def open?
+    opening_hours_today = self.opening_hours.find_by(day: Date.today.wday)
+    if opening_hours_today.nil?
+      return false
+    end
+
+    return Time.now.between?(opening_hours_today.opens_at.to_time, opening_hours_today.closes_at.to_time)
+
+  end
+
   def test_slot_duration(week_day)
     daily_opening_duration_in_hours = (self.opening_hours.find_by(day: week_day).closes_at - self.opening_hours.find_by(day: week_day).opens_at) / 3600.0
     return (daily_opening_duration_in_hours / self.daily_capacity).hours

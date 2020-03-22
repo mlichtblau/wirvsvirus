@@ -55,8 +55,6 @@ ActiveRecord::Schema.define(version: 2020_03_21_232222) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "kind"
-    t.integer "superregion_id"
-    t.index ["superregion_id"], name: "index_criterions_on_superregion_id"
   end
 
   create_table "criterions_patients", id: false, force: :cascade do |t|
@@ -88,8 +86,8 @@ ActiveRecord::Schema.define(version: 2020_03_21_232222) do
 
   create_table "opening_hours", force: :cascade do |t|
     t.integer "day"
-    t.time "opens_at"
-    t.time "closes_at"
+    t.datetime "opens_at"
+    t.datetime "closes_at"
     t.integer "testcenter_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
