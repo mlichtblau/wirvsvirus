@@ -55,7 +55,7 @@ export function getCriterions() {
       criterion: 'contact confirmed case',
       question: 'Hatten Sie engen Kontakt zu einem bestätigten Fall?',
     },
-    { criterion: 'contact suspected case', question: 'Are you pregnant?' },
+    { criterion: 'contact suspected case', question: 'Hatten Sie engen Kontakt zu einem Verdachtsfall?' },
     {
       criterion: 'high risk visit',
       question:
