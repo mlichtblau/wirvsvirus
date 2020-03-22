@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  api:
+    image: mlichtblau/wirvvsvirus/api:latest
+    build:
+      context: src/api
+    ports:
+      - "3000:3000"
+
+  postgres:
+    image: postgres:11.7-alpine
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgresdata:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer:4.7
+
+volumes:
+  postgresdata:
+
