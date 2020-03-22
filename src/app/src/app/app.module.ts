@@ -14,6 +14,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {ContactDatumProvider} from './shared/api/contact-datum/contact-datum';
 import {CoordinateProvider} from './shared/api/coordinate/coordinate';
 import {TestcenterProvider} from './shared/api/testcenter/testcenter';
+import {CriterionProvider} from './shared/api/criterion/criterion';
+import {OpeningHourProvider} from './shared/api/opening-hour/opening-hour';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,7 +29,9 @@ import {TestcenterProvider} from './shared/api/testcenter/testcenter';
       AppointmentProvider,
       ContactDatumProvider,
       CoordinateProvider,
-      TestcenterProvider
+      TestcenterProvider,
+      CriterionProvider,
+      OpeningHourProvider
   ],
   bootstrap: [AppComponent]
 })
