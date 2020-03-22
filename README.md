@@ -59,7 +59,7 @@ Unsere API bietet keine Möglichkeit die Anamesen der Patienten abzufragen. Dies
 
 Optional würden wir gerne anbieten, dass die betroffene Person Kontaktinformationen für Rückfragen hinterlegen kann. Wir prüfen zurzeit mögliche Realisierungen, die die Identität des Patienten nicht preisgeben.
 
-Die **Datenschutzrelevanten Fragen** besprechen wir zurzeit mit Experten aus Slack. Sobald wir neue Erkentnisse haben, vervollständigen wir diese Frage.
+⚠️ Die **Datenschutzrelevanten Fragen** besprechen wir zurzeit mit Experten aus Slack. Sobald wir neue Erkentnisse haben, vervollständigen wir diese Frage.
 
 ### Wie verhindern Terminleichen verhindert?
 
