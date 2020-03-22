@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { TestcenterMapComponent } from "../../components/testcenter-map/testcenter-map.component";
+import {Appointment} from '../../shared/models/appointment';
+import {Router} from '@angular/router';
+import {Storage} from '@ionic/storage';
+
 
 @Component({
   selector: 'app-patient-overview',
