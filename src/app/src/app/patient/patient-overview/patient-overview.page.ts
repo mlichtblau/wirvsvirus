@@ -39,8 +39,7 @@ export class PatientOverviewPage implements OnInit {
                 lng: tc.coordinate.longitude,
               },
               directions: tc.directions,
-              waitingTime: tc.current_delay,
-              openingHours: tc.opening_hours
+              waitingTime: tc.current_delay
             }
           )
         })
