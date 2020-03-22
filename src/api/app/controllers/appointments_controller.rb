@@ -66,7 +66,7 @@ class AppointmentsController < ApplicationController
     
     if @new_appointment.save
       @appointment.rescheduled_to = @new_appointment
-      render json: @appointment, include: :rescheduled_to
+      render json: @new_appointment, include: :rescheduled_to
     end
   end
 
