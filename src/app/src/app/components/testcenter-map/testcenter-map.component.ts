@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core'
+import {Component, ElementRef, Input, OnInit, ViewChild, OnChanges, SimpleChange} from '@angular/core'
 import { Geolocation } from '@ionic-native/geolocation/ngx'
 import {Storage} from '@ionic/storage';
 
@@ -9,8 +9,9 @@ declare var google;
   templateUrl: './testcenter-map.component.html',
   styleUrls: ['./testcenter-map.component.scss'],
 })
-export class TestcenterMapComponent implements OnInit {
+export class TestcenterMapComponent implements OnInit, OnChanges {
   @ViewChild('mapElement', {static: true}) mapElement: ElementRef;
+  @Input('isLoaded') isLoaded: boolean;
 
   constructor(
     private geolocation: Geolocation,
@@ -19,10 +20,21 @@ export class TestcenterMapComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.storage.get('testcenters')
+    /*this.storage.get('testcenters')
       .then((tcs) => {
         this.loadMap(tcs);
-      });
+      });*/
+  }
+
+  ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
+    let changedProp = changes['isLoaded'];
+    let to = JSON.stringify(changedProp.currentValue);
+    if(to) {
+      this.storage.get('testcenters')
+        .then((tcs) => {
+          this.loadMap(tcs);
+        });
+    }
   }
 
   loadMap(testcenters) {
@@ -35,7 +47,7 @@ export class TestcenterMapComponent implements OnInit {
         };
         const map = new google.maps.Map(this.mapElement.nativeElement);
         map.setCenter(pos);
-        map.setZoom(12);
+        map.setZoom(10);
 
         //info window for location of user
 

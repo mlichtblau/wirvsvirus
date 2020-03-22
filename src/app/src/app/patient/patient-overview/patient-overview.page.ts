@@ -11,6 +11,7 @@ import {TestcenterProvider} from "../../shared/api/testcenter/testcenter";
 export class PatientOverviewPage implements OnInit {
   activeSegment = 'mapview';
   testcenters = [];
+  isLoaded = false;
 
   constructor(
       public storage: Storage,
@@ -30,6 +31,7 @@ export class PatientOverviewPage implements OnInit {
     this.testCenterProvider.all()
       .subscribe((el) => {
         el.forEach(tc => {
+          console.log(tc);
           this.testcenters.push(
             {
               id: tc.id,
@@ -47,10 +49,12 @@ export class PatientOverviewPage implements OnInit {
             }
           )
         })
-
+        console.log(this.testcenters);
         this.storage.set('testcenters',
           this.testcenters
-        );
+        ).then(() => {
+          this.isLoaded=true;
+        });
       });
 
 
