@@ -26,7 +26,15 @@ export class PatientOverviewPage implements OnInit {
       public router: Router
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.storage.set('patient', {
+      id: 1,
+      zip_code: 12345,
+      age: 75,
+      living_situation: 'community',
+      workplace: 'police'
+    });
+  }
 
   segmentChanged($event) {
     this.activeSegment = $event.detail.value;

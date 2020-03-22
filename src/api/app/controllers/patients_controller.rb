@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  before_action :set_patient, only: [:show, :update, :destroy]
+  before_action :set_patient, only: [:show, :update, :destroy, :testcenters_index]
 
   # GET /patients
   def index
@@ -75,6 +75,11 @@ class PatientsController < ApplicationController
   # DELETE /patients/1
   def destroy
     @patient.destroy
+  end
+
+  # GET /patients/1/testcenters
+  def testcenters_index
+    render json: @patient.testcenters
   end
 
   private
