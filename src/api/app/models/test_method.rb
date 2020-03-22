@@ -1,2 +1,0 @@
-class TestMethod < ApplicationRecord
-end

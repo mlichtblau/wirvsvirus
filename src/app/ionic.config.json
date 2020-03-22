@@ -1,7 +1,0 @@
-{
-  "name": "COVID Q",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
