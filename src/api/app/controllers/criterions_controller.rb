@@ -46,6 +46,6 @@ class CriterionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def criterion_params
-      params.require(:criterion).permit(:name, :description, :superregion_id, :kind)
+      params.require(:criterion).permit(:name, :description, :kind)
     end
 end
