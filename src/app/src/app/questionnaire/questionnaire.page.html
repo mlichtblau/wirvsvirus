@@ -59,7 +59,9 @@
       <div class="slide question">
         <ion-item>
           <div class="big">
-            <ion-label position="floating">Wie alt sind Sie?</ion-label>
+            <ion-label position="floating">
+              Wie alt sind sie?
+            </ion-label>
             <ion-input [(ngModel)]="patientModel.age" type="number" (ngModelChange)="unlockOnChange('age')"></ion-input>
           </div>
         </ion-item>
@@ -68,20 +70,25 @@
         </ion-button>
       </div>
     </ion-slide>
-    <ion-slide>
+    <ion-slide *ngFor="let criterion of criterions; let i = index">
       <div class="slide question">
-        <ion-item>
-          <ion-label position="floating">
-            Hatten Sie in den letzten 24 Stunden Fieber?
-          </ion-label>
-          <ion-select [(ngModel)]="patient.anamnestic_items[0].answer" class="big">
-            <ion-select-option value="ja">Ja</ion-select-option>
-            <ion-select-option value="nein">Nein</ion-select-option>
-            <ion-select-option value="unsicher">Unsicher</ion-select-option>
+        <ion-item class="big">
+          <ion-label position="floating">{{ criterion.question }}</ion-label>
+          <ion-select [(ngModel)]="criterions[i].answer">
+            <ion-select-option value="yes">Ja</ion-select-option>
+            <ion-select-option value="no">Nein</ion-select-option>
+            <ion-select-option value="unsure">Unsicher</ion-select-option>
           </ion-select>
         </ion-item>
-        <ion-button class="nextButton" (click)="next()">
+        <ion-button class="nextButton" [disabled]="!allowNext('age')" (click)="nextAndLock()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <ion-button (click)="sendResults()">
+          Abschicken
         </ion-button>
       </div>
     </ion-slide>
@@ -102,9 +109,9 @@
         <p>Wenn Sie das Haus verlassen, halten Sie ausreichend Abstand
           (mehr als 2 Meter) zu anderen Personen, fassen Sie möglichst nichts
           an, und achten Sie auf die Regeln für richtiges Husten und Niesen.</p>
-          <ion-button [routerLink]="['/']">
-            Fertig
-          </ion-button>
+        <ion-button [routerLink]="['/']">
+          Fertig
+        </ion-button>
       </div>
     </ion-slide>
     <ion-slide>

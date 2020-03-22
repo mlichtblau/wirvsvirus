@@ -1,17 +1,13 @@
 import { ViewChild } from '@angular/core'
 import { Component, OnInit } from '@angular/core'
 import { IonSlides } from '@ionic/angular'
-import {Patient} from '../shared/models/patient';
-import {PatientProvider} from '../shared/api/patient/patient';
+import { Patient, CriterionNames } from '../shared/models/patient'
+import { PatientProvider } from '../shared/api/patient/patient'
 
-type Criterions = string
-
-type PatientModel = {
-  age?: number
-  living_situation?: 'community' | 'single'
-  workplace?: 'police' | 'other'
-  zip_code?: number
-  criterion_names?: Criterions[]
+type CriterionQuestion = {
+  criterion: CriterionNames
+  question?: string
+  answer?: 'yes' | 'no' | 'unsure'
 }
 
 @Component({
@@ -22,40 +18,33 @@ type PatientModel = {
 export class QuestionnairePage implements OnInit {
   @ViewChild(IonSlides, { static: false }) slides: IonSlides
 
-  patient: Patient = {
-    zip_code: null,
-    age: null,
-    living_situation: null,
-    workplace: null,
-    anamnestic_items: [{
-      criterion: '',
-      answer: null
-    }]
-};
+  patientModel: Patient = {}
 
-  constructor(
-      public patientProvider: PatientProvider
-  ) {}
-
-  patientModel: PatientModel = {}
+  criterions: CriterionQuestion[] = [
+    { criterion: 'smoking', question: 'Do you smoke?' },
+    { criterion: 'pregnancy', question: 'Are you pregnant?' },
+    {
+      criterion: 'chronic lung disease',
+      question: 'Do you have a chronic lung disease?',
+    },
+  ]
 
   slideOpts = {
     speed: 400,
     centeredSlides: true,
   }
 
-  addAnamnesticItem(item) {
-    this.patient.anamnestic_items.push(item);
+  sendResults() {
+    this.patientModel.anamnestic_items = this.criterions
+    console.log(this.patientModel)
+    this.patientProvider.create(this.patientModel).subscribe(patient => {
+      console.log(patient)
+    })
   }
+
+  constructor(public patientProvider: PatientProvider) {}
 
   ngOnInit() {}
-
-  save() {
-    this.patientProvider.create(this.patient)
-        .subscribe((patient) => {
-
-        })
-  }
 
   unlockOnChange(prop: string) {
     if (this.allowNext(prop)) {
