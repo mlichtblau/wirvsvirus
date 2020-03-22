@@ -12,7 +12,7 @@ interface Query {
 }
 
 export class RestService<T> {
-    baseUrl: string = "";
+    baseUrl: string = "http://localhost:3000";
     resource = '/';
 
     get base(): string {

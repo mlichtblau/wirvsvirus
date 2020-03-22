@@ -48,12 +48,32 @@
 
         <ion-item>
           <ion-label position="floating">Öffnungszeiten Beginn</ion-label>
-          <ion-input [(ngModel)]="testcenter.opening_hours[0].opens_at" type="string"></ion-input>
+          <ion-input [(ngModel)]="openingHours[0].opens_at" type="string"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label position="floating">Öffnungszeiten Ende</ion-label>
-          <ion-input [(ngModel)]="testcenter.opening_hours[0].closes_at" type="string"></ion-input>
+          <ion-input [(ngModel)]="openingHours[0].closes_at" type="string"></ion-input>
+        </ion-item>
+
+        <ion-button class="nextButton" (click)="next()">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+
+        <ion-item>
+          <ion-label position="floating">Telefonnummer</ion-label>
+          <ion-input [(ngModel)]="contactDatum.phone" type="string"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">E-Mail Adresse</ion-label>
+          <ion-input [(ngModel)]="contactDatum.email" type="email"></ion-input>
         </ion-item>
 
         <ion-button (click)="saveTestcenter()">Speichern</ion-button>

@@ -1,5 +1,9 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {IonSlides} from '@ionic/angular';
+import {ContactDatumProvider} from '../../shared/api/contact-datum/contact-datum';
+import {TestcenterProvider} from '../../shared/api/testcenter/testcenter';
+import {ContactDatum} from '../../shared/models/contact-datum';
+import {Testcenter} from '../../shared/models/testcenter';
 
 @Component({
   selector: 'app-testcenter-new',
@@ -9,16 +13,24 @@ import {IonSlides} from '@ionic/angular';
 export class TestcenterNewPage implements OnInit {
   @ViewChild(IonSlides, { static: false }) slides: IonSlides;
 
-  testcenter = {
+  testcenter: Testcenter = {
     name: null,
     street: null,
     zip_code: null,
     city: null,
-    opening_hours: [{
-      opens_at: null,
-      closes_at: null,
-      day: 0
-    }]
+    coordinate_id: 2,
+    contact_datum_id: null
+  };
+
+  openingHours = [{
+    opens_at: null,
+    closes_at: null,
+    day: 0
+  }];
+
+  contactDatum: ContactDatum = {
+    phone: null,
+    email: null
   };
 
   slideOpts = {
@@ -26,7 +38,10 @@ export class TestcenterNewPage implements OnInit {
     centeredSlides: true,
   };
 
-  constructor() {}
+  constructor(
+      public contactDatumProvider: ContactDatumProvider,
+      public testcenterProvider: TestcenterProvider
+  ) {}
 
   ngOnInit() {}
 
@@ -49,6 +64,17 @@ export class TestcenterNewPage implements OnInit {
 
   saveTestcenter() {
     console.log(this.testcenter);
+    this.contactDatumProvider.create(this.contactDatum)
+        .subscribe((contactDatum) => {
+          console.log(contactDatum);
+
+          this.testcenter.contact_datum_id = contactDatum.id;
+          this.testcenterProvider.create(this.testcenter)
+              .subscribe((testcenter) => {
+                console.log(testcenter);
+              });
+        });
+
     this.next();
   }
 }

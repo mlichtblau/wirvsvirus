@@ -11,6 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import {RestService} from './shared/api/rest.service';
 import {AppointmentProvider} from './shared/api/appointment/appointment';
 import {HttpClientModule} from '@angular/common/http';
+import {ContactDatumProvider} from './shared/api/contact-datum/contact-datum';
+import {CoordinateProvider} from './shared/api/coordinate/coordinate';
+import {TestcenterProvider} from './shared/api/testcenter/testcenter';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +24,10 @@ import {HttpClientModule} from '@angular/common/http';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
       RestService,
-      AppointmentProvider
+      AppointmentProvider,
+      ContactDatumProvider,
+      CoordinateProvider,
+      TestcenterProvider
   ],
   bootstrap: [AppComponent]
 })

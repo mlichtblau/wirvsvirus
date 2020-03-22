@@ -1,4 +1,5 @@
 export interface Appointment {
+    id?: number;
     appointment_time: Date;
     patient_id: number;
     testcenter_id: number;

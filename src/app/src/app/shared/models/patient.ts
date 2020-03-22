@@ -1,4 +1,5 @@
 export interface Patient {
+    id?: number;
     zip: string;
     age: number;
     living_situation: string;
