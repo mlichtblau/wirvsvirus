@@ -6,8 +6,7 @@ Unsere Plattform entlastet die Testzentren in Deutschland, indem Patienten unmit
 
 ![WirWsVirus](docs/wir_vs_virus-logo.png)
 
-| ![Screenshot 1](docs/screen-1.png) 	| ![Screenshot 2](docs/screen-2.png) 	| ![Screenshot 3](docs/screen-3.jpeg) |
-|------------------------------------	|------------------------------------	|------------------------------------	|
+![App Description Screenshots](docs/app-description.jpeg)
 
 ## Ziele
 
