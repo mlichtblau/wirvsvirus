@@ -59,7 +59,7 @@
         <ion-button class="prevButton" (click)="prev()">
           <ion-icon name="chevron-back-outline"></ion-icon>
         </ion-button>
-        <ion-button class="nextButton" (click)="nextAndLock()">
+        <ion-button (click)="next()" class="nextButton">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
       </div>
@@ -71,13 +71,13 @@
             <ion-label position="floating">
               Wie alt sind sie?
             </ion-label>
-            <ion-input [(ngModel)]="patientModel.age" type="number" (ngModelChange)="unlockOnChange('age')"></ion-input>
+            <ion-input [(ngModel)]="patientModel.age" type="number"></ion-input>
           </div>
         </ion-item>
         <ion-button class="prevButton" (click)="prev()">
           <ion-icon name="chevron-back-outline"></ion-icon>
         </ion-button>
-        <ion-button class="nextButton" [disabled]="!allowNext('age')" (click)="nextAndLock()">
+        <ion-button (click)="next()" [disabled]="!allowNext('age')" class="nextButton">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
       </div>
@@ -89,14 +89,14 @@
             <ion-label position="floating">
               Bitten geben Sie ihre Postleitzahl an.
             </ion-label>
-            <ion-input [(ngModel)]="patientModel.zip_code" type="number" (ngModelChange)="unlockOnChange('zip_code')">
+            <ion-input [(ngModel)]="patientModel.zip_code" type="number">
             </ion-input>
           </div>
         </ion-item>
         <ion-button class="prevButton" (click)="prev()">
           <ion-icon name="chevron-back-outline"></ion-icon>
         </ion-button>
-        <ion-button class="nextButton" [disabled]="!allowNext('age')" (click)="nextAndLock()">
+        <ion-button (click)="next()" [disabled]="!allowNext('zip_code')" class="nextButton">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
       </div>
