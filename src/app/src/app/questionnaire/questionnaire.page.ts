@@ -31,6 +31,16 @@ export class QuestionnairePage implements OnInit {
 
   ngOnInit() {}
 
+  unlockOnChange(prop: string) {
+    if (this.allowNext(prop)) {
+      this.unlock()
+    }
+  }
+
+  allowNext(prop: string) {
+    return !!this.patientModel[prop]
+  }
+
   lock() {
     this.slides.lockSwipes(true)
   }
@@ -43,7 +53,8 @@ export class QuestionnairePage implements OnInit {
     this.slides.slideNext()
   }
 
-  prev() {
-    this.slides.slidePrev()
+  nextAndLock() {
+    this.next()
+    this.lock()
   }
 }
