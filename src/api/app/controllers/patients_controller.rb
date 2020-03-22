@@ -10,7 +10,7 @@ class PatientsController < ApplicationController
 
   # GET /patients/1
   def show
-    render json: @patient
+    render json: @patient, :include => {:criterions => {:only => [:name, :description, :kind]}}
   end
 
   # POST /patients
@@ -18,12 +18,23 @@ class PatientsController < ApplicationController
     @patient = Patient.new(patient_params)
 
     if @patient.save
-      params[:criterion_ids].each do |criterion_id|
-        criterion = Criterion.find_by id: criterion_id
+      all_criterions_found = true
+      wrong_criterion = ''
+      params[:criterion_names].each do |criterion_name|
+        criterion = Criterion.find_by name: criterion_name
         if criterion
-          @patient.criterions << Criterion.find_by(id: criterion)
-          render json: @patient, status: :created, location: @patient
+          @patient.criterions << criterion
+        else
+          wrong_criterion = criterion_name
+          all_criterions_found = false
+          break
         end
+      end
+      
+      if all_criterions_found
+        render json: @patient, :include => {:criterions => {:only => [:name, :description, :kind]}}, status: :created, location: @patient
+      else
+        render json: {error: 'criterion not found: ' + wrong_criterion}, status: :unprocessable_entity
       end
     else
       render json: @patient.errors, status: :unprocessable_entity
@@ -52,6 +63,6 @@ class PatientsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def patient_params
-      params.require(:patient).permit(:age, :living_situation, :workplace, :zip_code)
+      params.require(:patient).permit(:age, :living_situation, :workplace, :zip_code, :flu_vaccinated, :symptoms_since)
     end
 end

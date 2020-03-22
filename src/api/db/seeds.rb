@@ -15,11 +15,15 @@ criterions = Criterion.create([
   {kind: :risk_factor, name: 'pregnancy'},
   {kind: :risk_factor, name: 'taking steroids'},
   {kind: :risk_factor, name: 'taking immunosuppressants'},
-  {kind: :risk_factor, name: 'flu vaccinated'},
-  {kind: :risk_factor, name: 'contact to confirmed case'},
-  {kind: :risk_factor, name: 'contact to suspected case'},
   
-  {kind: :symptom, name: 'fever'},
+  # {kind: :symptom, name: 'fever below 38'},
+  # {kind: :symptom, name: 'fever 38'},
+  # {kind: :symptom, name: 'fever 39'},
+  # {kind: :symptom, name: 'fever 40'},
+  # {kind: :symptom, name: 'fever 41'},
+  # {kind: :symptom, name: 'fever 42'},
+  # {kind: :symptom, name: 'fever above 42'},
+  {kind: :symptom, name: 'fever', description: 'Fieber über 38°C in den letzten 24 Stunden'},
   {kind: :symptom, name: 'chills'},
   {kind: :symptom, name: 'fatigue'},
   {kind: :symptom, name: 'myalgia'},
@@ -29,23 +33,20 @@ criterions = Criterion.create([
   {kind: :symptom, name: 'sore throat'},
   {kind: :symptom, name: 'headache'},
   {kind: :symptom, name: 'tachypnea'},
-  {kind: :symptom, name: 'dyspnea'}
+  {kind: :symptom, name: 'dyspnea'},
+  
+  {kind: :contact, name: 'contact confirmed case'},
+  {kind: :contact, name: 'contact suspected case'},
+  
+  {kind: :visit, name: 'high risk visit'}
 ])
 
-italy = Criterion.create(kind: :visit, name: 'italy')
-lombardia = Criterion.create(kind: :visit, name: 'lombardia', superregion: italy)
-
-spain = Criterion.create(kind: :visit, name: 'spain')
-madrid = Criterion.create(kind: :visit, name: 'madrid', superregion: spain)
-
-# TEST DATA
 
 testcenter = Testcenter.create(
   name: 'Charité – Virchow Klinikum',
   street: 'Augustenburger Platz 1',
   zip_code: '13353',
   city: 'Berlin',
-  # not valid
   directions: 'Mittelallee 1',
   coordinate_attributes: {longitude: 52.541899, latitude: 13.345846},
   daily_capacity: 10,
