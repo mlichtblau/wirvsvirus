@@ -18,6 +18,9 @@
           Wenn Sie sich aktuell schwer krank fühlen, suchen Sie bitte
           umgehend medizinische Hilfe auf.
         </p>
+        <ion-button class="prevButton" (click)="prev()">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
         <ion-button class="nextButton" (click)="next()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
@@ -37,6 +40,9 @@
           Wenn Sie sich aktuell schwer krank fühlen,
           suchen Sie bitte umgehend einen Arzt/Ärztin oder medizinische Hilfe auf.
         </p>
+        <ion-button class="prevButton" (click)="prev()">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
         <ion-button class="nextButton" (click)="next()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
@@ -50,6 +56,9 @@
           passendes Testzentrum zu vermitteln, haben wir
           vorab ein paar Fragen.
         </p>
+        <ion-button class="prevButton" (click)="prev()">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
         <ion-button class="nextButton" (click)="nextAndLock()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
@@ -65,6 +74,9 @@
             <ion-input [(ngModel)]="patientModel.age" type="number" (ngModelChange)="unlockOnChange('age')"></ion-input>
           </div>
         </ion-item>
+        <ion-button class="prevButton" (click)="prev()">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
         <ion-button class="nextButton" [disabled]="!allowNext('age')" (click)="nextAndLock()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
@@ -81,6 +93,9 @@
             </ion-input>
           </div>
         </ion-item>
+        <ion-button class="prevButton" (click)="prev()">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
         <ion-button class="nextButton" [disabled]="!allowNext('age')" (click)="nextAndLock()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
@@ -89,14 +104,15 @@
     <ion-slide>
       <div class="slide question">
         <ion-item>
-          <div class="big">
-            <ion-label position="floating">
-              Seid wann haben Sie Symptome?
-            </ion-label>
-            <ion-input [(ngModel)]="patientModel.symptoms_since" type="string">
-            </ion-input>
-          </div>
+          <ion-label position="floating">
+            Seid wann haben Sie Symptome?
+          </ion-label>
+          <ion-input [(ngModel)]="patientModel.symptoms_since" type="string">
+          </ion-input>
         </ion-item>
+        <ion-button class="prevButton" (click)="prev()">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
         <ion-button class="nextButton" [disabled]="!allowNext('age')" (click)="next()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>
@@ -121,6 +137,9 @@
             <ion-radio slot="end" value="unsure"></ion-radio>
           </ion-item>
         </ion-radio-group>
+        <ion-button class="prevButton" (click)="prev()">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
         <ion-button class="nextButton" (click)="next()">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>

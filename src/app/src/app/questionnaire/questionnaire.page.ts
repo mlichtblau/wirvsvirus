@@ -14,9 +14,7 @@ import { getCriterions } from './criterions'
 export class QuestionnairePage implements OnInit {
   @ViewChild(IonSlides, { static: false }) slides: IonSlides
 
-  patientModel: Patient = {
-    symptoms_since: '10.03.2020',
-  }
+  patientModel: Patient = {}
 
   slideOpts = {
     speed: 400,
@@ -57,6 +55,10 @@ export class QuestionnairePage implements OnInit {
 
   next() {
     this.slides.slideNext()
+  }
+
+  prev() {
+    this.slides.slidePrev()
   }
 
   nextAndLock() {
