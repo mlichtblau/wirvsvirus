@@ -1,13 +1,18 @@
-# COVID Q
+# COVID Q ![Website Status Badge](https://img.shields.io/website?url=https%3A%2F%2Fcorona-q.appspot.com)
 
-Der hohe Bedarf an Tests auf SARS-CoV-19 führt zu überfüllten Teststellen mit teils drastischen Verspätungen und auflaufenden Menschenmassen. Des Weiteren ist der Prozess für Patient, Arzt und dem medizischen Personal sowohl aufwendig als auch bürokratisch. 
+Der hohe Bedarf an Tests auf SARS-CoV-2 führt zu überfüllten Teststellen mit teils drastischen Verspätungen und auflaufenden Menschenmassen. Des Weiteren ist der Prozess für Patient, Arzt und dem medizinischen Personal sowohl aufwendig als auch bürokratisch. 
 
-Unsere Plattform entlastet die Testzentren in Deutschland, indem Patienten unmittelbar vor dem Test zum Zentrum gerufen werden. Damit vermeiden wir lange Schlangen potentiell erkrankter Menschen. Auf Basis von Echtzeitdaten der Warteschlangen reagieren wir auch auf Verzögerungen im Testablauf und informieren die Patienten über etwaige Verspätungen. Damit erzeugen wir bedeutend weniger Aufwand als bei der klassichen Terminvergabe und sind untern Strich dennoch sicherer sowie flexibler.
+Unsere Plattform entlastet die Testzentren in Deutschland, indem Patienten unmittelbar vor dem Test zum Zentrum gerufen werden. Damit vermeiden wir lange Schlangen potentiell erkrankter Menschen. Auf Basis von Echtzeitdaten der Warteschlangen reagieren wir auch auf Verzögerungen im Testablauf und informieren die Patienten über etwaige Verspätungen. Damit erzeugen wir bedeutend weniger Aufwand als bei der klassischen Terminvergabe und sind untern Strich dennoch sicherer sowie flexibler.
+
+![App Description Screenshots](docs/app-description.jpeg)
+
+## WirVsVirus Hack
 
 ![WirWsVirus](docs/wir_vs_virus-logo.png)
 
-| ![Screenshot 1](docs/screen-1.png) 	| ![Screenshot 2](docs/screen-2.png) 	| ![Screenshot 3](docs/screen-3.jpeg) |
-|------------------------------------	|------------------------------------	|------------------------------------	|
+**COVID Q** ist bei der Teilnahme am Hackathon [WirVsVirus](https://wirvsvirushackathon.org) entstanden. Wir haben an der **Challenge 040** zur _Unterstüztung medizinisches Personals_, konkret mit der Entlastung von Testzentren: **1_040_c_d_entlastung_testcentren**.
+
+Wir haben im Channel [#1_040_medizinischespersonal](http://wirvsvirus.slack.com/messages/1_040_medizinischespersonal) mit unseren Mentor:innen und Pat:innen sowie anderen Teams kommuniziert. Die Team-interne Kommunikation fand im Channel [#1_040_c_d_entlastung_testcentren](http://wirvsvirus.slack.com/messages/1_040_c_d_entlastung_testcentren) statt.
 
 ## Ziele
 
@@ -53,43 +58,77 @@ Wir überlegen zurzeit ein Konzept für einen Fast-Track. Dabei sollen Personen 
 
 ### Sind meine Daten sicher?
 
+Im Rahmen der Eigenanmenese erfassen wir vertrauliche, sehr persönliche Daten. Dabei fragen wir allerdings keine personenbezognene Daten, mit denen man auf die Identität des Antagstellers schließen könnte, ab. Wir fragen weder den Namen, die Anschrift noch Identifizierungsnummern (z.B. Sozialversicherungsnummer) an. Die Amanmese wird mit einem Identifier gespeichert, welcher beim Test vorgezeigt werden kann. Dieser dient als einzige Möglichkeit die erfasste Anamnese mit dem Antragsteller zu verbinden.
 
+Unsere API bietet keine Möglichkeit die Anamesen der Patienten abzufragen. Diese werden nur in Verbindung mit Wartelisten an das medizinische Personal der Testzentren herausgegeben. Auch das medizinische Personal kann keine Rückschlüsse auf die Identität des Patienten in unserer Plattform schließen.
 
-## Rollen
+Optional würden wir gerne anbieten, dass die betroffene Person Kontaktinformationen für Rückfragen hinterlegen kann. Wir prüfen zurzeit mögliche Realisierungen, die die Identität des Patienten nicht preisgeben.
 
-Unsere Plattform verbindet Patienten mit Testzentren und offiziellen Anlaufstellen rund um SARS-CoV-2. Die Termine zum Testen sollen zentral verwaltet und zugewiesen werden um Betroffenen Zeit zu sparen und Transparenz zu schaffen. Des Weiteren sollen betroffene Personen mit Informationsmaterialien gebildet werden.
+⚠️ Die **Datenschutzrelevanten Fragen** besprechen wir zurzeit mit Experten aus Slack. Sobald wir neue Erkentnisse haben, vervollständigen wir diese Frage.
 
-### Patienten
+### Wie verhindern Terminleichen verhindert?
 
-Patienten haben den Verdacht sich mit dem Virus infiziert zu haben. Sie haben sich entweder in einem Risikogebiet befunden oder direkten Kontakt zu einer erkrankten Person gehabt zu haben.
+Unsere Plattform vereinfacht die Terminfindung für Patienten und birgt damit das Risiko, dass Personen eine lockere Haltung gegenüber den Terminen annehmen. Um dem entgegenzuwirken, haben wir uns mehrere Konzepte überlegt.
 
-Sie können in **COVID Q** ihre Symptome beschreiben und erhalten eine Liste qualifizierter Testzentren. Anschließent können sies ich auf die Warteliste eines Testzentrums setzen. Über die Warteliste können Wartezeiten und Auslastungen von Testzentren eingesehen werden.
+Zum Einen können sich betroffene Personen auf lediglich [eine Warteliste bewerben](#kann-man-sich-auf-mehrere-wartelisten-setzen). Unsere Plattform versucht technisch zu verhindern, dass Personen sich in mehreren Testzentren für einen Test registrieren.
 
-### Testzentren
+Des Weiteren werden Patienten an ihren [Termin erinnert](#47). Sie werden rechtzeitig darüber informiert, wann sie sich auf den Weg ins Testzentrum machen sollten.
 
-Patienten können sich in diversen Testzentren in Deutschland auf SARS-CoV-2 testen lassen.
+Zu guter letzte wird das [Erscheinen](#7) oder [Versäumen](#5) von Terminen vom medizinschen Personal gemeldet. 
+
+## An wen richtet sich die Plattform?
+
+Die Plattform **COVID Q** bietet Patienten eine schnelle, unkomplizierte und unbürokratische Möglichkeit sich für Test auf SARS-CoV-19 zu bewerben. Medizinischem Personal und Helfer in den Testzentren wird Arbeit abgenommen, indem die Terminfindung automatisiert auf Basis von Warteschlangen stattfinet. Offizielle Stellen wie Städte, Länder, der Bund und gemeinnützige Organisationen können über die Plattform Testzentren melden und zentral verwalten. Des Weiteren können sie Informationsmaterial anlegen und an die wartenden Patienten über Push-Benachrichtigungen verschicken.
+
+### Betroffene Personen und Patienten ![Patient Badge](https://img.shields.io/github/labels/mlichtblau/wirvsvirus/rolle:patient)
+
+Personen mit Verdacht auf Infektion können über die App eine Eigenanamnese in Anlehnung an die [App der Charité](https://covapp.charite.de) durchführen. Nach der Durchführung erhält die Person Rückmeldung über Notwendigkeit bzw. Dringlichkeit eines Testes. 
+
+Personen, die die Kriterien auf einen Test in Hinsich auf Dringlichkeit nicht erfüllen, erhalten eine Übersicht an Informationsmaterialen aus offiziellen Quellen (RKI, Gesundheitsminestierum) und Tipps zur freiwilligen Eigenisolation.
+
+Bei Risiko auf eine Ansteckung durch erhält die betroffene Person eine Übersicht qualifizierter Testzentren in der Nähe. Für jedes Testzentrum ist die [geschätzte Auslastung](#36) und die [geschätzte Wartedauer](#35) angzeigt. Diese werden auf Basis anonymisierter Statistiken und aus offiziellen Quellen berechnet. Die Person kann sich nun auf die Warteliste von [einem](#kann-man-sich-auf-mehrere-wartelisten-setzen) Testzentrum setzen. Nun wird der Patient regelmäßig über seinen Wartelistenstatus informiert und erhält das Infomaterial, welches das Testzentrum hinterlegt hat. Des Weiteren wird über Verspätungen und anderen Terminanpassungen per Push-Benachrichtigung informiert. Der Patient kann nun zu Hause, fernab langer Warteschlangen potentiell erkrankter Personen auf seinen Testtermin warten. 
+
+Nach Ablehnung auf einen Test oder erfolgreicher Vermitllung eines Testes werden alle Daten zur betroffenen Person gelöscht.
+
+### Testzentren ![Test Center Badge](https://img.shields.io/github/labels/mlichtblau/wirvsvirus/rolle:testzentrum)
+
+Die offiziellen Testzentren werden sowohl von den Verantwortlichen des Testzentrums (Medizinischem Personal, Helfer) und offiziellen Behörden (Städte, Länder, Bund und gemeinnütige Organisationen wie z.B. dem Gesundheitsamt) verwaltet. Damit soll eine zentrale Anlaufstelle für [Patienten](#betroffene-personen-und-patienten) geschaffen werden, welche ebenso zentral von offiziellen verwaltet werden kann. Neue Testzentren können innerhalb weniger Minuten einer breiten Masse an Personen zur Verfügung gestellt werden.
 
 #### Verantwortliche und Leiter
 
-Verantwortliche von Testzentren können Informationen zur Kapazität, den Anforderungen und den Möglichen Tests ihres Zentrums hinterlegen. Auf Basis dieser Daten werden dem Patienten nach der Eigen-Anamnese verfügbare und passende Testzentren vorgeschlagen.
+Die Verantwortlichen von Testzentren pflegen die Kontaktdaten, Anfahrtmöglichkeiten, Öffnungszeiten und Beschreibungen zur Testabwicklung. Diese Informationen können von den Patienten eingesehen werden und werden kurz vor dem Testtermin aktive per Push-Benachrichtigung verschickt. Die für den Patienten relevanten Daten befinden sich zentral an einer Stelle und die Recherche über weitere, offizielle Stellen entfällt.
 
-Nachrichten über Verspätungen oder Zwischenfälle können mittels Push-Benachrichtigungen an alle wartenden Patienten geschickt werden.
+Testzentren haben teils unterschiedliche Anforderungen und Möglichkeiten. Diese können online konfiguriert werden und dienen der automatisierten Selektion von Patienten nach deren Eigenanamnese. Als Beispiel können die verfügbaren Testverfahren hinterleget werden.
 
-#### Mitarbeiter
+In Notfällen oder bei bedeutenden Verzögerungen können die wartenden Patienten über Push-Benachichtigungen informiert werden. Termine können im Fall von Engpässen schneller und einfacher neu mit den Paitenten abgestimmt werden.
 
-tba
+#### Mitarbeiter ![Employee Badge](https://img.shields.io/github/labels/mlichtblau/wirvsvirus/rolle:mitarbeiter)
 
-### Offizielle Verwaltung von Bund, Ländern und Organisationen
+Medizinisches Personal und Helfer aus Testzentren erhalten ebenfalls einen Zugang zur Plattform. Dabei erhalten sie Zugriff auf die Warteliste von ihrem Testzentrum. Sie können Eigenanamnesen der wartenden Patienten einsehen, ohne Rückschlüsse auf deren Identität zu ziehen. 
 
-Verbände, Organisationen, Länder und der Bund können die Testzentren in Deutschland zentral verwalten. Neue Zentren können unkompliziert registriert werden und den Patienten nach ihrer Eigen-Anamnese vorgeschlagen werden. Durch die Prüfung durch offizielle Stellen werden unseriöse Tesstellen gefiltert.
+Die Notwendigkeit auf einen Test kann nun in einer zweiten Instanz durch geschultes Personal für jeden Patienten geprüft. Patienten, die sich nicht für einen Test qualifizieren, können abgelehnt werden. Diese erhalten daraufhin wieder eine Push-Benachrichtigung über die Änderung ihres Wartelistenstatus.
 
-## Technologische Umsetzung
+Angenommene Patienten werden über Push-Benachichtigung informiert, dass sie sich bald im Testzentrum testen lassen können. Sie erhalten nochmal die Informationsmaterialen des Zentrums. 
+
+Die Helfer geben unserer Plattform Feedback über das Erscheinen und Versäumen von Patienten.
+
+### Offizielle Verwaltung von Bund, Ländern und Organisationen ![Official Authority Badge](https://img.shields.io/github/labels/mlichtblau/wirvsvirus/rolle:gesundheitsamt)
+
+Zurzeit werden Termine über lokale Behörden oder die bundensweite Hotline **116117** vergeben. Informationen zu Testzentren werden auf den Internetseiten der Behörden und in der Presse veröffenlicht. Bei detailreicher Pflege der Daten erhalten die Patienten alle Informationen direkt in der App. Hinterlegte Informationen können über Push-Benachrichtigungen auch aktiv an Patienten verschickt werden. 
+
+Zurzeit ist es uns noch nicht möglich die Testzentren von offizielle Stelle automatisiert abzufragen. Wir suchen allerdings nach Lösungsmöglichkeiten und öffentlichen Schnittstellen. Bis darauf hoffen wir auf Hilfe aus den Ländern und dem Gesundheitsamt.
+
+## Technologische Umsetzung ![Language Badge](https://img.shields.io/github/languages/count/mlichtblau/wirvsvirus)
 
 Die Plattform **COVID Q** ist eine Web-basierte Anwendung mit Schwerpunkt auf mobile Endgeräte. 
 
-### Lizenz
+### ![License Badge](https://img.shields.io/github/license/mlichtblau/wirvsvirus)
 
-tba
+**Who cares whose shares.**
+
+Unsere gesamte Plattform, einschließich des gesamten Quellcodes, ist offen und frei zugänglich. Wir hoffen und freuen uns auf Unterstüztung aus der Community und nehmen Pull Requests gerne entgegen. Unsere verwendete Lizenz erlaubt die nicht-kommerzielle oder kommerzielle Weiterentwicklung des Projektes. Unser Fokus liegt in der Bewältigung der aktuellen Situation. Wir haben nur eine einzige Bedingung: Folgeprojekte müssen ebenfalls quelloffen sein, damit die Community aus den Erfahrungen lernen kann.
+
+Falls ihr mithelfen wollt, lest bitte unsere [Contributing](CONTRIBUTING.md) und unseren [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ### Ionic Frontend
 

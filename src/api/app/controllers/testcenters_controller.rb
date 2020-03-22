@@ -3,10 +3,14 @@ class TestcentersController < ApplicationController
 
   # GET /testcenters
   def index
+    @testcenters = Testcenter.all
+
     if params[:verified_only]
-      @testcenters = Testcenter.all_verified
-    else
-      @testcenters = Testcenter.all
+      @testcenters = @testcenters.all_verified
+    end
+
+    if params[:open_only]
+      @testcenters = @testcenters.all_open
     end
 
     render json: @testcenters, include: [:coordinate, :contact_datum], methods: :current_delay

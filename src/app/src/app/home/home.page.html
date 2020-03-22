@@ -18,7 +18,9 @@
         <p>Ein Fragebogen hilft Ihnen Ihr Infektionsrisiko einzustufen und gegebenenfalls ein passendes Testzentrum zu
           finden. Sie können sich dort in eine virtuelle Schlange einreihen und bequem zu Hause auf Ihren Termin warten.
         </p>
-        <ion-button color="medium" expand="block" [routerLink]="['/', 'questionnaire']">COVID-19 TEST
+        <ion-button color="medium" expand="block" [routerLink]="['/', 'questionnaire']">
+          <ion-icon slot="start" name="medkit-outline"></ion-icon>
+          COVID-19 TEST
         </ion-button>
       </ion-col>
     </ion-row>
@@ -29,8 +31,9 @@
         </h2>
         <p>Hier hast Du die Möglichkeit uns auf weitere Testzentren aufmerksam zu machen.
         </p>
-        <ion-button color="medium" expand="block" [routerLink]="['/', 'testcenter', 'new']">TESTZENTRUM
-          ANMELDEN
+        <ion-button color="medium" expand="block" [routerLink]="['/', 'testcenter', 'new']">
+          <ion-icon slot="start" name="add-outline"></ion-icon>
+          TESTZENTRUM MELDEN
         </ion-button>
 
       </ion-col>
@@ -42,7 +45,9 @@
         </h2>
         <p>Hier können sich Mitarbeiter von Testzentren und Gesundheitszentren anmelden.
         </p>
-        <ion-button color="medium" expand="block" [routerLink]="['/', 'testcenter', 'login']">LOG IN
+        <ion-button color="medium" expand="block" [routerLink]="['/', 'testcenter', 'login']">
+          <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+          LOG IN
         </ion-button>
       </ion-col>
     </ion-row>

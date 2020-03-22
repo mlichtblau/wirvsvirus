@@ -10,7 +10,7 @@
       <ion-button slot="start" color="success" (click)="checkIn(i)">
         <ion-icon slot="icon-only" name="checkmark-outline"></ion-icon>
       </ion-button>
-      <ion-label>
+      <ion-label [routerLink]="['/', 'testcenter', 'queue', 'patient']" [queryParams]="{ id: appointment?.patient_id}">
         <h2>{{ appointment?.waiting_number }}</h2>
         <h3>{{ appointment?.appointment_time | date: 'short' }}</h3>
       </ion-label>
@@ -20,3 +20,15 @@
     </ion-item>
   </ion-list>
 </ion-content>
+
+<ion-footer class="dark-bg ion-padding">
+  <h2 class="title ion-text-center">Kontakt zu Wartenden</h2>
+  <ion-button color="light" size="small">
+    <ion-icon slot="start" name="megaphone-outline"></ion-icon>
+    Nachricht senden
+  </ion-button>
+  <ion-button color="light" size="small">
+    <ion-icon slot="start" name="information-circle-outline"></ion-icon>
+    Informationen für Wartende
+  </ion-button>
+</ion-footer>

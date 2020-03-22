@@ -87,8 +87,8 @@ ActiveRecord::Schema.define(version: 2020_03_22_150842) do
 
   create_table "opening_hours", force: :cascade do |t|
     t.integer "day"
-    t.time "opens_at"
-    t.time "closes_at"
+    t.datetime "opens_at"
+    t.datetime "closes_at"
     t.integer "testcenter_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -127,6 +127,15 @@ ActiveRecord::Schema.define(version: 2020_03_22_150842) do
     t.integer "test_method_id", null: false
   end
 
+  create_table "testcenter_criterions", force: :cascade do |t|
+    t.integer "criterion_id", null: false
+    t.integer "testcenter_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["criterion_id"], name: "index_testcenter_criterions_on_criterion_id"
+    t.index ["testcenter_id"], name: "index_testcenter_criterions_on_testcenter_id"
+  end
+
   create_table "testcenter_staffs", force: :cascade do |t|
     t.integer "testcenter_id", null: false
     t.integer "staff_type"
@@ -159,6 +168,8 @@ ActiveRecord::Schema.define(version: 2020_03_22_150842) do
   add_foreign_key "messages", "testcenters"
   add_foreign_key "opening_hours", "testcenters"
   add_foreign_key "scaffolds", "testcenters"
+  add_foreign_key "testcenter_criterions", "criterions"
+  add_foreign_key "testcenter_criterions", "testcenters"
   add_foreign_key "testcenter_staffs", "testcenters"
   add_foreign_key "testcenters", "contact_data"
   add_foreign_key "testcenters", "coordinates"

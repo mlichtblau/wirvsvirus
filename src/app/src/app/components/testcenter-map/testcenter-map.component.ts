@@ -101,6 +101,15 @@ export class TestcenterMapComponent implements OnInit {
     console.log(this.testcenters)
   }
 
+  minutesToString(n): string {
+    var num = n;
+    var hours = (num / 60);
+    var rhours = Math.floor(hours);
+    var minutes = (hours - rhours) * 60;
+    var rminutes = Math.round(minutes);
+    return rhours + ":" + rminutes + "h";
+  }
+
   ngAfterContentInit(): void {
     this.geolocation
       .getCurrentPosition()
@@ -164,8 +173,8 @@ export class TestcenterMapComponent implements OnInit {
             `<p>Heute: ${tc.openingHours[getCurrentDay()].opensAt}-${
               tc.openingHours[getCurrentDay()].closesAt
             } <br>` +
-            `Wartezeit: etwa ${tc.waitingTime} Minuten</p>` +
-            `<ion-button color="medium" expand="block" href="../patient/queue-confirmation/${tc.id}">In Warteschlange stellen</ion-button>` +
+            `Wartezeit: etwa ${this.minutesToString(tc.waitingTime)}</p>` +
+            `<ion-button color="medium" expand="block" href="../patient/queue-confirmation/${tc.id}">Auswählen</ion-button>` +
             '</div>' +
             '</div>'
           const testCenterInfoWindow = new google.maps.InfoWindow({

@@ -1,8 +1,8 @@
-<ion-content>
+<ion-content class="ion-padding">
     <p>
         Sie stehen Schlange für Ihren COVID-19 Test im <br>
 
-        <strong>{{ testcenter?.name }}</strong><br>
+        <strong>{{ testcenter?.name || "Uni Göttingen Süd Testcenter" }}</strong><br>
     </p>
     <p>
         Wir werden Sie 2 Stunden vor Ihrem Termin benachrichtigen.
@@ -14,23 +14,21 @@
 
     <ul>
         <li>
-            Ihre Wartenummer: Bitte notieren Sie diese und melden Sie sich damit in Ihrem Testzentrum
+            <strong>Ihre Wartenummer</strong>: Bitte notieren Sie diese und melden Sie sich damit in Ihrem Testzentrum
         </li>
         <li>
-            Wichtige Informationen des Testzentrums: Bitte nehmen Sie sich Zeit diese sorgfältig zu lesen
+            <strong>Informationen des Testzentrums</strong>: Bitte nehmen Sie sich Zeit diese sorgfältig zu lesen
         </li>
     </ul>
 
+    <p>Falls Sie sich entschließen Ihre Position in der Warteschlange abzugeben, sagen Sie uns bitte zeitnah Bescheid.</p>
     <p>
-        Falls Sie sich entschließen Ihre Position in der Warteschlange abzugeben, sagen Sie uns zeitnah bitte Bescheid.
-
         Bitte beachten Sie, dass Informationen nicht bindend sind und sich auch kurzfristig aufgrund von Notfällen
         ändern können. Aufgrund der aktuellen Situation ist mit Verzögerungen zu rechnen.
-
     </p>
 
 
-    <ion-button (click)="confirmAppointment()" expand="block">Show Countdown</ion-button>
+    <ion-button (click)="confirmAppointment()" expand="block">Weiter</ion-button>
 </ion-content>
 
 <ion-header>

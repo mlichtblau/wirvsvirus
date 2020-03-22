@@ -4,8 +4,8 @@ class Testcenter < ApplicationRecord
 
   validates :street, :zip_code, :city, presence: true
 
-  has_many :criterions_testcenters
-  has_many :criterions, through: :criterions_testcenters
+  has_many :testcenter_criterions
+  has_many :criterions, through: :testcenter_criterions
   has_many :appointments
   belongs_to :coordinate
   belongs_to :contact_datum
@@ -24,7 +24,7 @@ class Testcenter < ApplicationRecord
     end
 
     if delays.mean.nil?
-      return "keine Verspätung"
+      return "Keine Verspätung"
     end
 
     return time_ago_in_words(delays.mean.seconds.from_now)
@@ -36,6 +36,20 @@ class Testcenter < ApplicationRecord
 
   def self.all_verified
     return Testcenter.where.not(verified_at: nil).all
+  end
+
+  def self.all_open
+    return Testcenter.all.select(&:open?)
+  end
+
+  def open?
+    opening_hours_today = self.opening_hours.find_by(day: Date.today.wday)
+    if opening_hours_today.nil?
+      return false
+    end
+
+    return Time.now.between?(opening_hours_today.opens_at.to_time, opening_hours_today.closes_at.to_time)
+
   end
 
   def test_slot_duration(week_day)

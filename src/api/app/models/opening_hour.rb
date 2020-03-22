@@ -1,5 +1,5 @@
 class OpeningHour < ApplicationRecord
   belongs_to :testcenter
 
-  enum day: [:monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday]
+  enum day: [:sunday, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday]
 end
