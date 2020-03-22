@@ -1,20 +1,25 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>patient-overview</ion-title>
+    <ion-title>Testzentren</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-segment (ionChange)="segmentChanged($event)">
-    <ion-segment-button value="friends">
-      <ion-label>Friends</ion-label>
+    <ion-segment-button value="mapview">
+      <ion-label>Map</ion-label>
     </ion-segment-button>
-    <ion-segment-button value="enemies">
-      <ion-label>Enemies</ion-label>
+    <ion-segment-button value="listview">
+      <ion-label>List</ion-label>
     </ion-segment-button>
   </ion-segment>
 
-  <ion-button expand="block" *ngIf="activeSegment === 'friends'" (click)="addAppointment()">Friends Button</ion-button>
-  <!--<ion-button expand="block" *ngIf="activeSegment === 'friends'" [routerLink]="['/', 'patient','queue-confirmation']">Friends Button</ion-button>-->
-  <ion-button expand="block" *ngIf="activeSegment === 'enemies'" [routerLink]="['/', 'patient','queue-confirmation']">Enemy Button</ion-button>
+  <app-testcenter-map *ngIf="activeSegment==='mapview'"></app-testcenter-map>
+
+  <ion-footer *ngIf="activeSegment==='mapview'">
+    <ion-toolbar>
+      <ion-title>Bitte wählen Sie ein Testzentrum</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+  <ion-button expand="block" *ngIf="activeSegment === 'listview'" [routerLink]="['/', 'patient','queue-confirmation']">List View</ion-button>
 </ion-content>

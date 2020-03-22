@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Storage} from '@ionic/storage';
 import {Appointment} from '../../shared/models/appointment';
 import {Router} from '@angular/router';
+import {Storage} from '@ionic/storage';
+
 
 @Component({
   selector: 'app-patient-overview',
@@ -9,7 +10,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./patient-overview.page.scss'],
 })
 export class PatientOverviewPage implements OnInit {
-  activeSegment = 'friends';
+  activeSegment = 'mapview';
 
   appointment: Appointment = {
     appointment_time: new Date('2020-03-21T15:00:00'),

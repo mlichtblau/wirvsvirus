@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {NavController} from "@ionic/angular";
 
 @Component({
   selector: 'app-patient-queue-confirmation',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./patient-queue-confirmation.page.scss'],
 })
 export class PatientQueueConfirmationPage implements OnInit {
+  testcenterID;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    ) { }
 
   ngOnInit() {
+    this.testcenterID = this.route.snapshot.paramMap.get('testcenterID');
   }
 
 }

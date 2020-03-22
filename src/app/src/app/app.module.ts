@@ -8,6 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import {ComponentsModule} from "./components/components.module";
 import {RestService} from './shared/api/rest.service';
 import {AppointmentProvider} from './shared/api/appointment/appointment';
 import {HttpClientModule} from '@angular/common/http';
@@ -27,7 +28,8 @@ import {TestcenterStaffProvider} from './shared/api/testcenter-staff/testcenter-
     HttpClientModule,
     IonicModule.forRoot(),
     IonicStorageModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+      ComponentsModule
   ],
   providers: [
     StatusBar,
