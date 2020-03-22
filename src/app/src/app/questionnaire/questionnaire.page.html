@@ -86,6 +86,22 @@
         </ion-button>
       </div>
     </ion-slide>
+    <ion-slide>
+      <div class="slide question">
+        <ion-item>
+          <div class="big">
+            <ion-label position="floating">
+              Seid wann haben Sie Symptome?
+            </ion-label>
+            <ion-input [(ngModel)]="patientModel.symptoms_since" type="string">
+            </ion-input>
+          </div>
+        </ion-item>
+        <ion-button class="nextButton" [disabled]="!allowNext('age')" (click)="next()">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-slide>
     <ion-slide *ngFor="let criterion of criterions; let i = index">
       <div class="slide question">
         <ion-radio-group [(ngModel)]="criterion.answer" (ngModelChange)="next()">
