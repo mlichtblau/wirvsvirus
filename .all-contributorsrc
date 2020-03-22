@@ -1,0 +1,91 @@
+{
+  "projectName": "wirvsvirus",
+  "projectOwner": "mlichtblau",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "mlichtblau",
+      "name": "Marius Lichtblau",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/22854083?v=4",
+      "profile": "http://lichtblau.io",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "marcfreiheit",
+      "name": "Marc André Freiheit",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/27914201?v=4",
+      "profile": "http://marcfreiheit.de",
+      "contributions": [
+        "business",
+        "infra",
+        "projectManagement"
+      ]
+    },
+    {
+      "login": "drs-m",
+      "name": "Darius Mewes",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1767255?v=4",
+      "profile": "https://github.com/drs-m",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "FWirtz",
+      "name": "Florian Wirtz",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6052785?v=4",
+      "profile": "https://github.com/FWirtz",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "manner",
+      "name": "Moritz Manner",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3809419?v=4",
+      "profile": "https://github.com/manner",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "tom2022",
+      "name": "Thomas M. Samer",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/32955754?v=4",
+      "profile": "https://github.com/tom2022",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "juliusrueckin",
+      "name": "Julius Rückin",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6661426?v=4",
+      "profile": "https://www.linkedin.com/in/juliusrueckin/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "pia-francesca",
+      "name": "Pia Francesca Rissom",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/56447302?v=4",
+      "profile": "https://github.com/pia-francesca",
+      "contributions": [
+        "design",
+        "content",
+        "video"
+      ]
+    }
+  ],
+  "contributorsPerLine": 4
+}

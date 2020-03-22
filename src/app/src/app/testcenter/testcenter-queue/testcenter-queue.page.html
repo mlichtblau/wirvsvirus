@@ -30,13 +30,13 @@
     </ion-row>
     <ion-row>
       <ion-col text-center>
-        <ion-button color="light" size="small" style="display: inline-block;">
+        <ion-button color="light" size="small" style="display: inline-block;" [routerLink]="['/', 'testcenter', 'send-message']">
           <ion-icon name="megaphone-outline" slot="start"></ion-icon>
           Nachricht senden
         </ion-button>
       </ion-col>
       <ion-col text-center>
-        <ion-button color="light" size="small" style="display: inline-block;">
+        <ion-button color="light" size="small" style="display: inline-block;" [routerLink]="['/', 'testcenter', 'info-for-patients']">
           <ion-icon name="information-circle-outline" slot="start"></ion-icon>
           Informationen für Wartende
         </ion-button>
