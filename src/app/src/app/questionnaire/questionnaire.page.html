@@ -87,7 +87,7 @@
         <ion-item>
           <div class="big">
             <ion-label position="floating">
-              Bitten geben Sie ihre Postleitzahl an.
+              Bitte geben Sie ihre Postleitzahl an.
             </ion-label>
             <ion-input [(ngModel)]="patientModel.zip_code" type="number">
             </ion-input>
@@ -105,7 +105,7 @@
       <div class="slide question">
         <ion-item>
           <ion-label position="floating">
-            Seit wie vielen Tagen haben Sie Symptome?
+            Wann haben Ihre Symptome eingesetzt?
           </ion-label>
           <ion-datetime [(ngModel)]="patientModel.symptoms_since" [max]="currentDateString.substr(0, 10)" displayFormat="DD.MM" min="2020-01-01"></ion-datetime>
         </ion-item>
