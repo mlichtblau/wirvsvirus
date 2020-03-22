@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Appointment} from '../../shared/models/appointment';
 import {Router} from '@angular/router';
 import {Storage} from '@ionic/storage';
-
+import {TestcenterProvider} from "../../shared/api/testcenter/testcenter";
 
 @Component({
   selector: 'app-patient-overview',
@@ -11,40 +10,53 @@ import {Storage} from '@ionic/storage';
 })
 export class PatientOverviewPage implements OnInit {
   activeSegment = 'mapview';
-
-  appointment: Appointment = {
-    appointment_time: new Date('2020-03-21T15:00:00'),
-    patient_id: 1,
-    testcenter_id: 1,
-    waiting_number: 'UKG_02301',
-    processed_at: undefined,
-    created_at: new Date('2020-03-21T10:00:00')
-  };
+  testcenters = [];
+  isLoaded = false;
 
   constructor(
       public storage: Storage,
-      public router: Router
+      public router: Router,
+      public testCenterProvider: TestcenterProvider
   ) { }
 
   ngOnInit() {
-    this.storage.set('patient', {
-      id: 1,
-      zip_code: 12345,
-      age: 75,
-      living_situation: 'community',
-      workplace: 'police'
-    });
+    this.fetchTestCenter();
   }
 
   segmentChanged($event) {
     this.activeSegment = $event.detail.value;
   }
 
-  addAppointment() {
-    this.storage.set('appointment', this.appointment)
-        .then(() => {
-          this.router.navigate(['/', 'patient', 'countdown']);
+  fetchTestCenter() {
+    this.testCenterProvider.all()
+      .subscribe((el) => {
+        el.forEach(tc => {
+          console.log(tc);
+          this.testcenters.push(
+            {
+              id: tc.id,
+              name: tc.name,
+              street: tc.street,
+              zipCode: tc.zip_code,
+              city: tc.city,
+              pos: {
+                lat: tc.coordinate.latitude,
+                lng: tc.coordinate.longitude,
+              },
+              directions: tc.directions,
+              waitingTime: tc.current_delay,
+              openingHours: tc.opening_hours
+            }
+          )
         })
-  }
+        console.log(this.testcenters);
+        this.storage.set('testcenters',
+          this.testcenters
+        ).then(() => {
+          this.isLoaded=true;
+        });
+      });
 
+
+}
 }
