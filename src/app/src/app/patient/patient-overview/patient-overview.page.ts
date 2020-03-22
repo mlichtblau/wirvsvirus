@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestcenterMapComponent } from "../../components/testcenter-map/testcenter-map.component";
 
 @Component({
   selector: 'app-patient-overview',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./patient-overview.page.scss'],
 })
 export class PatientOverviewPage implements OnInit {
-  activeSegment = 'friends';
+  activeSegment = 'mapview';
 
   constructor() { }
 

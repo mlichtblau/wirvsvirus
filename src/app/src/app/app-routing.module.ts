@@ -13,7 +13,7 @@ const routes: Routes = [
     loadChildren: () => import('./patient/patient-overview/patient-overview.module').then( m => m.PatientOverviewPageModule)
   },
   {
-    path: 'patient/queue-confirmation',
+    path: 'patient/queue-confirmation/:testcenterID',
     loadChildren: () => import('./patient/patient-queue-confirmation/patient-queue-confirmation.module').then( m => m.PatientQueueConfirmationPageModule)
   },
   {
