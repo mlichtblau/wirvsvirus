@@ -4,12 +4,7 @@ import { IonSlides } from '@ionic/angular'
 import { Patient, CriterionNames } from '../shared/models/patient'
 import { PatientProvider } from '../shared/api/patient/patient'
 import { map, pick } from 'lodash'
-
-type CriterionQuestion = {
-  criterion: CriterionNames
-  question?: string
-  answer?: 'yes' | 'no' | 'unsure'
-}
+import { getCriterions } from './criterions'
 
 @Component({
   selector: 'app-questionnaire',
@@ -19,21 +14,20 @@ type CriterionQuestion = {
 export class QuestionnairePage implements OnInit {
   @ViewChild(IonSlides, { static: false }) slides: IonSlides
 
-  patientModel: Patient = {}
-
-  criterions: CriterionQuestion[] = [
-    { criterion: 'smoking', question: 'Do you smoke?' },
-    { criterion: 'pregnancy', question: 'Are you pregnant?' },
-    {
-      criterion: 'chronic lung disease',
-      question: 'Do you have a chronic lung disease?',
-    },
-  ]
+  patientModel: Patient = {
+    zip_code: '123',
+    living_situation: 'community',
+    workplace: 'police',
+    flu_vaccinated: true,
+    symptoms_since: '10.03.2020',
+  }
 
   slideOpts = {
     speed: 400,
     centeredSlides: true,
   }
+
+  criterions = getCriterions()
 
   sendResults() {
     this.patientModel.anamnestic_items = map(this.criterions, item =>
@@ -58,7 +52,7 @@ export class QuestionnairePage implements OnInit {
   }
 
   lock() {
-    this.slides.lockSwipes(true)
+    // this.slides.lockSwipes(true)
   }
 
   unlock() {
@@ -71,6 +65,6 @@ export class QuestionnairePage implements OnInit {
 
   nextAndLock() {
     this.next()
-    this.lock()
+    // this.lock()
   }
 }
