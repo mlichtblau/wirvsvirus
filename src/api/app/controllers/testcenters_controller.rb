@@ -81,7 +81,7 @@ class TestcentersController < ApplicationController
   end
   
   def show_next_appointments
-    @next_appointments = @testcenter.appointments.order :appointment_time
+    @next_appointments = @testcenter.appointments.not_canceled.not_yet_processed.order :appointment_time
     render json: @next_appointments
   end
 

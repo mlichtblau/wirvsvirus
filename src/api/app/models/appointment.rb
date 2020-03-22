@@ -4,6 +4,9 @@ class Appointment < ApplicationRecord
   belongs_to :feedback, optional: true
   belongs_to :rescheduled_to, class_name: 'Appointment', foreign_key: :rescheduled_to_appointment_id, optional: true
 
+  scope :not_canceled, -> {where(canceled_at: nil)}
+  scope :not_yet_processed, -> {where(processed_at: nil)}
+
   before_create :generate_automated_appointment_data
 
   def generate_automated_appointment_data
