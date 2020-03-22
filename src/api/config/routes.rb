@@ -22,5 +22,6 @@ Rails.application.routes.draw do
 
   get 'appointments/:id/canceled', to: 'appointments#cancel_appointment'
   get 'appointments/:id/processed', to: 'appointments#process_appointment'
+  post 'appointments/:id/rescheduled', to: 'appointments#reschedule_appointment'
 
 end

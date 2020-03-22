@@ -1,5 +1,5 @@
 class AppointmentsController < ApplicationController
-  before_action :set_appointment, only: [:show, :update, :destroy, :cancel_appointment, :process_appointment]
+  before_action :set_appointment, only: [:show, :update, :destroy, :cancel_appointment, :process_appointment, :reschedule_appointment]
 
   # GET /appointments
   def index
@@ -53,6 +53,20 @@ class AppointmentsController < ApplicationController
       render json: @appointment
     else
       render json: @appointment.errors, status: :unprocessable_entity
+    end
+  end
+  
+  def reschedule_appointment
+    @new_appointment = Appointment.new(
+      patient: @appointment.patient,
+      testcenter: @appointment.testcenter,
+      waiting_number: @appointment.waiting_number,
+      appointment_time: params['new_appointment_time']
+    )
+    
+    if @new_appointment.save
+      @appointment.rescheduled_to = @new_appointment
+      render json: @appointment, include: :rescheduled_to
     end
   end
 
