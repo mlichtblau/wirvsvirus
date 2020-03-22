@@ -21,5 +21,9 @@
           <ion-input [(ngModel)]="testcenterStaff.pin_code" type="string"></ion-input>
         </ion-item>
 
+        <ion-item *ngIf="didError" color="danger">
+            <ion-label>Anmeldung fehlgeschlagen.</ion-label>
+        </ion-item>
+
     <ion-button class="ion-margin" expand="block" [disabled]="!isLoginButtonActive()" (click)="login()">Anmelden</ion-button>
 </ion-content>
