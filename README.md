@@ -1,4 +1,4 @@
-# COVID Q ![License Badge](https://img.shields.io/github/license/mlichtblau/wirvsvirus)
+# COVID Q ![Website Status Badge](https://img.shields.io/website?url=https%3A%2F%2Fcorona-q.appspot.com)
 
 Der hohe Bedarf an Tests auf SARS-CoV-19 führt zu überfüllten Teststellen mit teils drastischen Verspätungen und auflaufenden Menschenmassen. Des Weiteren ist der Prozess für Patient, Arzt und dem medizischen Personal sowohl aufwendig als auch bürokratisch. 
 
@@ -75,7 +75,7 @@ Zu guter letzte wird das [Erscheinen](#7) oder [Versäumen](#5) von Terminen vom
 
 Die Plattform **COVID Q** bietet Patienten eine schnelle, unkomplizierte und unbürokratische Möglichkeit sich für Test auf SARS-CoV-19 zu bewerben. Medizinischem Personal und Helfer in den Testzentren wird Arbeit abgenommen, indem die Terminfindung automatisiert auf Basis von Warteschlangen stattfinet. Offizielle Stellen wie Städte, Länder, der Bund und gemeinnützige Organisationen können über die Plattform Testzentren melden und zentral verwalten. Des Weiteren können sie Informationsmaterial anlegen und an die wartenden Patienten über Push-Benachrichtigungen verschicken.
 
-### Betroffene Personen und Patienten
+### Betroffene Personen und Patienten ![Patient Badge](https://img.shields.io/github/labels/mlichtblau/wirvsvirus/rolle:patient)
 
 Personen mit Verdacht auf Infektion können über die App eine Eigenanamnese in Anlehnung an die [App der Charité](https://covapp.charite.de) durchführen. Nach der Durchführung erhält die Person Rückmeldung über Notwendigkeit bzw. Dringlichkeit eines Testes. 
 
@@ -85,7 +85,7 @@ Bei Risiko auf eine Ansteckung durch erhält die betroffene Person eine Übersic
 
 Nach Ablehnung auf einen Test oder erfolgreicher Vermitllung eines Testes werden alle Daten zur betroffenen Person gelöscht.
 
-### Testzentren
+### Testzentren ![Test Center Badge](https://img.shields.io/github/labels/mlichtblau/wirvsvirus/rolle:testzentrum)
 
 Die offiziellen Testzentren werden sowohl von den Verantwortlichen des Testzentrums (Medizinischem Personal, Helfer) und offiziellen Behörden (Städte, Länder, Bund und gemeinnütige Organisationen wie z.B. dem Gesundheitsamt) verwaltet. Damit soll eine zentrale Anlaufstelle für [Patienten](#betroffene-personen-und-patienten) geschaffen werden, welche ebenso zentral von offiziellen verwaltet werden kann. Neue Testzentren können innerhalb weniger Minuten einer breiten Masse an Personen zur Verfügung gestellt werden.
 
@@ -97,7 +97,7 @@ Testzentren haben teils unterschiedliche Anforderungen und Möglichkeiten. Diese
 
 In Notfällen oder bei bedeutenden Verzögerungen können die wartenden Patienten über Push-Benachichtigungen informiert werden. Termine können im Fall von Engpässen schneller und einfacher neu mit den Paitenten abgestimmt werden.
 
-#### Mitarbeiter
+#### Mitarbeiter ![Employee Badge](https://img.shields.io/github/labels/mlichtblau/wirvsvirus/rolle:mitarbeiter)
 
 Medizinisches Personal und Helfer aus Testzentren erhalten ebenfalls einen Zugang zur Plattform. Dabei erhalten sie Zugriff auf die Warteliste von ihrem Testzentrum. Sie können Eigenanamnesen der wartenden Patienten einsehen, ohne Rückschlüsse auf deren Identität zu ziehen. 
 
@@ -107,17 +107,17 @@ Angenommene Patienten werden über Push-Benachichtigung informiert, dass sie sic
 
 Die Helfer geben unserer Plattform Feedback über das Erscheinen und Versäumen von Patienten.
 
-### Offizielle Verwaltung von Bund, Ländern und Organisationen
+### Offizielle Verwaltung von Bund, Ländern und Organisationen ![Official Authority Badge](https://img.shields.io/github/labels/mlichtblau/wirvsvirus/rolle:gesundheitsamt)
 
 Zurzeit werden Termine über lokale Behörden oder die bundensweite Hotline **116117** vergeben. Informationen zu Testzentren werden auf den Internetseiten der Behörden und in der Presse veröffenlicht. Bei detailreicher Pflege der Daten erhalten die Patienten alle Informationen direkt in der App. Hinterlegte Informationen können über Push-Benachrichtigungen auch aktiv an Patienten verschickt werden. 
 
 Zurzeit ist es uns noch nicht möglich die Testzentren von offizielle Stelle automatisiert abzufragen. Wir suchen allerdings nach Lösungsmöglichkeiten und öffentlichen Schnittstellen. Bis darauf hoffen wir auf Hilfe aus den Ländern und dem Gesundheitsamt.
 
-## Technologische Umsetzung
+## Technologische Umsetzung ![Language Badge](https://img.shields.io/github/languages/count/mlichtblau/wirvsvirus)
 
 Die Plattform **COVID Q** ist eine Web-basierte Anwendung mit Schwerpunkt auf mobile Endgeräte. 
 
-### Lizenz
+### Lizenz ![License Badge](https://img.shields.io/github/license/mlichtblau/wirvsvirus)
 
 **Who cares whose shares.**
 
