@@ -18,5 +18,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   post 'testcenters/:id/criterions', to: 'testcenters#set_criteria'
+  get 'appointments/:id/canceled', to: 'appointments#cancel_appointment'
+  get 'appointments/:id/processed', to: 'appointments#process_appointment'
 
 end

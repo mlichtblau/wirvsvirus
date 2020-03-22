@@ -53,11 +53,17 @@ testcenter = Testcenter.create(
   contact_datum_attributes: {phone: '030 450 50'}
 )
 
+OpeningHour.create(testcenter: testcenter, day: :monday, opens_at: Time.now - 6.hours, closes_at: Time.now + 6.hours)
+OpeningHour.create(testcenter: testcenter, day: :tuesday, opens_at: Time.now - 6.hours, closes_at: Time.now + 6.hours)
+OpeningHour.create(testcenter: testcenter, day: :wednesday, opens_at: Time.now - 6.hours, closes_at: Time.now + 6.hours)
+OpeningHour.create(testcenter: testcenter, day: :thursday, opens_at: Time.now - 6.hours, closes_at: Time.now + 6.hours)
+OpeningHour.create(testcenter: testcenter, day: :friday, opens_at: Time.now - 6.hours, closes_at: Time.now + 6.hours)
+OpeningHour.create(testcenter: testcenter, day: :saturday, opens_at: Time.now - 6.hours, closes_at: Time.now + 6.hours)
+OpeningHour.create(testcenter: testcenter, day: :sunday, opens_at: Time.now - 6.hours, closes_at: Time.now + 6.hours)
+
 TestcenterStaff.create(testcenter: testcenter, staff_type: :coworker, pin_code: "1234")
 TestcenterStaff.create(testcenter: testcenter, staff_type: :admin, pin_code: "5678")
 
 patient = Patient.create(age: 35, living_situation: :community, workplace: :police, zip_code: "80331")
 
 Appointment.create(patient: patient, testcenter: testcenter, appointment_time: DateTime.now + 2.hours, waiting_number: "555")
-
-OpeningHour.create(testcenter: testcenter, day: :tuesday, opens_at: Time.now - 6.hours, closes_at: Time.now + 2.hours)

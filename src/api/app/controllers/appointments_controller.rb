@@ -1,5 +1,5 @@
 class AppointmentsController < ApplicationController
-  before_action :set_appointment, only: [:show, :update, :destroy]
+  before_action :set_appointment, only: [:show, :update, :destroy, :cancel_appointment, :process_appointment]
 
   # GET /appointments
   def index
@@ -36,6 +36,24 @@ class AppointmentsController < ApplicationController
   # DELETE /appointments/1
   def destroy
     @appointment.destroy
+  end
+
+  # GET /appointments/1/cancel
+  def cancel_appointment
+    if @appointment.update(canceled_at: DateTime.now)
+      render json: @appointment
+    else
+      render json: @appointment.errors, status: :unprocessable_entity
+    end
+  end
+
+  # GET /appointments/1/process
+  def process_appointment
+    if @appointment.update(processed_at: DateTime.now)
+      render json: @appointment
+    else
+      render json: @appointment.errors, status: :unprocessable_entity
+    end
   end
 
   private

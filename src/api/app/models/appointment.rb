@@ -4,12 +4,12 @@ class Appointment < ApplicationRecord
   belongs_to :feedback, optional: true
   belongs_to :appointment, foreign_key: :rescheduled_to_appointment_id, optional: true
 
-  before_save :generate_automated_appointment_data
+  before_create :generate_automated_appointment_data
 
   def generate_automated_appointment_data
-    self.waiting_number = generate_next_waiting_number
-    last_appointment_time = self.testcenter.appointments.order(:appointment_time).last
-    self.appointment_time = last_appointment_time + self.testcenter.test_slot_duration(last_appointment_time.wday)
+    self.waiting_number = Appointment.generate_next_waiting_number
+    last_appointment = self.testcenter.appointments.order(:appointment_time).last
+    self.appointment_time = last_appointment.appointment_time + self.testcenter.test_slot_duration(last_appointment.appointment_time.wday)
   end
 
   def self.generate_next_waiting_number
