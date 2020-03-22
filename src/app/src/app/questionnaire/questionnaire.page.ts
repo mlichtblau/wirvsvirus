@@ -2,6 +2,16 @@ import { ViewChild } from '@angular/core'
 import { Component, OnInit } from '@angular/core'
 import { IonSlides } from '@ionic/angular'
 
+type Criterions = string
+
+type PatientModel = {
+  age?: number
+  living_situation?: 'community' | 'single'
+  workplace?: 'police' | 'other'
+  zip_code?: number
+  criterion_names?: Criterions[]
+}
+
 @Component({
   selector: 'app-questionnaire',
   templateUrl: './questionnaire.page.html',
@@ -9,6 +19,8 @@ import { IonSlides } from '@ionic/angular'
 })
 export class QuestionnairePage implements OnInit {
   @ViewChild(IonSlides, { static: false }) slides: IonSlides
+
+  patientModel: PatientModel = {}
 
   slideOpts = {
     speed: 400,
