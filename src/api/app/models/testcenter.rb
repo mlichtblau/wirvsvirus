@@ -62,16 +62,16 @@ class Testcenter < ApplicationRecord
   end
 
   def next_opening_hour(given_datetime)
-    open_days = self.opening_hours.collect { |opening_hour| opening_hour.day.to_i }
-    next_open_day = given_datetime.wday
-    days_jump = 0
+    open_days = self.opening_hours.collect { |opening_hour| OpeningHour.days[opening_hour.day] }
+    next_open_day = (given_datetime.wday + 1) % 6
+    days_jump = 1
     while not open_days.include? next_open_day
       days_jump = days_jump + 1
       next_open_day = (next_open_day + 1) % 6
     end
-
+    
     next_opening_hour = self.opening_hours.find_by(day: next_open_day).opens_at
-    next_opening_hour_datetime = given_datetime.to_date + days_jump.days + next_opening_hour.to_datetime.hours + next_opening_hour.to_datetime.minutes + next_opening_hour.to_datetime.seconds
+    next_opening_hour_datetime = given_datetime.to_date + days_jump.days + next_opening_hour.to_datetime.hour.hours + next_opening_hour.to_datetime.minute.minutes + next_opening_hour.to_datetime.second.seconds
 
     return next_opening_hour_datetime
   end
