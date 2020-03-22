@@ -33,7 +33,7 @@ export class TestcenterMapComponent implements OnInit {
       }[]
     } = {
       testcenter: [{
-        id: '24323',
+        id: '1',
         name: "Uni Klinikum Göttingen",
         street: "Robert-Koch-Straße",
         zipCode: "37075",
