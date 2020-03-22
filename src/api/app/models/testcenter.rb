@@ -52,6 +52,30 @@ class Testcenter < ApplicationRecord
 
   end
 
+  def open_at?(given_datetime)
+    opening_hours = self.opening_hours.find_by(day: given_datetime.wday)
+    if opening_hours.nil?
+      return false
+    end
+
+    return given_datetime.between?(opening_hours.opens_at, opening_hours.closes_at)
+  end
+
+  def next_opening_hour(given_datetime)
+    open_days = self.opening_hours.collect { |opening_hour| opening_hour.day.to_i }
+    next_open_day = given_datetime.wday
+    days_jump = 0
+    while not open_days.include? next_open_day
+      days_jump = days_jump + 1
+      next_open_day = (next_open_day + 1) % 6
+    end
+
+    next_opening_hour = self.opening_hours.find_by(day: next_open_day).opens_at
+    next_opening_hour_datetime = given_datetime.to_date + days_jump.days + next_opening_hour.hours + next_opening_hour.minutes + next_opening_hour.seconds
+
+    return next_opening_hour_datetime
+  end
+
   def test_slot_duration(week_day)
     daily_opening_duration_in_hours = (self.opening_hours.find_by(day: week_day).closes_at - self.opening_hours.find_by(day: week_day).opens_at) / 3600.0
     return (daily_opening_duration_in_hours / self.daily_capacity).hours

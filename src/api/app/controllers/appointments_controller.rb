@@ -38,7 +38,7 @@ class AppointmentsController < ApplicationController
     @appointment.destroy
   end
 
-  # GET /appointments/1/cancel
+  # PUT /appointments/1/cancel
   def cancel_appointment
     if @appointment.update(canceled_at: DateTime.now)
       render json: @appointment
@@ -47,7 +47,7 @@ class AppointmentsController < ApplicationController
     end
   end
 
-  # GET /appointments/1/process
+  # PUT /appointments/1/process
   def process_appointment
     if @appointment.update(processed_at: DateTime.now)
       render json: @appointment
