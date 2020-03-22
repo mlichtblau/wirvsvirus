@@ -3,7 +3,11 @@ class TestcentersController < ApplicationController
 
   # GET /testcenters
   def index
-    @testcenters = Testcenter.all
+    if params[:verified_only]
+      @testcenters = Testcenter.all_verified
+    else
+      @testcenters = Testcenter.all
+    end
 
     render json: @testcenters, include: [:coordinate, :contact_datum]
   end
