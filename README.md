@@ -13,7 +13,7 @@ Unsere Plattform entlastet die Testzentren in Deutschland, indem Patienten unmit
 
 **COVID Q** ist bei der Teilnahme am Hackathon [WirVsVirus](https://wirvsvirushackathon.org) entstanden. Wir haben an der **Challenge 040** zur _Unterstützung medizinisches Personals_, konkret mit der Entlastung von Testzentren: **1_040_c_d_entlastung_testcentren**.
 
-Wir haben im Channel [#1_040_medizinischespersonal](http://wirvsvirus.slack.com/messages/1_040_medizinischespersonal) mit unseren Mentor:innen und Pat:innen sowie anderen Teams kommuniziert. Die Team-interne Kommunikation fand im Channel [#1_040_c_d_entlastung_testcentren](http://wirvsvirus.slack.com/messages/1_040_c_d_entlastung_testcentren) statt.
+Wir haben im Channel [#1_040_medizinischespersonal](http://wirvsvirus.slack.com/messages/1_040_medizinischespersonal) mit unseren Mentor:innen und Pat:innen sowie anderen Teams kommuniziert.
 
 ## Ziele
 
