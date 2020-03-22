@@ -24,7 +24,7 @@ class Testcenter < ApplicationRecord
     end
 
     if delays.mean.nil?
-      return "0 Minuten"
+      return "Keine Verspätung"
     end
 
     return time_ago_in_words(delays.mean.seconds.from_now)
