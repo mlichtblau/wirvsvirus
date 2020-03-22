@@ -7,9 +7,13 @@ class Appointment < ApplicationRecord
   before_create :generate_automated_appointment_data
 
   def generate_automated_appointment_data
-    self.waiting_number = Appointment.generate_next_waiting_number
-    last_appointment = self.testcenter.appointments.order(:appointment_time).last
-    self.appointment_time = last_appointment.appointment_time + self.testcenter.test_slot_duration(last_appointment.appointment_time.wday)
+    if self.waiting_number.blank?
+      self.waiting_number = Appointment.generate_next_waiting_number
+    end
+    if self.appointment_time.blank?
+      last_appointment = self.testcenter.appointments.order(:appointment_time).last
+      self.appointment_time = last_appointment.appointment_time + self.testcenter.test_slot_duration(last_appointment.appointment_time.wday)
+    end
   end
 
   def self.generate_next_waiting_number
