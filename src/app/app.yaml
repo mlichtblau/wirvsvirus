@@ -1,4 +1,5 @@
 runtime: python27
+api_version: 1
 threadsafe: true
 
 skip_files:
@@ -7,8 +8,21 @@ skip_files:
 handlers:
 - url: /
   static_files: www/index.html
-  upload: www/index.html
-
-- url: /(.*)
+  upload: www/.*
+- url: /(.*\.js)
+  redirect_http_response_code: 301
   static_files: www/\1
-  upload: www/(.*)
+  upload: www/.*\.js
+- url: /(.*\.css)
+  redirect_http_response_code: 301
+  static_files: www/\1
+  mime_type: text/css
+  upload: www/.*\.css
+- url: /(.*\.svg)
+  redirect_http_response_code: 301
+  static_files: www/\1
+  mime_type:  image/svg+xml
+  upload: www/.*\.svg
+- url: /.*
+  static_files: www/index.html
+  upload: www/.*
