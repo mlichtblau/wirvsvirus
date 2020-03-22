@@ -74,7 +74,7 @@
           <ion-label position="floating">
             Hatten Sie in den letzten 24 Stunden Fieber?
           </ion-label>
-          <ion-select class="big">
+          <ion-select [(ngModel)]="patient.anamnestic_items[0].answer" class="big">
             <ion-select-option value="ja">Ja</ion-select-option>
             <ion-select-option value="nein">Nein</ion-select-option>
             <ion-select-option value="unsicher">Unsicher</ion-select-option>
@@ -116,8 +116,8 @@
         </ion-text>
         <p>Im Folgenden Helfen wir Ihnen ein nahes Testzentrum mit kurzer Wartezeit zu finden.</p>
         <p>
-          Wegen des hohen Andrangs in den Testzentren können Sie sich 
-          nur in einem Testzentrum auf die Warteliste setzen lassen. 
+          Wegen des hohen Andrangs in den Testzentren können Sie sich
+          nur in einem Testzentrum auf die Warteliste setzen lassen.
           Wir bitten um Ihr Verständnis.
         </p>
         <ion-button [routerLink]="['/', 'patient', 'overview']">

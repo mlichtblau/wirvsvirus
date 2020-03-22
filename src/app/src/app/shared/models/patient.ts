@@ -4,5 +4,5 @@ export interface Patient {
     age: number;
     living_situation: string;
     workplace: string;
-    criterion_names?: Array<string>;
+    anamnestic_items: Array<{ criterion: string, answer: string }>;
 }
