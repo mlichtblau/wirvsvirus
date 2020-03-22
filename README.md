@@ -1,4 +1,6 @@
-# COVID Q ![Website Status Badge](https://img.shields.io/website?url=https%3A%2F%2Fcorona-q.appspot.com)
+# COVID Q ![Website Status Badge](https://img.shields.io/website?url=https%3A%2F%2Fcorona-q.appspot.com) <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Der hohe Bedarf an Tests auf SARS-CoV-2 führt zu überfüllten Teststellen mit teils drastischen Verspätungen und auflaufenden Menschenmassen. Des Weiteren ist der Prozess für Patient, Arzt und dem medizinischen Personal sowohl aufwendig als auch bürokratisch. 
 
@@ -152,3 +154,22 @@ Mitarbeiter von Testzentren melden sich zurzeit mit dem Identifier ihres Testzen
 - Die Plattform wird auf der [Google Cloud Platform](https://cloud.google.com/gcp) mit Hilfe von [App Engine](https://cloud.google.com/appengine) und [Cloud SQL](https://cloud.google.com/sql gehostet. Vielen Dank an das kostenlose Kontingent an das Team von GCP!
 - Alle Server befinden sich in Deutschland.
 - Lokal ist die Plattform über [Docker](https://www.docker.com) und [docker-compose](https://docs.docker.com/compose/) deployed.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://lichtblau.io"><img src="https://avatars2.githubusercontent.com/u/22854083?v=4" width="100px;" alt=""/><br /><sub><b>Marius Lichtblau</b></sub></a><br /><a href="https://github.com/mlichtblau/wirvsvirus/commits?author=mlichtblau" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
