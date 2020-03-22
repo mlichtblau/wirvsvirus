@@ -60,6 +60,11 @@ export class TestcenterNewPage implements OnInit, AfterViewInit {
     };
   }
 
+  resetFormAndReturn() {
+    this.resetForm();
+    this.slideTo(0);
+  }
+
   slideTo(index: number) {
     this.slides.lockSwipes(false);
     this.slides.slideTo(index);
@@ -81,8 +86,6 @@ export class TestcenterNewPage implements OnInit, AfterViewInit {
           this.testcenter.contact_datum_id = contactDatum.id;
           this.testcenterProvider.create(this.testcenter)
               .subscribe((testcenter) => {
-                this.resetForm();
-                this.slideTo(0);
                 console.log(testcenter);
               });
         });
