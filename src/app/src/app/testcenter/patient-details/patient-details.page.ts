@@ -15,14 +15,27 @@ export class PatientDetailsPage implements OnInit {
     age: 23,
     living_situation: "community",
     workplace: "school",
-    criterion_names: ["Urlaub in Italien (23.03.20)", "Fieber"],
+    flu_vaccinated: true,
+    symptoms_since: "2 Tagen",
+    anamnestic_items: [{
+      criterion: "smoking",
+      answer: "yes"
+    }]
   }, {
     id: 1,
     zip_code: "14480",
     age: 62,
     living_situation: "alone",
     workplace: "other",
-    criterion_names: ["Chronische Lungenerkrankung", "Anhaltender Husten", "Tachypnea"],
+    flu_vaccinated: false,
+    symptoms_since: "6 Tage",
+    anamnestic_items: [{
+      criterion: "smoking",
+      answer: "no"
+    }, {
+      criterion: "chronic lung disease",
+      answer: "yes"
+    }]
   }];
 
   patient: Patient;

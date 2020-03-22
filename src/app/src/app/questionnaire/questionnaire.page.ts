@@ -35,7 +35,14 @@ export class QuestionnairePage implements OnInit, AfterViewInit {
         .subscribe(patient => {
           this.storage.set('patient', patient)
               .then(() => {
-                this.next();
+                if(patient.test_indication){
+                  this.next();
+                  this.next();
+                }
+                else{
+                  this.next();
+                }
+
               });
         });
   }

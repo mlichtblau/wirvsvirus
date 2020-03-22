@@ -37,7 +37,7 @@ class PatientsController < ApplicationController
           break
         end
       else
-        wrong_criterion = criterion_name
+        wrong_criterion = anamnestic_item[:criterion]
         all_criterions_found = false
         break
       end

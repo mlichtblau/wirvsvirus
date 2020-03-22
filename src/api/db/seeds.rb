@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 criterions = Criterion.create([
-  {kind: :general, name: 'flu_vaccinated'},
-  {kind: :general, name: 'critical_workplace'},
-  {kind: :general, name: 'living_alone'},
+  {kind: :general, name: 'flu vaccinated'},
+  {kind: :general, name: 'critical workplace'},
+  {kind: :general, name: 'living alone'},
 
   {kind: :risk_factor, name: 'smoking'},
   {kind: :risk_factor, name: 'diabetes'},
