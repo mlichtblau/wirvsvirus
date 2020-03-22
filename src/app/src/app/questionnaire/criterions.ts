@@ -7,7 +7,7 @@ type CriterionQuestion = {
 export function getCriterions() {
   return [
     { criterion: 'smoking', question: 'Rauchen Sie?' },
-    { criterion: 'pregnancy', question: 'Bist Sie schwanger?' },
+    { criterion: 'pregnancy', question: 'Sind Sie schwanger?' },
     {
       criterion: 'chronic lung disease',
       question: 'Haben Sie eine chronische Lungen Krankenheit?',
@@ -30,7 +30,7 @@ export function getCriterions() {
     },
     {
       criterion: 'taking immunosuppressants',
-      question: 'Nehmen Sie aktuell Immunosuppressiva',
+      question: 'Nehmen Sie aktuell Immunosuppressiva?',
     },
     {
       criterion: 'fever',
