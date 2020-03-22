@@ -15,9 +15,6 @@ export class QuestionnairePage implements OnInit {
   @ViewChild(IonSlides, { static: false }) slides: IonSlides
 
   patientModel: Patient = {
-    living_situation: 'community',
-    workplace: 'police',
-    flu_vaccinated: true,
     symptoms_since: '10.03.2020',
   }
 

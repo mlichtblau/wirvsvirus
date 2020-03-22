@@ -61,5 +61,15 @@ export function getCriterions() {
       question:
         'Haben Sie sich in den letzten 4 Wochen in einem der folgenden Risikogebiete aufgehalten?',
     },
+    { criterion: 'living alone', question: 'Leben Sie alleine?' },
+    {
+      criterion: 'workplace',
+      question:
+        'Arbeiten Sie in einem strukturreleveanten Beruf? (Polizei, Arzt, etc.)',
+    },
+    {
+      criterion: 'flu_vaccinated',
+      question: 'Wurden Sie seit Oktober 2019 gegen Grippe geimpft?',
+    },
   ]
 }
