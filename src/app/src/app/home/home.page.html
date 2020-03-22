@@ -29,8 +29,9 @@
         </h2>
         <p>Hier hast Du die Möglichkeit uns auf weitere Testzentren aufmerksam zu machen.
         </p>
-        <ion-button color="medium" expand="block" [routerLink]="['/', 'testcenter', 'new']">TESTZENTRUM
-          MELDEN
+        <ion-button color="medium" expand="block" [routerLink]="['/', 'testcenter', 'new']">
+          <ion-icon slot="start" name="add-outline"></ion-icon>
+          TESTZENTRUM MELDEN
         </ion-button>
 
       </ion-col>
@@ -42,7 +43,9 @@
         </h2>
         <p>Hier können sich Mitarbeiter von Testzentren und Gesundheitszentren anmelden.
         </p>
-        <ion-button color="medium" expand="block" [routerLink]="['/', 'testcenter', 'login']">LOG IN
+        <ion-button color="medium" expand="block" [routerLink]="['/', 'testcenter', 'login']">
+          <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+          LOG IN
         </ion-button>
       </ion-col>
     </ion-row>
