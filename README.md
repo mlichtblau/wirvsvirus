@@ -1,5 +1,5 @@
 # COVID Q ![Website Status Badge](https://img.shields.io/website?url=https%3A%2F%2Fcorona-q.appspot.com) <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Der hohe Bedarf an Tests auf SARS-CoV-2 führt zu überfüllten Teststellen mit teils drastischen Verspätungen und auflaufenden Menschenmassen. Des Weiteren ist der Prozess für Patient, Arzt und dem medizinischen Personal sowohl aufwendig als auch bürokratisch. 
@@ -171,6 +171,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/manner"><img src="https://avatars2.githubusercontent.com/u/3809419?v=4" width="100px;" alt=""/><br /><sub><b>Moritz Manner</b></sub></a><br /><a href="https://github.com/mlichtblau/wirvsvirus/commits?author=manner" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/tom2022"><img src="https://avatars1.githubusercontent.com/u/32955754?v=4" width="100px;" alt=""/><br /><sub><b>tom2022</b></sub></a><br /><a href="https://github.com/mlichtblau/wirvsvirus/commits?author=tom2022" title="Code">💻</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/juliusrueckin/"><img src="https://avatars3.githubusercontent.com/u/6661426?v=4" width="100px;" alt=""/><br /><sub><b>Julius Rückin</b></sub></a><br /><a href="https://github.com/mlichtblau/wirvsvirus/commits?author=juliusrueckin" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/pia-francesca"><img src="https://avatars1.githubusercontent.com/u/56447302?v=4" width="100px;" alt=""/><br /><sub><b>pia-francesca</b></sub></a><br /><a href="#design-pia-francesca" title="Design">🎨</a></td>
   </tr>
 </table>
 
