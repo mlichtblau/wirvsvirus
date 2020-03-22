@@ -1,5 +1,5 @@
 class TestcentersController < ApplicationController
-  before_action :set_testcenter, only: [:show, :update, :destroy, :set_criteria, :staff_login, current_delay, :show_next_appointments]
+  before_action :set_testcenter, only: [:show, :update, :destroy, :set_criteria, :staff_login, :current_delay, :show_next_appointments]
 
   # GET /testcenters
   def index
@@ -9,14 +9,12 @@ class TestcentersController < ApplicationController
       @testcenters = Testcenter.all
     end
 
-    @testcenters = @testcenters.as_json(include: [:coordinate, :contact_datum, :current_delay], methods: :current_delay)
-    render json: @testcenters
+    render json: @testcenters, include: [:coordinate, :contact_datum], methods: :current_delay
   end
 
   # GET /testcenters/1
   def show
-    @testcenter = @testcenter.as_json(include: [:coordinate, :contact_datum, :current_delay], methods: :current_delay)
-    render json: @testcenter, include: [:coordinate, :contact_datum, :current_delay]
+    render json: @testcenter, include: [:coordinate, :contact_datum], methods: :current_delay
   end
 
   # POST /testcenters

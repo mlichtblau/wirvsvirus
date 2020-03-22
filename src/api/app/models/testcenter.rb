@@ -23,13 +23,11 @@ class Testcenter < ApplicationRecord
       delays << appointment.processed_at - appointment.appointment_time
     end
 
-    delay_str = time_ago_in_words(delays.mean.seconds.from_now)
-
     if delays.mean.nil?
-      delay_str = "keine Verspätung"
+      return "keine Verspätung"
     end
 
-    return delay_str
+    return time_ago_in_words(delays.mean.seconds.from_now)
   end
 
   def todays_appintments
