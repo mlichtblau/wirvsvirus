@@ -15,12 +15,16 @@ import { Storage } from '@ionic/storage'
 export class QuestionnairePage implements OnInit, AfterViewInit {
   @ViewChild(IonSlides, { static: false }) slides: IonSlides
 
-  patientModel: Patient = {}
+  currentDateString = new Date(Date.now()).toISOString();
+
+  patientModel: Patient = {
+    symptoms_since: new Date(Date.now()).toISOString()
+  };
 
   slideOpts = {
     speed: 400,
     centeredSlides: false,
-  }
+  };
 
   criterions = getCriterions()
 
