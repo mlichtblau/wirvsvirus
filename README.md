@@ -1,4 +1,5 @@
-# COVID Q ![Website Status Badge](https://img.shields.io/website?url=https%3A%2F%2Fcorona-q.appspot.com)
+# COVID Q ![Website Status Badge](https://img.shields.io/website?url=https%3A%2F%2Fcorona-q.appspot.com) <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section --> [![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Der hohe Bedarf an Tests auf SARS-CoV-2 führt zu überfüllten Teststellen mit teils drastischen Verspätungen und auflaufenden Menschenmassen. Des Weiteren ist der Prozess für Patient, Arzt und dem medizinischen Personal sowohl aufwendig als auch bürokratisch. 
 
@@ -10,7 +11,7 @@ Unsere Plattform entlastet die Testzentren in Deutschland, indem Patienten unmit
 
 ![WirWsVirus](docs/wir_vs_virus-logo.png)
 
-**COVID Q** ist bei der Teilnahme am Hackathon [WirVsVirus](https://wirvsvirushackathon.org) entstanden. Wir haben an der **Challenge 040** zur _Unterstüztung medizinisches Personals_, konkret mit der Entlastung von Testzentren: **1_040_c_d_entlastung_testcentren**.
+**COVID Q** ist bei der Teilnahme am Hackathon [WirVsVirus](https://wirvsvirushackathon.org) entstanden. Wir haben an der **Challenge 040** zur _Unterstützung medizinisches Personals_, konkret mit der Entlastung von Testzentren: **1_040_c_d_entlastung_testcentren**.
 
 Wir haben im Channel [#1_040_medizinischespersonal](http://wirvsvirus.slack.com/messages/1_040_medizinischespersonal) mit unseren Mentor:innen und Pat:innen sowie anderen Teams kommuniziert. Die Team-interne Kommunikation fand im Channel [#1_040_c_d_entlastung_testcentren](http://wirvsvirus.slack.com/messages/1_040_c_d_entlastung_testcentren) statt.
 
@@ -18,23 +19,23 @@ Wir haben im Channel [#1_040_medizinischespersonal](http://wirvsvirus.slack.com/
 
 ### Identifizieren von Verdachtspersonen ohne Aufwand
 
-Aufgrund der Omnipräsenz des SARS-CoV-19 Virus in den Medien haben viele Menschen die Angst, sie könnten sich mit dem Virus infiziert haben. Dabei informieren sich viele über den ärztlichen Bereitschaftsdienst unter **116117**, lokalen Beratungsstellen oder beim Arzt des Vertrauens. Die Anlaufstellen sind aufgrund der hohen Nachfrage maximal ausgelastet und Ärzte können im Fall anderer Beschwerden nicht mehr verlässlich kontaktiert werden.
+Aufgrund der Omnipräsenz des SARS-CoV-2 Virus in den Medien haben viele Menschen die Angst, sie könnten sich mit dem Virus infiziert haben. Dabei informieren sich viele über den ärztlichen Bereitschaftsdienst unter **116117**, lokalen Beratungsstellen oder beim Arzt des Vertrauens. Die Anlaufstellen sind aufgrund der hohen Nachfrage maximal ausgelastet und Ärzte können im Fall anderer Beschwerden nicht mehr verlässlich kontaktiert werden.
 
 Die Plattform **COVID Q** vermittelt Patienten mit Verdacht auf eine Infektion an die Testzentren in Deutschland. Dabei findet zunächst eine Eigen-Anamnese statt, wie sie auch durch eine telefonische Beratungsstelle oder den Arzt stattfindet. Auf Basis aktueller Empfehlungen vermittelt die Plattform Verdachtsfälle an qualifizierte Testzentren in der Nähe. Falls die Notwendigkeit auf einen Test aufgrund der Eigen-Anamnese nicht gegeben ist, werden Links zu öffentlichen Beratungstellen und Tipps zum Eigenschutz bereitgestellt. Damit sollen die Beratungsstellen und Ärzte entlastet und besorgte Menschen aufgeklärt werden.
 
 ### Unbürokratisch zum Test bei Verdacht
 
-Im Falle eines begründeten Verdachtes auf eine Infektion mit SARS-CoV-19 - z.B. falls sich die Person in einem Risikogebiet befunden oder direkten Konakt mit einer positiv getesteten Person gehabt hat -, kann die betroffene Person sich auf die Warteliste eines Testzentrums setzen. Das Testzentrum erhält auch einen Zugang zur Plattform. Über diesen Zugang können die Wartelisten und auch die Daten zu den Patienten abgerufen werden. Das medizinische Personal kann Nachrichten an alle Patienten der Warteliste schicken und Informationsmaterialen wie zum Beispiel Anfahrtsbeschreibungen oder Verhaltensregeln veröffentlichen. Patienten haben mit **COVID Q** nur noch eine Anlaufstelle und müssen nicht stundenlang in Telefon-Warteschleifen verbringen. Die Daten werden zw. dem Testzentrum und dem Patienten direkt geteilt, sodass möglichst wenige Personin mit der Bearbeitung eines Falles beschäftigt sind.
+Im Falle eines begründeten Verdachtes auf eine Infektion mit SARS-CoV-2 - z.B. falls sich die Person in einem Risikogebiet befunden oder direkten Konakt mit einer positiv getesteten Person gehabt hat -, kann die betroffene Person sich auf die Warteliste eines Testzentrums setzen. Das Testzentrum erhält auch einen Zugang zur Plattform. Über diesen Zugang können die Wartelisten und auch die Daten zu den Patienten abgerufen werden. Das medizinische Personal kann Nachrichten an alle Patienten der Warteliste schicken und Informationsmaterialen wie zum Beispiel Anfahrtsbeschreibungen oder Verhaltensregeln veröffentlichen. Patienten haben mit **COVID Q** nur noch eine Anlaufstelle und müssen nicht stundenlang in Telefon-Warteschleifen verbringen. Die Daten werden zw. dem Testzentrum und dem Patienten direkt geteilt, sodass möglichst wenige Personin mit der Bearbeitung eines Falles beschäftigt sind.
 
 Das medizinsche Personal des Testzentrums kann die Patienten auf der Warteliste prüfen und die Notwendigkeit auf einen Test in einer zweiter Instanz prüfen.
 
 ### Dynamische Terminvergabe
 
-Die meisten Testzentren in Deutschland vergeben Termine und Verdachtsfälle auf das Virus zu testen. Das ist zum Einen mit einem hohen Bearbeitungsaufwand verbunden und zum Anderen unflexibel im Fall von Verzögerungen. Falls Termin auflaufen, stauen sich auch die Personen im Testzentrum, wodurch sich eine Gruppe potentiell ansteckender Personen bildet. 
+Die meisten Testzentren in Deutschland vergeben Termine und Verdachtsfälle auf das Virus zu testen. Das ist zum Einen mit einem hohen Bearbeitungsaufwand verbunden und zum Anderen unflexibel im Fall von Verzögerungen. Falls Termine auflaufen, stauen sich auch die Personen im Testzentrum, wodurch sich eine Gruppe potentiell ansteckender Personen bildet. 
 
 Die Plattform erfasst den Bearbeitungsstatus aller in der Warteliste stehenden Patienten. Über Echtzeitdaten können die Patienten ihre geschätzte Wartedauer jederzeit einsehen und werden wenige Stunden vor dem Test informiert, sich zur Teststelle zu begeben. Damit werden auflaufenden Personengruppen vermieden und die Gefahr einer Ansteckung Anderer in vollen Wartezimmern reduziert. 
 
-Wir glauben, dass dieses Konzept flexibler als die klassische Terminvergabe ist und durch permantente Transparenz keinen Nachteil für die Patienten bildet.
+Wir glauben, dass dieses Konzept flexibler als die klassische Terminvergabe ist und durch permanente Transparenz keinen Nachteil für die Patienten bildet.
 
 ## FAQ
 
@@ -64,9 +65,9 @@ Unsere API bietet keine Möglichkeit die Anamesen der Patienten abzufragen. Dies
 
 Optional würden wir gerne anbieten, dass die betroffene Person Kontaktinformationen für Rückfragen hinterlegen kann. Wir prüfen zurzeit mögliche Realisierungen, die die Identität des Patienten nicht preisgeben.
 
-⚠️ Die **Datenschutzrelevanten Fragen** besprechen wir zurzeit mit Experten aus Slack. Sobald wir neue Erkentnisse haben, vervollständigen wir diese Frage.
+⚠️ Die **Datenschutzrelevanten Fragen** besprechen wir zurzeit mit Experten. Sobald wir neue Erkentnisse haben, vervollständigen wir diese Frage.
 
-### Wie verhindern Terminleichen verhindert?
+### Wie werden Terminleichen verhindert?
 
 Unsere Plattform vereinfacht die Terminfindung für Patienten und birgt damit das Risiko, dass Personen eine lockere Haltung gegenüber den Terminen annehmen. Um dem entgegenzuwirken, haben wir uns mehrere Konzepte überlegt.
 
@@ -78,7 +79,7 @@ Zu guter letzte wird das [Erscheinen](#7) oder [Versäumen](#5) von Terminen vom
 
 ## An wen richtet sich die Plattform?
 
-Die Plattform **COVID Q** bietet Patienten eine schnelle, unkomplizierte und unbürokratische Möglichkeit sich für Test auf SARS-CoV-19 zu bewerben. Medizinischem Personal und Helfer in den Testzentren wird Arbeit abgenommen, indem die Terminfindung automatisiert auf Basis von Warteschlangen stattfinet. Offizielle Stellen wie Städte, Länder, der Bund und gemeinnützige Organisationen können über die Plattform Testzentren melden und zentral verwalten. Des Weiteren können sie Informationsmaterial anlegen und an die wartenden Patienten über Push-Benachrichtigungen verschicken.
+Die Plattform **COVID Q** bietet Patienten eine schnelle, unkomplizierte und unbürokratische Möglichkeit sich für Test auf SARS-CoV-2 zu bewerben. Medizinischem Personal und Helfern in den Testzentren wird Arbeit abgenommen, indem die Terminfindung automatisiert auf Basis von Warteschlangen stattfinet. Offizielle Stellen wie Städte, Länder, der Bund und gemeinnützige Organisationen können über die Plattform Testzentren melden und zentral verwalten. Des Weiteren können sie Informationsmaterial anlegen und an die wartenden Patienten über Push-Benachrichtigungen verschicken.
 
 ### Betroffene Personen und Patienten ![Patient Badge](https://img.shields.io/github/labels/mlichtblau/wirvsvirus/rolle:patient)
 
@@ -86,13 +87,13 @@ Personen mit Verdacht auf Infektion können über die App eine Eigenanamnese in 
 
 Personen, die die Kriterien auf einen Test in Hinsich auf Dringlichkeit nicht erfüllen, erhalten eine Übersicht an Informationsmaterialen aus offiziellen Quellen (RKI, Gesundheitsminestierum) und Tipps zur freiwilligen Eigenisolation.
 
-Bei Risiko auf eine Ansteckung durch erhält die betroffene Person eine Übersicht qualifizierter Testzentren in der Nähe. Für jedes Testzentrum ist die [geschätzte Auslastung](#36) und die [geschätzte Wartedauer](#35) angzeigt. Diese werden auf Basis anonymisierter Statistiken und aus offiziellen Quellen berechnet. Die Person kann sich nun auf die Warteliste von [einem](#kann-man-sich-auf-mehrere-wartelisten-setzen) Testzentrum setzen. Nun wird der Patient regelmäßig über seinen Wartelistenstatus informiert und erhält das Infomaterial, welches das Testzentrum hinterlegt hat. Des Weiteren wird über Verspätungen und anderen Terminanpassungen per Push-Benachrichtigung informiert. Der Patient kann nun zu Hause, fernab langer Warteschlangen potentiell erkrankter Personen auf seinen Testtermin warten. 
+Bei Risiko auf eine Ansteckung erhält die betroffene Person eine Übersicht qualifizierter Testzentren in der Nähe. Für jedes Testzentrum ist die [geschätzte Auslastung](#36) und die [geschätzte Wartedauer](#35) angezeigt. Diese werden auf Basis anonymisierter Statistiken und aus offiziellen Quellen berechnet. Die Person kann sich nun auf die Warteliste von [einem](#kann-man-sich-auf-mehrere-wartelisten-setzen) Testzentrum setzen. Nun wird der Patient regelmäßig über seinen Wartelistenstatus informiert und erhält das Infomaterial, welches das Testzentrum hinterlegt hat. Des Weiteren wird über Verspätungen und andere Terminanpassungen per Push-Benachrichtigung informiert. Der Patient kann nun zu Hause, fernab langer Warteschlangen potentiell erkrankter Personen auf seinen Testtermin warten. 
 
-Nach Ablehnung auf einen Test oder erfolgreicher Vermitllung eines Testes werden alle Daten zur betroffenen Person gelöscht.
+Nach Ablehnung auf einen Test oder erfolgreicher Vermittlung eines Testes werden alle Daten zur betroffenen Person gelöscht.
 
 ### Testzentren ![Test Center Badge](https://img.shields.io/github/labels/mlichtblau/wirvsvirus/rolle:testzentrum)
 
-Die offiziellen Testzentren werden sowohl von den Verantwortlichen des Testzentrums (Medizinischem Personal, Helfer) und offiziellen Behörden (Städte, Länder, Bund und gemeinnütige Organisationen wie z.B. dem Gesundheitsamt) verwaltet. Damit soll eine zentrale Anlaufstelle für [Patienten](#betroffene-personen-und-patienten) geschaffen werden, welche ebenso zentral von offiziellen verwaltet werden kann. Neue Testzentren können innerhalb weniger Minuten einer breiten Masse an Personen zur Verfügung gestellt werden.
+Die offiziellen Testzentren werden sowohl von den Verantwortlichen des Testzentrums (Medizinischem Personal, Helfer) und offiziellen Behörden (Städte, Länder, Bund und gemeinnützige Organisationen) verwaltet. Damit soll eine zentrale Anlaufstelle für [Patienten](#betroffene-personen-und-patienten) geschaffen werden, welche ebenso zentral von offiziellen verwaltet werden kann. Neue Testzentren können innerhalb weniger Minuten einer breiten Masse an Personen zur Verfügung gestellt werden.
 
 #### Verantwortliche und Leiter
 
@@ -149,6 +150,34 @@ Mitarbeiter von Testzentren melden sich zurzeit mit dem Identifier ihres Testzen
 ### Miscellaneous
 
 - Als Datenbank verwenden wir [PostgreSQL](https://www.postgresql.org).
-- Die Plattform wird auf der [Google Cloud Platform](https://cloud.google.com/gcp) mit Hilfe von [App Engine](https://cloud.google.com/appengine) und [Cloud SQL](https://cloud.google.com/sql gehostet. Vielen Dank an das kostenlose Kontingent an das Team von GCP!
+- Die Plattform wird auf der [Google Cloud Platform](https://cloud.google.com/gcp) mit Hilfe von [App Engine](https://cloud.google.com/appengine) und [Cloud SQL](https://cloud.google.com/sql) gehostet. Vielen Dank an das kostenlose Kontingent an das Team von GCP!
 - Alle Server befinden sich in Deutschland.
 - Lokal ist die Plattform über [Docker](https://www.docker.com) und [docker-compose](https://docs.docker.com/compose/) deployed.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://lichtblau.io"><img src="https://avatars2.githubusercontent.com/u/22854083?v=4" width="100px;" alt=""/><br /><sub><b>Marius Lichtblau</b></sub></a><br /><a href="https://github.com/mlichtblau/wirvsvirus/commits?author=mlichtblau" title="Code">💻</a></td>
+    <td align="center"><a href="http://marcfreiheit.de"><img src="https://avatars2.githubusercontent.com/u/27914201?v=4" width="100px;" alt=""/><br /><sub><b>Marc André Freiheit</b></sub></a><br /><a href="#business-marcfreiheit" title="Business development">💼</a> <a href="#infra-marcfreiheit" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#projectManagement-marcfreiheit" title="Project Management">📆</a></td>
+    <td align="center"><a href="https://github.com/drs-m"><img src="https://avatars3.githubusercontent.com/u/1767255?v=4" width="100px;" alt=""/><br /><sub><b>Darius Mewes</b></sub></a><br /><a href="https://github.com/mlichtblau/wirvsvirus/commits?author=drs-m" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/FWirtz"><img src="https://avatars1.githubusercontent.com/u/6052785?v=4" width="100px;" alt=""/><br /><sub><b>Florian Wirtz</b></sub></a><br /><a href="https://github.com/mlichtblau/wirvsvirus/commits?author=FWirtz" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/manner"><img src="https://avatars2.githubusercontent.com/u/3809419?v=4" width="100px;" alt=""/><br /><sub><b>Moritz Manner</b></sub></a><br /><a href="https://github.com/mlichtblau/wirvsvirus/commits?author=manner" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/tom2022"><img src="https://avatars1.githubusercontent.com/u/32955754?v=4" width="100px;" alt=""/><br /><sub><b>Thomas M. Samer</b></sub></a><br /><a href="https://github.com/mlichtblau/wirvsvirus/commits?author=tom2022" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/juliusrueckin/"><img src="https://avatars3.githubusercontent.com/u/6661426?v=4" width="100px;" alt=""/><br /><sub><b>Julius Rückin</b></sub></a><br /><a href="https://github.com/mlichtblau/wirvsvirus/commits?author=juliusrueckin" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/pia-francesca"><img src="https://avatars1.githubusercontent.com/u/56447302?v=4" width="100px;" alt=""/><br /><sub><b>Pia Francesca Rissom</b></sub></a><br /><a href="#design-pia-francesca" title="Design">🎨</a> <a href="#content-pia-francesca" title="Content">🖋</a> <a href="#video-pia-francesca" title="Videos">📹</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
