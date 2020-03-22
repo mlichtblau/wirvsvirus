@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core'
 import { IonSlides } from '@ionic/angular'
 import { Patient, CriterionNames } from '../shared/models/patient'
 import { PatientProvider } from '../shared/api/patient/patient'
+import { map, pick } from 'lodash'
 
 type CriterionQuestion = {
   criterion: CriterionNames
@@ -35,11 +36,11 @@ export class QuestionnairePage implements OnInit {
   }
 
   sendResults() {
-    this.patientModel.anamnestic_items = this.criterions
+    this.patientModel.anamnestic_items = map(this.criterions, item =>
+      pick(item, ['criterion', 'answer'])
+    )
     console.log(this.patientModel)
-    this.patientProvider.create(this.patientModel).subscribe(patient => {
-      console.log(patient)
-    })
+    this.patientProvider.create(this.patientModel).subscribe(patient => {})
   }
 
   constructor(public patientProvider: PatientProvider) {}
