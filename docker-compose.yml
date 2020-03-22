@@ -7,6 +7,8 @@ services:
       context: src/api
     ports:
       - "3000:3000"
+    env_file:
+      - .api.env
 
   postgres:
     image: postgres:11.7-alpine
@@ -14,6 +16,8 @@ services:
       - "5432:5432"
     volumes:
       - postgresdata:/var/lib/postgresql/data
+    env_file:
+      - .postgres.env
 
   adminer:
     image: adminer:4.7
