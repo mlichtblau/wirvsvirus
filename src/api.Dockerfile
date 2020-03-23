@@ -11,7 +11,7 @@ ENV RACK_ENV='production'
 
 RUN apk add --no-cache postgresql sqlite sqlite-libs
 
-COPY Gemfile Gemfile.lock ./
+COPY api/Gemfile api/Gemfile.lock ./
 
 RUN apk add --no-cache --virtual .build-deps build-base postgresql-dev sqlite-dev && \
     gem update --system && bundle update && bundle install --jobs 20 --retry 5 && \
@@ -19,7 +19,7 @@ RUN apk add --no-cache --virtual .build-deps build-base postgresql-dev sqlite-de
 
 RUN apk add --no-cache libc6-compat
 
-COPY . .
+COPY api .
 
 EXPOSE 3000
 
