@@ -4,7 +4,8 @@ services:
   api:
     image: mlichtblau/wirvvsvirus/api:latest
     build:
-      context: src/api
+      context: src
+      dockerfile: api.Dockerfile
     ports:
       - "3000:3000"
     env_file:
