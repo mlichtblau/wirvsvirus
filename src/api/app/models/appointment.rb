@@ -10,7 +10,7 @@ class Appointment < ApplicationRecord
   before_create :generate_automated_appointment_data
 
   def generate_automated_appointment_data
-    self.waiting_number = Appointment.generate_next_waiting_number
+    self.waiting_number = self.generate_next_waiting_number
     last_appointment = self.testcenter.appointments.order(:appointment_time).last
     if last_appointment.nil?
       if self.testcenter.open_at?(DateTime.now + 30.minutes)
@@ -27,8 +27,8 @@ class Appointment < ApplicationRecord
     end
   end
 
-  def self.generate_next_waiting_number
-    todays_appointments = Appointment.where('appointment_time BETWEEN ? AND ?', DateTime.now.beginning_of_day, DateTime.now.end_of_day)
+  def generate_next_waiting_number
+    todays_appointments = Appointment.where('testcenter_id = ? AND (appointment_time BETWEEN ? AND ?)', self.testcenter.id, DateTime.now.beginning_of_day, DateTime.now.end_of_day)
     if todays_appointments.empty?
       return 1.to_s
     else
