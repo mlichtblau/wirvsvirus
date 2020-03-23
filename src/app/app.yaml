@@ -6,23 +6,9 @@ skip_files:
 - (?!^www)
 
 handlers:
-- url: /
-  static_files: www/index.html
-  upload: www/.*
-- url: /(.*\.js)
-  redirect_http_response_code: 301
+- url: /(.*\.(js|css|svg|png)(|\.map))$
   static_files: www/\1
-  upload: www/.*\.js
-- url: /(.*\.css)
-  redirect_http_response_code: 301
-  static_files: www/\1
-  mime_type: text/css
-  upload: www/.*\.css
-- url: /(.*\.svg)
-  redirect_http_response_code: 301
-  static_files: www/\1
-  mime_type:  image/svg+xml
-  upload: www/.*\.svg
+  upload: www/(.*)(|\.map)
 - url: /.*
   static_files: www/index.html
   upload: www/.*
